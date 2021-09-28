@@ -1,0 +1,74 @@
+@use '../global'as *;
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: #{$z-index-header + 1};
+
+  &__overlay {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    background-color: black;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+
+    z-index: -1;
+  }
+
+  &__sidebar {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 512px;
+    @media screen and (min-width: 1442px) {
+      width: #{get-vw(512px, 1442px)};
+    }
+
+    pointer-events: auto;
+    transform: translateX(100%);
+    transition: transform .3s;
+    will-change: transform;
+    contain: paint;
+
+    @media screen and (max-width: $bp-menu) {
+      width: 100vw;
+    }
+
+    &_pos {
+      &_left {
+        left: 0;
+      }
+
+      &_right {
+        left: auto;
+        right: 0;
+      }
+    }
+
+    background-color: #C4C4C4;
+  }
+
+  &.is_active {
+    pointer-events: auto;
+
+    .drawer__overlay {
+      visibility: visible;
+      opacity: 0.6;
+    }
+
+    .drawer__sidebar {
+      transform: none;
+    }
+  }
+}

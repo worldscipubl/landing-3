@@ -1,0 +1,23 @@
+@use '../global'as *;
+
+.do-steps {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.do-steps__inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.do-steps__header {
+  padding-bottom: 48px;
+}
+
+.do-steps__body {
+  flex-grow: 1;
+}

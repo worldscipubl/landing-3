@@ -1,0 +1,21 @@
+@use '../global'as *;
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    border-radius: 12%;
+    overflow: hidden;
+    flex: 1;
+
+    & + & {
+      margin-left: 4%;
+    }
+  }
+
+  &__link-img {
+    object-position: center;
+    object-fit: cover;
+  }
+}

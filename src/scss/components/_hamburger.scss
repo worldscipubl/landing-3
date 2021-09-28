@@ -1,0 +1,39 @@
+@use '../global'as *;
+
+.hamburger {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  width: 30px;
+  position: relative;
+  z-index: 2;
+
+  &__line {
+    align-items: center;
+    background: $black;
+    display: flex;
+    flex: none;
+    height: 2px;
+    justify-content: center;
+    position: relative;
+    transition: all 0.4s ease;
+    width: 100%;
+
+    &::before,
+    &::after {
+      background: inherit;
+      content: '';
+      height: 2px;
+      position: absolute;
+      top: -7px;
+      width: 100%;
+      z-index: 1;
+    }
+
+    &::after {
+      top: 7px;
+    }
+  }
+}

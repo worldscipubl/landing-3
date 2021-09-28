@@ -4,12 +4,23 @@ $light-blue: #3361E9;
 $white: #FFFFFF;
 $black: #000000;
 $gray: #F5F5F5;
+$gray-dark: #B3B3B3;
 $green: #219653;
+$subtitleBackground: #001437;
+$colorShadow: rgba(0, 0, 0, 0.25);
 
 $fontMain: 'Roboto', Arial, sans-serif;
 
 // Sass Screen Variables
 $bp-mobile: 486px;
+$bp-menu: 765px;
 $bp-tablet: 924px;
 $bp-laptop: 1024px;
 $bp-large: 1440px;
+
+$header-height: 58px;
+$navbar-width: 283px;
+
+$z-index-nav: 5;
+$z-index-header: 10;
+$z-index-drop-down-menu: 20;

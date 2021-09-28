@@ -1,0 +1,33 @@
+@use '../global'as *;
+
+.features-grid {
+  width: 100%;
+  margin: 0 auto 48px;
+}
+
+.features-grid__inner {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  width: 100%;
+  margin: -24px;
+
+  &_outline {
+    margin: -12px;
+    grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
+
+    .features-grid__item {
+      margin: 12px;
+    }
+  }
+}
+
+.features-grid__item {
+  display: flex;
+  flex: 1 1 auto;
+  overflow: hidden;
+  margin: 24px;
+  vertical-align: top;
+  max-width: 100%;
+  min-width: 0;
+}

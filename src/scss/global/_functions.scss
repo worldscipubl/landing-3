@@ -23,3 +23,11 @@
   $adjust: 16*$tone;
   @return adjust-color($color, $red: $adjust, $green: $adjust, $blue: $adjust);
 }
+
+@mixin font-size($font-size: 12px) {
+  font-size: $font-size;
+
+  @media (min-width: $bp-large) {
+    font-size: #{get-vw($font-size, $bp-large)};
+  }
+}

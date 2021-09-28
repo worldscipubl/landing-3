@@ -1,0 +1,22 @@
+@use '../global'as *;
+
+.progress-bar {
+  height: 1em;
+  display: flex;
+  overflow: hidden;
+  font-size: 16px;
+  background-color: #e9ecef;
+  border-radius: .6em;
+
+  &_bg {
+    &_green {
+      .progress-bar__indicator {
+        background-color: $green;
+      }
+    }
+  }
+}
+
+.progress-bar__indicator {
+  border-radius: .6em;
+}

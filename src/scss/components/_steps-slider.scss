@@ -1,0 +1,27 @@
+@use '../global'as *;
+
+.steps-slider {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.steps-slider__col {
+  flex-grow: 1;
+}
+
+.steps-slider__col_imgs {
+
+}
+
+.steps-slider__img {
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  margin-left: auto;
+
+  opacity: var(--opacity);
+  transition: transform var(--duration) var(--ease), opacity var(--duration) var(--ease);
+  transform: translate3d(var(--translateX), 0, 0) rotate(var(--rotate));
+}

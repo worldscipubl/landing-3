@@ -1,0 +1,23 @@
+@use '../global'as *;
+
+.features-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  &_outline {
+    flex-direction: column;
+    padding: 18px;
+
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+  }
+}
+
+.features-card__icon {
+
+}
+
+.features-card__body {
+  padding-left: 14px;
+}

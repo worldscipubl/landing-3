@@ -1,0 +1,32 @@
+@use '../../global'as *;
+
+.navbar-banner {
+  position: relative;
+  width: 100%;
+  margin-top: 3vh;
+
+  @media screen and (max-height: 620px) {
+    margin-top: 0;
+  }
+
+  &__subtitle {
+    margin-top: 0.5em;
+  }
+
+  &__description {
+
+  }
+
+  &__btn {
+    margin: 1em 0;
+    width: 40%;
+  }
+
+  &__bg {
+    object-position: bottom right;
+    width: 52%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

@@ -1,0 +1,45 @@
+@use '../global'as *;
+
+$list-colors: ("black": #000,
+        "white": #FFF,
+        "gray": #00000066,
+        "gray-blue": #0D1D47,
+        "yellow": #FFC700,
+        "green": #219653,
+        "bronze": #BD8C4E,
+        "silver": #B5B5B5,
+        "gold": #ECBA40,
+        "platinum": #9195A3,
+        "red": red,
+);
+
+.list {
+  & > li {
+    display: flex;
+    align-items: center;
+    margin-top: 0.8em;
+  }
+
+  & > li::before {
+    content: "";
+    background-color: green;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    display: inline-flex;
+    line-height: 0.5em;
+    color: white;
+    text-align: center;
+    margin-right: 0.52em;
+    flex: 0 0 auto;
+  }
+
+  &_color {
+    @each $color,
+    $val in $list-colors {
+      &_#{$color} > li::before {
+        background-color: $val;
+      }
+    }
+  }
+}

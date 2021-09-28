@@ -37,6 +37,11 @@ $maxWidthContainer: $maxWidthContainer + 2 * $p-side;
   }
 }
 
+.first-section {
+  margin-top: $header-height;
+  min-height: calc(100vh - #{$header-height});
+}
+
 .mt-a {
   margin-top: auto;
 }

@@ -1,0 +1,35 @@
+@use '../global'as *;
+
+.step-card {
+  padding: 1em 3em;
+  overflow: hidden;
+
+  &.active {
+    background: $gray;
+    border-radius: 12px;
+
+    .step-card__inner {
+      height: auto;
+    }
+  }
+}
+
+.step-card__inner {
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  overflow: hidden;
+  transition: height .3s ease;
+}
+
+.step-card__title {
+  cursor: pointer;
+}
+
+.step-card__desc {
+  margin-top: 1em;
+}
+
+.step-card__link {
+  margin-top: 1em;
+}

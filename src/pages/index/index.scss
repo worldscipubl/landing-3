@@ -1,8 +1,26 @@
 @charset "UTF-8";
-//@use 'foundation';
+@use './src/scss/foundation';
 
 /* List of components used on this page: */
+@use "./src/scss/components/header";
+@use "./src/scss/components/button";
+@use "./src/scss/components/list";
+@use "./src/scss/components/steps-slider";
+@use "./src/scss/components/step-card";
+@use "./src/scss/components/features-grid";
+@use "./src/scss/components/features-card";
+@use "./src/scss/components/call-btn";
+@use "./src/scss/components/drawer";
+@use "./src/scss/components/burger";
+@use "./src/scss/components/navbar";
+@use "./src/scss/components/social-list";
+@use "./src/scss/components/progress-bar";
 
 /* List of sections used on this page: */
-
+@use "./src/scss/sections/section-primary";
+@use "./src/scss/sections/promo-tabs";
+@use "./src/scss/sections/promo-slide";
+@use "./src/scss/sections/do-steps";
+@use "./src/scss/sections/promo-section";
+@use "./src/scss/sections/quiz";
 

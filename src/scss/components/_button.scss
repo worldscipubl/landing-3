@@ -24,8 +24,55 @@
   text-decoration: none;
   transition: all 250ms;
 
+  background-color: transparent;
+  border: 1px solid transparent;
+
+  &_size {
+
+  }
+
+  /* Серая для меню*/
+  &_menu {
+    border-radius: 6px;
+    border-width: 0;
+    overflow: hidden;
+    padding: 14px 24px;
+    background: #f5f5f5;
+    box-shadow: none;
+    color: $dark-blue;
+    text-align: left;
+
+    &:hover {
+      background: #E1E1E1;
+      color: $dark-blue;
+    }
+
+    @media screen and (max-width: 420px) {
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 420px) {
+      font-size: 12px;
+    }
+  }
+
+  /* Зеленая для квиза*/
+  &_quiz {
+    border-radius: 1.25em;
+    overflow: hidden;
+    padding: 0.8em 1em;
+    background-color: transparent;
+    color: black;
+    border: 1px solid $green;
+
+    &:hover {
+      background-color: $green;
+      color: white;
+    }
+  }
+
   /* Серая для табов*/
-  &_primary {
+  &_primary, &_outline_primary {
     background-color: $gray;
     border-color: $gray;
     color: $dark-blue;
@@ -49,7 +96,7 @@
   }
 
   /* Синия для ссылкок на Facebook*/
-  &_secondary {
+  &_secondary, &_outline_secondary {
     background-color: $light-blue;
     border-color: $light-blue;
     color: white;
@@ -63,7 +110,7 @@
   }
 
   /* Зеленная для квиза*/
-  &_success {
+  &_success, &_outline_success {
     background-color: $green;
     border-color: $green;
     color: white;
@@ -72,6 +119,7 @@
     &:hover {
       background-color: #{darker($green, 1)};
       border-color: #{darker($green, 1)};
+      color: white;
     }
   }
 
@@ -82,5 +130,38 @@
 
   &_p {
     margin-top: auto;
+  }
+
+  &_fill {
+    width: 100%;
+  }
+
+  &_align {
+    &_left {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.button_outline {
+  /* Серая для табов*/
+  &_primary {
+    background-color: transparent;
+    border-color: $dark-blue;
+    color: $dark-blue;
+  }
+
+  /* Синия для ссылкок на Facebook*/
+  &_secondary {
+    background-color: transparent;
+    border-color: $light-blue;
+    color: $light-blue;
+  }
+
+  /* Зеленная для квиза*/
+  &_success {
+    background-color: transparent;
+    border-color: $green;
+    color: $green;
   }
 }

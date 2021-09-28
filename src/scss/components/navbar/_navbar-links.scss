@@ -1,0 +1,18 @@
+@use '../../global'as *;
+
+.nav-links {
+  width: 100%;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    & + & {
+      margin-top: 12px;
+
+      @media screen and (max-width: 375px) {
+        margin-top: 6px;
+      }
+    }
+  }
+}

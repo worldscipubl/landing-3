@@ -1,0 +1,39 @@
+@use '../../global'as *;
+
+.navbar-card {
+  @media screen and (max-width: 420px) {
+    margin-top: 6px;
+  }
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+
+    background-color: #E6F2FB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    transition: transform 300ms;
+
+    &:hover {
+      transform: scale(1.08);
+    }
+
+  }
+
+  &__label {
+    margin-top: 0.6em;
+
+    @media screen and (max-width: 340px) {
+      font-size: 12px;
+    }
+  }
+}

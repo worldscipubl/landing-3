@@ -1,0 +1,12 @@
+@use '../../global'as *;
+
+.quiz-section {
+  display: flex;
+  flex-direction: column;
+
+  &_bg {
+    &_gray {
+      background-color: #F5F5F5;
+    }
+  }
+}

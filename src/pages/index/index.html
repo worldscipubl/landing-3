@@ -2,19 +2,828 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Webpack Boilerplate Starter Template</title>
-    <meta name="description"
-          content="Simple starter webpack 5 project template boilerplate supporting SASS/PostCSS, Babel ES7, browser syncing, code linting. Easy project setup having multiple features and developer friendly tools.">
-    <meta name="keywords"
-          content="webpack, webpack-configuration, template, boilerplate, setup, html, css, sass, javascript">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Plamen Nikolov, WeAreAthlon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSP</title>
 </head>
 <body>
-<h2>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque facilis in itaque laudantium quae quas sed vel
-    veniam. Aperiam asperiores blanditiis deserunt distinctio eaque eligendi libero magni sed soluta voluptate!
-</h2>
-<img src="images/content/header.png" alt="">
+<!-- Шапка:  -->
+<header class="header header_bg_white" id="header">
+    <div class="header__inner">
+        <a class="header__logo header-logo"
+           href="/">
+            <img class="header-logo__img"
+                 src="images/content/logo/logo_black.svg"
+                 alt="Logo: World Sci Publ">
+            <h3 class="header-logo__label text
+                text_color_gray-blue
+                text_weight_bold">
+                Publication service<br>
+                World Sci Publ
+            </h3>
+        </a>
+        <ul class="header__action">
+            <li class="header__action-item header__action-item_call">
+                <a class="call-btn"
+                   id="header-call-btn"
+                   href="tel:+74951277926"
+                   data-formsended="call_1">
+                    <img class="call-btn__img"
+                         src="images/content/icons/phone-call.svg"
+                         alt="phone">
+                    <span class="text call-btn__label">
+                        +7 (495) 127 - 79 - 26
+                    </span>
+                </a>
+            </li>
+            <li class="header__action-item">
+                <button class="burger js-burger">
+                    <span class="burger__item"></span>
+                    <span class="burger__item"></span>
+                    <span class="burger__item"></span>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="drawer js-drawer">
+        <div class="drawer__overlay js-drawer-overlay"></div>
+        <div class="drawer__sidebar drawer__sidebar_pos_right">
+            <nav class="navbar navbar_bg_white">
+                <div class="navbar__inner">
+                    <h3 class="navbar__title text text_weight_bold text_color_gray-blue text_size_accent">
+                        Меню сервиса World Sci Publ
+                    </h3>
+                    <ul class="navbar__links nav-links">
+                        <li class="nav-links__item">
+                            <a class="button button_menu text text_color_gray-blue"
+                               href="/main/audit/"
+                               target="_blank">
+                                ⚙️ Подробный аудит статьи с рецензией
+                            </a>
+                        </li>
+                        <li class="nav-links__item">
+                            <button class="button button_menu text text_color_gray-blue"
+                                    data-show-popup="1"
+                                    data-step="1"
+                                    data-formsended="submit_application_">
+                                ⏱ Сроки и стоимость публикации
+                            </button>
+                        </li>
+                        <li class="nav-links__item">
+                            <a class="button button_menu text text_color_gray-blue"
+                               href="/main/promocode"
+                               target="_blank">
+                                💵 Промокод 100$ на первую публикацию
+                            </a>
+                        </li>
+                        <li class="nav-links__item">
+                            <a class="button button_menu text text_color_gray-blue"
+                               href="/main/cooperation"
+                               target="_blank">
+                                ✍🏼 Вакансия “редактор научных статей”
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar__cards">
+                        <li class="navbar__card navbar-card">
+                            <a href="/" class="navbar-card__link">
+                                <img class="navbar-card__img"
+                                     src="images/content/menu/site.svg"
+                                     alt="Личный кабинет">
+                                <span class="navbar-card__label text">
+                                Сайт
+                            </span>
+                            </a>
+                        </li>
+                        <li class="navbar__card navbar-card">
+                            <a href="/cabinet/" class="navbar-card__link">
+                                <img class="navbar-card__img"
+                                     src="images/content/menu/cabinet.svg"
+                                     alt="Личный кабинет">
+                                <span class="navbar-card__label text">
+                                Личный кабинет
+                            </span>
+                            </a>
+                        </li>
+                        <li class="navbar__card navbar-card">
+                            <a href="https://journal.worldscipubl.com"
+                               class="navbar-card__link">
+                                <img class="navbar-card__img"
+                                     src="images/content/menu/blog.svg"
+                                     alt="Блог">
+                                <span class="navbar-card__label text">
+                                Блог
+                            </span>
+                            </a>
+                        </li>
+                        <li class="navbar__card navbar-card">
+                            <a href="https://taplink.cc/world.sci.publ"
+                               class="navbar-card__link">
+                                <img class="navbar-card__img"
+                                     src="images/content/menu/favorites.svg"
+                                     alt="Избранное">
+                                <span class="navbar-card__label text">
+                                Избранное
+                            </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="navbar__banner navbar-banner">
+                        <h3 class="navbar-banner__title
+                                text text_color_gray-blue
+                                text_size_accent text_weight_bold">
+                            Чат-бот
+                        </h3>
+                        <h4 class="navbar-banner__subtitle text text_color_gray-blue text_weight_bold">
+                            Робот помощник автоматически предоставит:
+                        </h4>
+                        <p class="navbar-banner__description text text_color_gray-blue">
+                            – доступ к полезным материалам;<br>
+                            – информацию о продукте;<br>
+                            – чат со специалистом.<br>
+                        </p>
+                        <a class="navbar-banner__btn button button_secondary"
+                           href="https://m.me/worldscipubl" target="_blank">
+                            Запустить чат-бот
+                        </a>
+                        <img class="navbar-banner__bg" src="images/content/menu/bot.svg" alt="bot">
+                    </div>
+                    <div class="navbar__footer">
+                        <ul class="navbar__actions">
+                            <li class="navbar__actions-item">
+                                <a class="text text_color_gray-blue"
+                                   href="mailto:ask@worldscipubl.com">
+                                    ask@worldscipubl.com
+                                </a>
+                            </li>
+                            <li class="navbar__actions-item">
+                                <a class="text text_color_gray-blue"
+                                   href="tel:+74951277926">
+                                    +7 (495) 127 - 79 - 26
+                                </a>
+                            </li>
+                            <li class="navbar__actions-item">
+                                <ul class="social-list navbar__social">
+                                    <li class="social-list__item"><a href="https://teleg.run/worldscipubl"
+                                                                     target="_blank" rel="noreferrer"
+                                                                     class="social-list__link"><img
+                                            class="social-list__link-img"
+                                            src="https://camo.githubusercontent.com/f4b401dd7cd9b7840fd31acafd49e151a80e4c9600bf219934461b96dd98e013/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f74656c656772616d2e737667"
+                                            alt="telegram"></a></li>
+                                    <li class="social-list__item"><a href="https://vk.com/worldscipubl/" target="_blank"
+                                                                     rel="noreferrer" class="social-list__link"><img
+                                            class="social-list__link-img"
+                                            src="https://camo.githubusercontent.com/26be819fcce90f75668efeb7a432b969dcc35a1e4478149c3fcd48fda5b457c3/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f766b2e737667"
+                                            alt="vk"></a></li>
+                                    <li class="social-list__item"><a
+                                            href="https://api.whatsapp.com/send/?phone=%2B79086008126&amp;text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9D%D0%BE%D0%BC%D0%B5%D1%80+%D0%BC%D0%BE%D0%B5%D0%B9+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8%3A+undefined&amp;app_absent=0"
+                                            target="_blank" rel="noreferrer" class="social-list__link"><img
+                                            class="social-list__link-img"
+                                            src="https://camo.githubusercontent.com/945d32cdd8d51fe844ca8b2976914ae8786586607aee1cba24d7318e24b30411/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f77686174736170702e737667"
+                                            alt="whatsapp"></a></li>
+                                    <li class="social-list__item"><a
+                                            href="https://www.youtube.com/channel/UC9Wuvp-a1pZn_iHkPAFrwKA?view_as=subscriber"
+                                            target="_blank" rel="noreferrer" class="social-list__link"><img
+                                            class="social-list__link-img"
+                                            src="https://camo.githubusercontent.com/d54e97f5edde790381f7e62b217410df33e066a0dc8f692f2fc6b25fc1768b0c/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f796f75747562652e737667"
+                                            alt="YouTube"></a></li>
+                                    <li class="social-list__item"><a href="https://www.instagram.com/world.sci.publ/"
+                                                                     target="_blank" rel="noreferrer"
+                                                                     class="social-list__link"><img
+                                            class="social-list__link-img"
+                                            src="https://camo.githubusercontent.com/c9dacf0f25a1489fdbc6c0d2b41cda58b77fa210a13a886d6f99e027adfbd358/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f696e7374616772616d2e737667"
+                                            alt="instagram"></a></li>
+                                    <li class="social-list__item"><a href="https://www.facebook.com/worldscipubl/"
+                                                                     target="_blank" rel="noreferrer"
+                                                                     class="social-list__link"><img
+                                            class="social-list__link-img"
+                                            src="https://camo.githubusercontent.com/8f245234577766478eaf3ee72b0615e99bb9ef3eaa56e1c37f75692811181d5c/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f66616365626f6f6b2e737667"
+                                            alt="facebook"></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <a class="navbar__faq text text_color_gray-blue" href="#">
+                            F.A.Q.
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+</header>
+<!-- Секция 1: Опубликуйте научную статью -->
+<section class="promo-tabs container first-section js-promo-tabs">
+    <div class="promo-tabs__inner">
+        <ul class="promo-tabs__tabs">
+            <li class="promo-tabs__tab">
+                <button class="button button_primary promo-tabs__btn-tab active">
+                    Стоимость и сроки
+                </button>
+            </li>
+            <li class="promo-tabs__tab">
+                <button class="button button_primary promo-tabs__btn-tab">
+                    Процесс публикации
+                </button>
+            </li>
+            <li class="promo-tabs__tab">
+                <button class="button button_primary promo-tabs__btn-tab">
+                    Подробный аудит с рецензией
+                </button>
+            </li>
+            <li class="promo-tabs__tab">
+                <button class="button button_primary promo-tabs__btn-tab">
+                    Промокод 100$ на первую публикацию
+                </button>
+            </li>
+            <li class="promo-tabs__tab">
+                <button class="button button_primary promo-tabs__btn-tab">
+                    Вакансии
+                </button>
+            </li>
+        </ul>
+        <div class="promo-tabs__content">
+            <!-- 1 SLIDE -->
+            <section class="promo promo_effect active promo-tabs__page">
+                <div class="promo__body">
+                    <div class="promo__col promo__col_w60">
+                        <h2 class="promo-slide__title text text_size_title text_weight_bold text_color_gray-blue">
+                            Опубликуйте научную статью
+                            в рецензируемых журналах из Scopus
+                            и Web of Science <span class="text_color_green">за 12 месяцев</span>
+                        </h2>
+                        <p class="promo-slide__desc text text_size_accent">
+                            Подготовим исследование под требования и возьмем на себя весь <br>
+                            <span class="text_color_light-blue">процесс публикации.</span> Отправьте рукопись на оценку
+                            экспертам сервиса
+                            и отслеживайте прогресс в личном кабинете
+                        </p>
+                        <div class="promo-slide__btn-group">
+                            <button class="promo-slide__btn button button_secondary">
+                                Узнать стоимость и сроки
+                            </button>
+                        </div>
+                    </div>
+                    <div class="promo__col promo__col_w40">
+                        <img class="promo-slide__img"
+                             src="images/content/mockups/promocode.svg"
+                             alt="Узнать стоимость и сроки">
+                    </div>
+                </div>
+            </section>
+            <!-- 2 SLIDE -->
+            <section class="promo promo_effect promo-tabs__page">
+                <div class="promo__body">
+                    <div class="promo__col promo__col_w60">
+                        <h2 class="promo-slide__title text text_size_title text_weight_bold text_color_gray-blue">
+                            Скачайте презентацию публикационного процесса
+                            с помощью сервиса <span class="text_color_green">World Sci Publ</span>
+                        </h2>
+                        <p class="promo-slide__desc text text_size_accent">
+                            В презентации вы найдете:
+                        </p>
+                        <ul class="promo-slide__desc list list_color_green">
+                            <li class="text text_size_accent">
+                                что входит в каждый этап публикационного процесса,
+                            </li>
+                            <li class="text text_size_accent">
+                                список выполняющих работу и ответственных за каждый этап специалистов,
+                            </li>
+                            <li class="text text_size_accent">
+                                примеры итоговых документов каждого этапа.
+                            </li>
+                        </ul>
+                        <div class="promo-slide__btn-group">
+                            <button class="promo-slide__btn button button_secondary">
+                                Скачать презентацию
+                            </button>
+                        </div>
+                    </div>
+                    <div class="promo__col promo__col_w40">
+                        <img class="promo-slide__img"
+                             src="images/content/mockups/promocode.svg"
+                             alt="Узнать стоимость и сроки">
+                    </div>
+                </div>
+            </section>
+            <!-- 3 SLIDE -->
+            <section class="promo promo_effect promo-tabs__page">
+                <div class="promo__body">
+                    <div class="promo__col promo__col_w60">
+                        <h2 class="promo-slide__title text text_size_title text_weight_bold text_color_gray-blue">
+                            Закажите подробный аудит исследования и пошаговый план для публикации
+                            в <span class="text_color_green">Scopus/Web of Science</span>
+                        </h2>
+
+                        <p class="promo-slide__desc text text_size_accent">
+                            Рецензия от редактора и результаты аудита покажут уровень готовности статьи к началу
+                            публикационных работ.
+                        </p>
+
+                        <p class="promo-slide__desc text text_size_accent">
+                            Чем выше будет качество исходного материала, тем больше шансов быстрее пройти процесс
+                            публикации в журнал с необходимым для Вас рейтингом.
+                        </p>
+
+                        <div class="promo-slide__btn-group">
+                            <button class="promo-slide__btn button button_success">
+                                Загрузить статью на аудит
+                            </button>
+
+                            <button class="promo-slide__btn button button_success">
+                                Как проходит аудит?
+                            </button>
+                        </div>
+                    </div>
+                    <div class="promo__col promo__col_w40">
+                        <img class="promo-slide__img"
+                             src="https://picsum.photos/598/399"
+                             alt="Узнать стоимость и сроки">
+                    </div>
+                </div>
+            </section>
+            <!-- 4 SLIDE -->
+            <section class="promo promo_effect promo-tabs__page">
+                <div class="promo__body">
+                    <div class="promo__col promo__col_w60">
+                        <h2 class="promo-slide__title text text_size_title text_weight_bold text_color_gray-blue">
+                            Дарим 100$ на первую публикацию с помощью сервиса
+                            <span class="text_color_green">World Sci Publ</span>
+                        </h2>
+
+                        <p class="promo-slide__desc text text_size_accent">
+                            Получите промокод сейчас, даже если материал не готов к публикации.
+                        </p>
+
+                        <p class="promo-slide__desc text text_size_accent">
+                            Активируйте промокод в течении 2021 года.
+                        </p>
+
+                        <div class="promo-slide__btn-group">
+                            <button class="promo-slide__btn button button_success">
+                                Ввести промокод
+                            </button>
+
+                            <button class="promo-slide__btn button button_success">
+                                Получить промокод
+                            </button>
+                        </div>
+                    </div>
+                    <div class="promo__col promo__col_w40">
+                        <img class="promo-slide__img"
+                             src="https://picsum.photos/598/399"
+                             alt="Узнать стоимость и сроки">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+<!-- Секция 2: Получите публикацию -->
+<section class="promo container full-screen">
+    <div class="promo__header">
+        <h2 class="do-steps__title text text_weight_bold text_size_title">
+            Получите публикацию при помощи команды <br>
+            профессионалов <span class="text_color_green">World Sci Publ</span>
+        </h2>
+    </div>
+    <div class="promo__body steps-slider js-steps-slider">
+        <div class="promo__col">
+            <div class="step-card active">
+                <h3 class="step-card__title text text_size_accent text_weight_bold">
+                    1 шаг
+                </h3>
+                <div class="step-card__inner">
+                    <p class="step-card__desc text text_size_accent ">
+                        Подробный аудит и подготовка статьи при помощи <span
+                            class="text_color_green">западных ученых</span>
+                    </p>
+                    <a class="step-card__link text text_size_accent " href="#">
+                        Узнать больше
+                    </a>
+                </div>
+            </div>
+            <div class="step-card">
+                <h3 class="step-card__title text text_size_accent text_weight_bold">
+                    1 шаг
+                </h3>
+                <div class="step-card__inner">
+                    <p class="step-card__desc text text_size_accent ">
+                        Подробный аудит и подготовка статьи при помощи <span
+                            class="text_color_green">западных ученых</span>
+                    </p>
+                    <a class="step-card__link text text_size_accent " href="#">
+                        Узнать больше
+                    </a>
+                </div>
+            </div>
+            <div class="step-card">
+                <h3 class="step-card__title text text_size_accent text_weight_bold">
+                    1 шаг
+                </h3>
+                <div class="step-card__inner">
+                    <p class="step-card__desc text text_size_accent ">
+                        Подробный аудит и подготовка статьи при помощи <span
+                            class="text_color_green">западных ученых</span>
+                    </p>
+                    <a class="step-card__link text text_size_accent " href="#">
+                        Узнать больше
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="promo__col">
+            <img class="steps-slider__img"
+                 src="https://picsum.photos/598/399"
+                 alt="1 шаг">
+        </div>
+    </div>
+</section>
+<!-- Секция 3: Мы создаем условия -->
+<section class="promo container full-screen">
+    <div class="promo__header">
+        <h2 class="do-steps__title text text_weight_bold text_size_title">
+            Мы создаем условия, в которых авторы <br>
+            <span class="text_color_green">максимально защищены</span>
+        </h2>
+    </div>
+    <div class="promo__body">
+        <div class="promo__col">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/crRiVWm0FB4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+        <div class="promo__col">
+            <h3 class="text text_weight_bold text_size_accent">
+                Наша основная задача — сделать процесс публикации комфортным, понятным и прозрачным для автора
+            </h3>
+            <p class="text mt-1em text_size_accent">
+                Процесс публикации отлажен. Все необходимые доработки по
+                замечаниям независимых рецензентов, возникающие
+                на этапе рецензирования статьи в журнале, своевременно вносятся англоязычными специалистами, имеющими
+                опыт публикаций по вашему направлению.
+            </p>
+            <p class="text text_size_accent mt-1em mb-1em">
+                <span class="text_weight_bold">Миссия сервиса</span> выступать в роли связуещюго звена
+                в коммуникации между зарубежными и русскоязычными
+                исследователями
+            </p>
+            <button class="button button_secondary mt-a">
+                Получить презентацию
+            </button>
+        </div>
+    </div>
+</section>
+<!-- Секция 4: Рассчитаем стоимость -->
+<section class="quiz-section quiz_bg_gray full-screen">
+    <div class="quiz-section__inner container">
+        <div class="quiz-section__header">
+            <h2 class="text text_weight_bold text_size_title mt-1em">
+                Оцениваем научную составляющую и степень
+                готовности статьи уже <span class="text_color_green">на первых этапах</span>
+            </h2>
+        </div>
+        <div class="quiz-section__body">
+            <div class="quiz js-quiz">
+                <div class="quiz__header">
+                    <h2 class="quiz__title text text_align_center text_color_white text_weight_bold text_size_accent">
+                        Ответьте на несколько вопросов,
+                        это поможет нам рассчитать стоимость вашей публикации
+                    </h2>
+                </div>
+                <div class="quiz__body">
+                    <div class="quiz__card quiz-card">
+                        <div class="quiz-card__header">
+                            <h2 class="quiz-card__question text text_weight_bold text_size_default">
+                                1. В какие сроки Вам необходима публикация?
+                            </h2>
+                        </div>
+                        <ul class="quiz-card__body">
+                            <!--                            <li class="quiz-card__answer">-->
+                            <!--                                <button class="button button_fill button_quiz">answer-->
+                            <!--                                </button>-->
+                            <!--                            </li>-->
+                        </ul>
+                    </div>
+                    <div class="quiz__nav">
+                        <div class="quiz__progress quiz-progress">
+                            <p class="quiz-progress__title text">
+                                Готово: <span class="quiz-progress__score text_color_green">25%</span>
+                            </p>
+                            <div class="quiz-progress__bar progress-bar progress-bar_bg_green">
+                                <i class="progress-bar__indicator"></i>
+                            </div>
+                        </div>
+                        <button class="quiz__backward">
+                            <svg width="17" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="quiz__backward-img"
+                                      d="M6.6 13.8c.3.3.7.3 1 0 .3-.3.3-.7 0-1L2.4 7.7h14c.3 0 .6-.3.6-.7 0-.4-.3-.7-.7-.7h-14l5.3-5.1a.7.7 0 0 0 0-1 .7.7 0 0 0-1 0L.2 6.5 0 7c0 .2 0 .4.2.5l6.4 6.3Z"
+                                      fill="#E5E5E5"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Секция 5: Оцениваем научную составляющую -->
+<section class="promo container">
+    <div class="promo__header">
+        <h2 class="do-steps__title text text_weight_bold text_size_title">
+            Оцениваем научную составляющую и степень
+            готовности статьи уже <span class="text_color_green">на первых этапах</span>
+        </h2>
+    </div>
+    <div class="promo__body">
+        <div class="promo__col">
+            <img class=""
+                 src="https://picsum.photos/598/399"
+                 alt="Узнать стоимость и сроки">
+        </div>
+        <div class="promo__col">
+            <h3 class="text text_weight_bold text_size_accent">
+                Мы исключаем возможные причины отказа в публикации еще на этапе подготовки статьи
+            </h3>
+
+            <ul class="list list_color_green mt-1em">
+                <li class="text text_size_accent">
+                    Вам не нужно беспокоиться о переводе, оформлении или других критериях
+                </li>
+                <li class="text text_size_accent">
+                    11 этапов профессиональной доработки и сопровождение статьи сводят к минимуму вероятность отказа в
+                    публикации
+                </li>
+                <li class="text text_size_accent">
+                    При необходимости внесения корректировок после рецензирования в журнале, англоязычные редакторы
+                    внесут повторные изменения без дополнительных оплат
+                </li>
+            </ul>
+
+            <button class="button button_secondary mt-a">
+                Перейти в чат
+            </button>
+        </div>
+    </div>
+</section>
+<!-- Секция 6: Даем действительные -->
+<section class="guaranties section-prim container">
+    <div class="section-prim__header">
+        <h2 class="guaranties__title text text_weight_bold text_size_title">
+            Даем действительные гарантии <br>
+            <span class="text_color_green">и снижаем риски</span>
+        </h2>
+    </div>
+    <div class="section-prim__body">
+        <div class="guaranties__item">
+            <h3 class="text text_size_accent text_weight_bold">
+                Качество
+            </h3>
+            <p class="text text_size_accent mt-1em">
+                Мы гарантируем вам качество предоставляемых услуг по доработке и сопровождению статьи, несём
+                ответственность за выполнение всех сопутствующих работ.
+            </p>
+            <a class="text text_size_accent mt-1em" href="#">
+                Перейти в блог
+            </a>
+        </div>
+        <div class="guaranties__item">
+            <h3 class="text text_size_accent text_weight_bold">
+                Соответствуем научной этике
+            </h3>
+            <p class="text text_size_accent mt-1em">
+                Мы не платим взносы журналам, но вкладываем в профессиональную доработку статьи 80% от общего бюджета.
+                Мы заинтересованы только в успешном результате.
+            </p>
+            <a class="text text_size_accent mt-1em" href="#">
+                Перейти в блог
+            </a>
+        </div>
+        <div class="guaranties__item">
+            <h3 class="text text_size_accent text_weight_bold">
+                Договор
+            </h3>
+            <p class="text text_size_accent mt-1em">
+                Наш сервис работает не первый год, поэтому мы знаем все риски и минимизируем их, чтобы вы оставались
+                довольны сотрудничеством, а публикации соответствовали международным стандартам.
+            </p>
+            <a class="text text_size_accent mt-1em" href="#">
+                Перейти в блог
+            </a>
+        </div>
+    </div>
+</section>
+<!-- Секция 7:  Все сопутствующие работы -->
+<section class="features section-prim container">
+    <div class="section-prim__header">
+        <h2 class="guaranties__title text text_weight_bold text_size_title">
+            Все сопутствующие работы по подготовке <br>
+            рукописи к подаче мы <span class="text_color_green">берем на себя</span>
+        </h2>
+    </div>
+    <div class="section-prim__body">
+        <div class="features-grid">
+            <div class="features-grid__inner">
+                <div class="features-grid__item">
+                    <article class="features-card">
+                        <img class="features-card__icon"
+                             src="https://picsum.photos/45/45"
+                             alt="Перевод">
+                        <div class="features-card__body">
+                            <h3 class="text text_weight_bold text_size_accent">
+                                Перевод
+                            </h3>
+                            <p class="text text_size_default mt-05em">
+                                одна строчка
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="features-grid__item">
+                    <article class="features-card">
+                        <img class="features-card__icon"
+                             src="https://picsum.photos/45/45"
+                             alt="Экспертная оценка">
+                        <div class="features-card__body">
+                            <h3 class="text text_weight_bold text_size_accent">
+                                Экспертная оценка
+                            </h3>
+                            <p class="text text_size_default mt-05em">
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="features-grid__item">
+                    <article class="features-card">
+                        <img class="features-card__icon"
+                             src="https://picsum.photos/45/45"
+                             alt="Продвижение статьи">
+                        <div class="features-card__body">
+                            <h3 class="text text_weight_bold text_size_accent">
+                                Продвижение статьи
+                            </h3>
+                            <p class="text text_size_default mt-05em">
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="features-grid__item">
+                    <article class="features-card">
+                        <img class="features-card__icon"
+                             src="https://picsum.photos/45/45"
+                             alt="Первичное редактирование">
+                        <div class="features-card__body">
+                            <h3 class="text text_weight_bold text_size_accent">
+                                Первичное редактирование
+                            </h3>
+                            <p class="text text_size_default mt-05em">
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="features-grid__item">
+                    <article class="features-card">
+                        <img class="features-card__icon"
+                             src="https://picsum.photos/45/45"
+                             alt="Научное редактирование">
+                        <div class="features-card__body">
+                            <h3 class="text text_weight_bold text_size_accent">
+                                Научное редактирование
+                            </h3>
+                            <p class="text text_size_default mt-05em">
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="features-grid__item">
+                    <article class="features-card">
+                        <img class="features-card__icon"
+                             src="https://picsum.photos/45/45"
+                             alt="Переговоры с журналами">
+                        <div class="features-card__body">
+                            <h3 class="text text_weight_bold text_size_accent">
+                                Переговоры с журналами
+                            </h3>
+                            <p class="text text_size_default mt-05em">
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-prim__footer">
+        <button class="button button_secondary mt-a m-auto-ws">
+            Узнать сроки
+        </button>
+    </div>
+</section>
+<!-- Секция 8: Полностью прозрачный процесс -->
+
+<!-- Секция 10: Карточки с фичами -->
+<section class="features section-prim container full-screen">
+    <div class="section-prim__header">
+        <h2 class="guaranties__title text text_weight_bold text_size_title">
+            Все сопутствующие работы по подготовке <br>
+            рукописи к подаче мы <span class="text_color_green">берем на себя</span>
+        </h2>
+    </div>
+    <div class="section-prim__body">
+        <div class="features-grid">
+            <div class="features-grid__inner features-grid__inner_outline">
+                <div class="features-grid__item">
+                    <article class="features-card features-card_outline">
+                        <h3 class="text text_weight_bold text_size_title">
+                            250+
+                        </h3>
+                        <p class="text text_size_default mt-05em">
+                            англоговорящих специалистов со степенью Phd и опытом публикаций помогут достичь успешного
+                            результата в необходимые сроки
+                        </p>
+                    </article>
+                </div>
+                <div class="features-grid__item">
+                    <article class="features-card features-card_outline">
+                        <h3 class="text text_weight_bold text_size_title">
+                            250+
+                        </h3>
+                        <p class="text text_size_default mt-05em">
+                            англоговорящих специалистов со степенью Phd и опытом публикаций помогут достичь успешного
+                            результата в необходимые сроки
+                        </p>
+                    </article>
+                </div>
+                <div class="features-grid__item">
+                    <article class="features-card features-card_outline">
+                        <h3 class="text text_weight_bold text_size_title">
+                            250+
+                        </h3>
+                        <p class="text text_size_default mt-05em">
+                            англоговорящих специалистов со степенью Phd и опытом публикаций помогут достичь успешного
+                            результата в необходимые сроки
+                        </p>
+                    </article>
+                </div>
+                <div class="features-grid__item">
+                    <article class="features-card features-card_outline">
+                        <h3 class="text text_weight_bold text_size_title">
+                            250+
+                        </h3>
+                        <p class="text text_size_default mt-05em">
+                            англоговорящих специалистов со степенью Phd и опытом публикаций помогут достичь успешного
+                            результата в необходимые сроки
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Секция 11: Личный кабинет позволяет -->
+<section class="cabinet promo container ">
+    <div class="promo__header">
+        <h2 class="text text_weight_bold text_size_title">
+            Личный кабинет позволяет отслеживать процесс публикации
+            <span class="text_color_green">на всех этапах работы</span>
+        </h2>
+        <p class="text text_size_accent mt-1em">
+            Текст про то, что есть мобильная версия и есть пк и это очень удобно
+        </p>
+    </div>
+    <div class="promo__body">
+        <div class="promo__col">
+            <img class=""
+                 src="https://picsum.photos/598/399"
+                 alt="Узнать стоимость и сроки">
+        </div>
+        <div class="promo__col">
+            <img class=""
+                 src="https://picsum.photos/598/399"
+                 alt="Узнать стоимость и сроки">
+        </div>
+    </div>
+    <div class="promo__footer">
+        <button class="button button_secondary mt-2em m-auto-ws">
+            Зарегистрироваться
+        </button>
+    </div>
+</section>
+<!-- Секция 12: Бесплатно проанализируем -->
+<!-- Секция 13: Отзывы авторов о работе -->
+<!-- Секция 14: Рассчитаем стоимость -->
+<section class="quiz container">
+    <h1 class="text text_size_title mt-2em mb-1em">quiz</h1>
+    <h1 class="text text_size_title mt-2em mb-1em">quiz</h1>
+    <h1 class="text text_size_title mt-2em mb-1em">quiz</h1>
+    <h1 class="text text_size_title mt-2em mb-1em">quiz</h1>
+</section>
+<!-- Секция 14: FAQ -->
+
 </body>
 </html>
