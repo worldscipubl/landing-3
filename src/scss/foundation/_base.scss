@@ -23,6 +23,22 @@ $maxWidthContainer: $maxWidthContainer + 2 * $p-side;
   }
 }
 
+.container-small {
+  $maxWidthContainer: $maxWidthContainer * 0.6;
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $p-side;
+
+  @media screen and (min-width: $bp-large) {
+    max-width: #{get-vw($maxWidthContainer, $bp-large)};
+    padding: 0 #{get-vw($p-side, $bp-large)};
+  }
+
+  @media screen and (max-width: $bp-mobile) {
+    padding: 0 12px;
+  }
+}
+
 .container-full {
   max-width: 100%;
   margin: 0 auto;
@@ -55,7 +71,7 @@ $maxWidthContainer: $maxWidthContainer + 2 * $p-side;
 }
 
 .mt-2em {
-  margin-top: 1em;
+  margin-top: 2em;
 }
 
 .mt-05em {

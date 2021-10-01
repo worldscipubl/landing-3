@@ -1,0 +1,16 @@
+@use '../global'as *;
+
+.input {
+  @extend %text-default;
+  font-size: 16px;
+  display: block;
+  background: $white;
+  border: 1px solid $borderColor;
+  border-radius: 0.4em;
+  padding: 0.6em 0.8em;
+  outline: none;
+
+  &:focus {
+    border: 1px solid $outline-green;
+  }
+}

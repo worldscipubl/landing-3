@@ -44,18 +44,6 @@ $text-colors: ("black": #000,
         "red": red,
 );
 
-%text-default {
-  font-family: $fontMain;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 120%;
-
-  @media screen and (min-width: $bp-large) {
-    font-size: #{get-vw(14px, $bp-large)};
-  }
-}
-
 .text {
   @extend %text-default;
   color: map-get($text-colors, "black");

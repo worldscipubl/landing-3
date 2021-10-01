@@ -1,0 +1,98 @@
+@use '../global'as *;
+
+.footer {
+  background-color: $dark-blue;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  //
+  //@media screen and (max-width: $bp-tablet) {
+  //  padding: 16px;
+  //}
+}
+
+.footer-grid {
+  width: 100%;
+  min-height: 262px;
+  display: grid;
+  grid:
+  "logo links_1 links_2 contact about" 1fr
+  "desc links_1 social contact politics" 1fr / 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 24px;
+
+  @media screen and (min-width: $bp-large) {
+    grid-gap: 32px;
+  }
+
+  @media screen and (max-width: $bp-tablet) {
+    grid-gap: 32px;
+    grid:
+  "logo desc" 1fr
+  "links_1 links_2" 1fr
+  "social contact" 1fr
+  "politics about" 1fr / 1fr 1fr;
+  }
+
+  @media screen and (max-width: $bp-menu) {
+    grid-gap: 16px;
+  }
+}
+
+.footer-links {
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: 0.5em;
+    }
+  }
+}
+
+.logo {
+  display: block;
+  margin: 0 auto auto;
+  grid-area: logo;
+  object-position: center;
+  object-fit: contain;
+  width: 100%;
+}
+
+.links_1 {
+  grid-area: links_1;
+}
+
+.links_2 {
+  grid-area: links_2;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+.about {
+  grid-area: about;
+  text-align: right;
+  margin-bottom: auto;
+
+  @media screen and (max-width: $bp-tablet) {
+    margin-bottom: 0;
+    margin-top: auto;
+  }
+}
+
+.desc {
+  margin-bottom: auto;
+  grid-area: desc;
+}
+
+.social {
+  grid-area: social;
+}
+
+.politics {
+  grid-area: politics;
+  margin-top: auto;
+  text-align: right;
+
+  @media screen and (max-width: $bp-laptop) {
+    text-align: left;
+  }
+}

@@ -1,0 +1,32 @@
+@use '../global'as *;
+
+.faq-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.faq-form__textarea {
+  font-family: $fontMain;
+  width: 100%;
+  text-align: left;
+  resize: none;
+  overflow: auto;
+  vertical-align: top;
+  min-height: 93px;
+  outline: none;
+  margin-bottom: 1em;
+}
+
+.faq-form__submit-group {
+  display: flex;
+}
+
+.faq-form__submit-input {
+  flex: 4;
+}
+
+.faq-form__submit-btn {
+  flex: 1;
+  margin-left: 1em;
+}

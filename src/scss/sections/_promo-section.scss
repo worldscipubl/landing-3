@@ -16,6 +16,12 @@
       opacity: 1;
     }
   }
+
+  &_bg {
+    &_gray {
+      background-color: #F5F5F5;
+    }
+  }
 }
 
 .promo__inner {
@@ -30,14 +36,19 @@
 }
 
 .promo__body {
+  width: 100%;
   display: flex;
+}
+
+.promo__footer {
+  width: 100%;
 }
 
 .promo__col {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 50%;
+  flex: 1;
 
   &:last-child {
     padding-left: 36px;
@@ -50,4 +61,12 @@
   &_w40 {
     width: 40%;
   }
+}
+
+.promo__img {
+  object-fit: contain;
+  object-position: top center;
+  display: inline-block;
+  border-radius: 1em;
+  overflow: hidden;
 }
