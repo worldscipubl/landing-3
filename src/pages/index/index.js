@@ -7,6 +7,7 @@ import PromoTabs from '../../js/components/promo-tabs';
 import StepsSlider from '../../js/components/steps-slider';
 import Header from '../../js/components/header';
 import Quiz from '../../js/components/quiz';
+import StageSlider from '../../js/components/stage-slider';
 
 /* Your JS Code goes here */
 window.addEventListener('DOMContentLoaded', () => {
@@ -14,4 +15,5 @@ window.addEventListener('DOMContentLoaded', () => {
   StepsSlider();
   Header();
   Quiz();
+  StageSlider();
 });

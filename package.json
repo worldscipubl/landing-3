@@ -58,5 +58,10 @@
     "lint:js": "eslint --ext .js src/js/",
     "stats": "webpack --config config/webpack.prod.config.js --mode=production --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json"
   },
-  "target": "web"
+  "target": "web",
+  "dependencies": {
+    "@glidejs/glide": "^3.4.1",
+    "flickity": "^2.2.2",
+    "flickity-as-nav-for": "^2.0.1"
+  }
 }

@@ -1,0 +1,21 @@
+@use '../global'as *;
+
+.link {
+  @extend %text-default;
+  display: inline-flex;
+  align-items: center;
+
+  &_file {
+    &:before {
+      content: "";
+      background-image: url("/src/images/content/icons/file-pdf.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      height: 2.5em;
+      min-width: 2.5em;
+      margin-right: 0.5em;
+      margin-left: -0.5em;
+    }
+  }
+}

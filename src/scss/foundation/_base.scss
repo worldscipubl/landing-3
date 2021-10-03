@@ -82,6 +82,11 @@ $maxWidthContainer: $maxWidthContainer + 2 * $p-side;
   margin-bottom: 1em;
 }
 
+.mb-2em {
+  margin-bottom: 2em;
+}
+
+
 .full-screen {
   min-height: 100vh;
 }
