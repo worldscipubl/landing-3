@@ -1,0 +1,141 @@
+@use '../global' as *;
+
+.spoilers {
+  width: 100%;
+  counter-reset: counter-spoiler;
+  display: flex;
+  flex-direction: column;
+}
+
+.spoilers__item {
+  counter-increment: counter-spoiler;
+  margin-top: 1em;
+}
+
+.spoiler {
+  width: 100%;
+
+  &.active {
+    .spoiler__body {
+      display: flex;
+    }
+
+    .spoiler__label {
+      &:after {
+        content: "-";
+      }
+    }
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+
+    &:before {
+      display: inline;
+      content: "0" counter(counter-spoiler);
+      font-style: normal;
+      font-family: $fontMain;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 122%;
+      padding-right: 12px;
+      color: $green;
+
+      @media screen and (max-width: $bp-mobile) {
+        font-size: 16px;
+        padding-right: 12px;
+      }
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+
+    border-bottom: 2px solid #C4C4C4;
+    color: #000000;
+
+    background: transparent;
+    padding: 24px 18px 24px 0;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+
+    @media screen and (max-width: $bp-mobile) {
+      font-size: 14px;
+      padding: 21px 12px 21px 0px;
+    }
+
+    &:after {
+      content: "+";
+      float: right;
+      font-family: $fontMain;
+      font-weight: bold;
+      color: #C4C4C4;
+      font-size: 20px;
+    }
+  }
+
+  &__text {
+    font-style: normal;
+    font-family: $fontMain;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+
+    color: #000000;
+    @media screen and (max-width: $bp-mobile) {
+      font-size: 14px;
+    }
+  }
+
+  &__inner {
+    background: #FFF;
+    border: 2px solid #C4C4C4;
+    border-top: none;
+    padding: 20px;
+  }
+
+  &__body {
+    display: none;
+
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+
+    &:before {
+      display: inline;
+      content: "00";
+      font-style: normal;
+      font-family: $fontMain;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 122%;
+      padding-right: 12px;
+      color: transparent;
+
+      @media screen and (max-width: $bp-mobile) {
+        @include font-size(16px);
+        line-height: 122%;
+        padding-right: 12px;
+      }
+    }
+  }
+
+  & > input:checked + &__body {
+    display: flex;
+  }
+
+  & > input:checked + &__label {
+    &:after {
+      content: "-";
+    }
+  }
+}

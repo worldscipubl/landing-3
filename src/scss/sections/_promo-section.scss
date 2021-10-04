@@ -39,6 +39,7 @@
 .promo__body {
   width: 100%;
   display: flex;
+  justify-content: space-between;
 }
 
 .promo__footer {
@@ -50,6 +51,7 @@
   flex-direction: column;
   align-items: flex-start;
   flex: 1;
+  position: relative;
 
   &:last-child {
     padding-left: 36px;
@@ -61,6 +63,10 @@
 
   &_w40 {
     width: 40%;
+  }
+
+  &_by3 {
+    width: calc((100% / 3) + 12px);
   }
 }
 

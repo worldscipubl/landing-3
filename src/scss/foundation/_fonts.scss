@@ -97,6 +97,25 @@ $text-colors: ("black": #000,
     }
   }
 
+  &_decoration {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -0.25em;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: $green;
+      border-radius: 20px;
+    }
+  }
+
+  &_underline {
+    border-bottom: 1px solid $borderColor;
+  }
+
   &_p {
     margin-top: 1em;
   }

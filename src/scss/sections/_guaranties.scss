@@ -8,5 +8,5 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: calc(100% / 3);
+  width: calc((100% / 3) + 12px);
 }

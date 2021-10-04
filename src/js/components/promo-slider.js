@@ -5,18 +5,26 @@ const PromoSlider = () => {
 
   const initSlider = (slider) => {
     const slideContainer = slider.querySelector('.promo-slider__content');
+    const slides = slideContainer.querySelectorAll('.promo-slider__page');
     const tabsContainer = createTabsContainer();
     slider.insertBefore(tabsContainer, slideContainer);
 
-    const slides = slideContainer.querySelectorAll('.promo-slider__page');
-    slides.forEach((slide) => {
+    const addTabToContainer = (slide) => {
+      if (!slide) return;
+      slide.classList.add('promo-slider__page_init');
       const title = slide.getAttribute('data-title');
       const tab = createTab(title);
       tabsContainer.appendChild(tab);
-    });
+    };
 
-    initFlickity(slideContainer);
-    initFlickityNav(tabsContainer, slideContainer);
+    addTabToContainer(slides[0]);
+
+    window.addEventListener('load', () => {
+      tabsContainer.innerHTML = '';
+      slides.forEach((slide) => addTabToContainer(slide));
+      initFlickity(slideContainer);
+      initFlickityNav(tabsContainer, slideContainer);
+    });
   };
 
   const initFlickity = (sliderContainer) => new Flickity(sliderContainer, {

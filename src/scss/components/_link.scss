@@ -19,3 +19,43 @@
     }
   }
 }
+
+.arrow-link {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &:hover .arrow-link__arrow {
+    &:after {
+      right: 0;
+    }
+  }
+}
+
+.arrow-link__subtitle {
+  margin-top: 0.5em;
+  color: $borderColor;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.arrow-link__arrow {
+  color: transparent;
+  transform: rotate(-45deg) translateZ(0);
+  height: 1em;
+  overflow: hidden;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 150%;
+    width: 1em;
+    height: 1em;
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyLDYuOUw3LjQsMi41TDksMWw1LjIsNS4xYzEuMSwxLDEuMSwyLjcsMCwzLjdMOSwxNWwtMS41LTEuNUwxMiw5LjFIMWwwLTIuMUgxMnoiIGZpbGw9ImJsYWNrIi8+PC9zdmc+) no-repeat 50%/contain;
+    content: "";
+    transition: right .32s ease;
+  }
+}

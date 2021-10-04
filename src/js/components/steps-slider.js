@@ -2,15 +2,21 @@ const StepsSlider = () => {
   const sliders = document.querySelectorAll('.js-steps-slider');
 
   const initStepsSlider = (slider) => {
-    const stepsTitle = slider.querySelectorAll('.step-card__title');
+    const stepTitles = slider.querySelectorAll('.step-card__title');
+    const stepImgs = slider.querySelectorAll('.steps-slider__img');
+    let currentImg = null;
 
-    stepsTitle.forEach((step, index) => step.addEventListener('click', (e) => {
-      resetSteps();
-      stepsTitle[index].parentElement?.classList.add('active');
-    }));
+    stepTitles.forEach((step, index) => step.addEventListener('click',
+      () => {
+        resetSteps();
+        stepTitles[index].parentElement?.classList.add('active');
+        currentImg = stepImgs[index];
+        currentImg.classList.add('active');
+      }));
 
     const resetSteps = () => {
-      stepsTitle.forEach((step) => step.parentElement.classList.remove('active'));
+      stepTitles.forEach((step) => step.parentElement.classList.remove('active'));
+      stepImgs.forEach((step) => step.classList.remove('active'));
     };
   };
 
