@@ -11,14 +11,29 @@
   min-height: 86px;
   margin-bottom: 48px;
   flex: 1;
-  padding: 6px;
 }
 
 .stage-slider__content {
-  width: 100%;
+  width: 75%;
   margin-bottom: 64px;
   min-height: 400px;
   flex: 1;
+
+  .flickity-prev-next-button {
+    &.previous {
+      left: -48px;
+    }
+
+    &.next {
+      right: -48px;
+    }
+  }
+
+  .flickity-button {
+    background: #EAEAEA;
+    border: none;
+    color: #000;
+  }
 }
 
 .stage-slider__slide {
@@ -49,7 +64,7 @@
   justify-content: space-between;
   transition: background 150ms;
 
-  margin: 5px;
+  margin: 6px 12px;
 
   & .stage-slider__nav-card-img {
     object-position: center;

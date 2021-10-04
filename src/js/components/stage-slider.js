@@ -1,5 +1,4 @@
-import Flickity from 'flickity';
-import FlickityNav from 'flickity-as-nav-for';
+import Flickity from 'flickity-as-nav-for';
 import 'flickity/dist/flickity.min.css';
 
 const StageSlider = () => {
@@ -19,8 +18,9 @@ const StageSlider = () => {
     const flickitySlider = new Flickity(contentList, {
       cellAlign: 'left',
       draggable: false,
-      prevNextButtons: false,
+      prevNextButtons: true,
       pageDots: false,
+      initialIndex: 2,
     });
 
     const addNavbarItem = ({
@@ -43,11 +43,11 @@ const StageSlider = () => {
         preImg,
       });
     });
-    const flickitySliderNav = new FlickityNav(navbarList, {
+    const flickitySliderNav = new Flickity(navbarList, {
       asNavFor: contentList,
-      groupCells: true,
       contain: true,
       pageDots: false,
+      prevNextButtons: false,
     });
   };
 
