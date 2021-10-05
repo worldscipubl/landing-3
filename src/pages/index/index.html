@@ -1026,10 +1026,7 @@
                             Заполните данные для подробного аудита:
                         </h2>
                         <div class="audit-form__body">
-                            <!--                            <input class="field__input" name="journal"-->
-                            <!--                                   placeholder="Необходимый рейтинг журнала"-->
-                            <!--                                   type="text" required>-->
-                            <div class="field audit-form__input" data-error="">
+                            <div class="field audit-form__input">
                                 <div class="custom-select">
                                     <select class="custom-select__inner" name="rating">
                                         <option value="0" disabled selected>
@@ -1041,26 +1038,32 @@
                                         <option value="Q1">Q1 / 75-100%</option>
                                     </select>
                                 </div>
+                                <span class="field__error"></span>
                             </div>
-                            <div class="field audit-form__input" data-error="">
+                            <div class="field audit-form__input">
                                 <input class="field__input" name="theme" placeholder="Тематика статьи"
                                        type="text"
                                        required>
+                                <span class="field__error"></span>
                             </div>
-                            <div class="field audit-form__input" data-error="">
+                            <div class="field audit-form__input">
                                 <input class="field__input" name="email" placeholder="E-mail" type="email"
                                        required>
+                                <span class="field__error"></span>
                             </div>
-                            <div class="field audit-form__input" data-error="">
+                            <div class="field audit-form__input">
                                 <input class="field__input" name="phone" placeholder="Номер телефона" type="tel"
                                        required>
+                                <span class="field__error"></span>
                             </div>
-                            <div class="field audit-form__input" data-error="">
+                            <div class="field audit-form__input">
                                 <input class="field__input" name="name" placeholder="Имя" type="text" required>
+                                <span class="field__error"></span>
                             </div>
-                            <div class="field audit-form__input" data-error="">
+                            <div class="field audit-form__input">
                                 <input class="field__input" name="file"
                                        placeholder="Загрузить статью (.pdf .doc .docx)" type="file" required>
+                                <span class="field__error"></span>
                             </div>
                         </div>
                     </div>
@@ -1320,16 +1323,22 @@
         </div>
         <div class="promo__body">
             <form class="faq-form" action="#">
-                <textarea class="faq-form__textarea input text"
-                          placeholder="Введите свой вопрос"
-                          name="massage"
-                          required></textarea>
+                <div class="field">
+                    <textarea class="faq-form__textarea field__input text"
+                              placeholder="Введите свой вопрос"
+                              name="massage"
+                              required></textarea>
+                    <span class="field__error"></span>
+                </div>
                 <div class="faq-form__submit-group">
-                    <input class="faq-form__submit-input input text"
-                           placeholder="Email"
-                           type="email"
-                           name="email"
-                           required>
+                    <div class="field faq-form__submit-input">
+                        <input class="field__input text"
+                               placeholder="Email"
+                               type="email"
+                               name="email"
+                               required>
+                        <span class="field__error"></span>
+                    </div>
                     <button class="faq-form__submit-btn button button_success">Отправить</button>
                 </div>
             </form>
