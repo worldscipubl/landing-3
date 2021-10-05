@@ -16,42 +16,21 @@
   width: 100%;
 
   &.active {
+
+    .spoiler__inner {
+      max-height: 300em;
+      overflow: visible;
+    }
+
     .spoiler__body {
-      display: flex;
+      max-height: 300em;
+      overflow: visible;
+      opacity: 1;
     }
 
     .spoiler__label {
       &:after {
-        content: "-";
-      }
-    }
-  }
-
-  &__checkbox {
-    display: none;
-  }
-
-  &__header {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    cursor: pointer;
-
-    &:before {
-      display: inline;
-      content: "0" counter(counter-spoiler);
-      font-style: normal;
-      font-family: $fontMain;
-      font-weight: bold;
-      font-size: 36px;
-      line-height: 122%;
-      padding-right: 12px;
-      color: $green;
-
-      @media screen and (max-width: $bp-mobile) {
-        font-size: 16px;
-        padding-right: 12px;
+        transform: rotateZ(180deg) translateY(50%);
       }
     }
   }
@@ -66,7 +45,8 @@
     padding: 24px 18px 24px 0;
     overflow: hidden;
     width: 100%;
-    display: block;
+    display: flex;
+    position: relative;
 
     @media screen and (max-width: $bp-mobile) {
       font-size: 14px;
@@ -74,58 +54,23 @@
     }
 
     &:after {
-      content: "+";
-      float: right;
-      font-family: $fontMain;
-      font-weight: bold;
-      color: #C4C4C4;
-      font-size: 20px;
+      content: "";
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b3b3b3'%3E%3Cpath d='M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z'%3E%3C/path%3E%3C/svg%3E");
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      height: 1.5em;
+      width: 1.5em;
     }
   }
 
   &__text {
-    font-style: normal;
-    font-family: $fontMain;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 140%;
-
-    color: #000000;
     @media screen and (max-width: $bp-mobile) {
       font-size: 14px;
-    }
-  }
-
-  &__inner {
-    background: #FFF;
-    border: 2px solid #C4C4C4;
-    border-top: none;
-    padding: 20px;
-  }
-
-  &__body {
-    display: none;
-
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-
-    &:before {
-      display: inline;
-      content: "00";
-      font-style: normal;
-      font-family: $fontMain;
-      font-weight: bold;
-      font-size: 36px;
-      line-height: 122%;
-      padding-right: 12px;
-      color: transparent;
-
-      @media screen and (max-width: $bp-mobile) {
-        @include font-size(16px);
-        line-height: 122%;
-        padding-right: 12px;
-      }
     }
   }
 
@@ -138,4 +83,72 @@
       content: "-";
     }
   }
+}
+
+.spoiler__header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    display: inline;
+    content: "0" counter(counter-spoiler);
+    font-style: normal;
+    font-family: $fontMain;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 122%;
+    padding-right: 12px;
+    color: $green;
+
+    @media screen and (max-width: $bp-mobile) {
+      font-size: 16px;
+      padding-right: 12px;
+    }
+  }
+}
+
+.spoiler__body {
+  display: flex;
+  max-height: 0;
+  overflow: hidden;
+  will-change: max-height;
+  opacity: 0;
+  transition: max-height 400ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, opacity 550ms;
+
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+
+  &:before {
+    display: inline;
+    content: "00";
+    font-style: normal;
+    font-family: $fontMain;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 122%;
+    padding-right: 12px;
+    color: transparent;
+
+    @media screen and (max-width: $bp-mobile) {
+      @include font-size(16px);
+      line-height: 122%;
+      padding-right: 12px;
+    }
+  }
+}
+
+.spoiler__inner {
+  background: #FFF;
+  border: 2px solid #C4C4C4;
+  border-top: none;
+  padding: 20px;
+  //max-height: 0;
+  //overflow: hidden;
+  //transition: max-height 200ms;
 }

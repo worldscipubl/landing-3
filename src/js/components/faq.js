@@ -3,12 +3,18 @@ const FaqSpoiler = () => {
 
   const initFaqSpoiler = (faq) => {
     const spoilers = faq.querySelectorAll('.spoiler');
+    let activeSpoiler = null;
 
     spoilers.forEach((spoiler) => {
       spoiler.addEventListener('click', () => {
-        console.log('spoiles');
-        resetSpoilers(spoilers);
-        spoiler.classList.add('active');
+        if (activeSpoiler !== spoiler) {
+          resetSpoilers(spoilers);
+          spoiler.classList.add('active');
+          activeSpoiler = spoiler;
+        } else {
+          spoiler.classList.remove('active');
+          activeSpoiler = null;
+        }
       });
     });
   };
