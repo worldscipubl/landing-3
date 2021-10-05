@@ -9,18 +9,29 @@
   border-radius: 12px;
   overflow: hidden;
 
-  width: 75%;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .quiz__header {
   background-color: $green;
   padding: 2em;
+
+  @media screen and (max-width: $bp-tablet) {
+    padding: 2em 16px;
+  }
+
+  @media screen and (max-width: $bp-mobile) {
+    padding: 1em 14px;
+  }
 }
 
 .quiz__title {
   width: 75%;
   margin: 0 auto;
+
+  @media screen and (max-width: $bp-tablet) {
+    width: 100%;
+  }
 }
 
 .quiz__body {
@@ -29,6 +40,14 @@
   min-height: 10em;
   padding: 48px 64px 36px;
   flex-grow: 1;
+
+  @media screen and (max-width: $bp-tablet) {
+    padding: 28px 16px;
+  }
+
+  @media screen and (max-width: $bp-mobile) {
+    padding: 28px 14px;
+  }
 }
 
 .quiz__cards {

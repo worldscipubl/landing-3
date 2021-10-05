@@ -20,6 +20,11 @@
   &__btn {
     margin: 1em 0;
     width: 46%;
+
+    @media screen and (max-width: $bp-mobile) {
+      margin: 1em auto;
+      width: 100%;
+    }
   }
 
   &__bg {
@@ -28,5 +33,9 @@
     position: absolute;
     bottom: 0;
     right: 0;
+
+    @media screen and (max-width: $bp-mobile) {
+      display: none;
+    }
   }
 }

@@ -213,7 +213,9 @@
     </div>
 </header>
 <!-- Секция 1: Опубликуйте научную статью -->
-<section class="promo container first-section">
+<!-- TODO: добавить флажочек -->
+<!-- TODO: вставить изображения -->
+<section class="promo container first-section pb-section">
     <div class="promo__inner promo-slider js-promo-slider">
         <div class="promo-slider__content">
             <!-- 1 SLIDE -->
@@ -239,7 +241,7 @@
                     </div>
                     <div class="promo__col promo__col_w40">
                         <img class="promo-slide__img"
-                             src="images/content/mockups/promocode.svg"
+                             src="images/content/mockups/web-site.svg"
                              alt="Узнать стоимость и сроки">
                     </div>
                 </div>
@@ -274,8 +276,16 @@
                     </div>
                     <div class="promo__col promo__col_w40">
                         <img class="promo-slide__img"
-                             src="images/content/mockups/promocode.svg"
-                             alt="Узнать стоимость и сроки">
+                             src="images/content/process/process.jpg"
+                             data-src="images/content/process/process.jpg"
+                             data-srcset="images/content/process/process@05x.jpg 0.5x,
+                             images/content/process/process@075x.jpg 0.75x,
+                             images/content/process/process@2x.jpg 2.2x"
+
+                             srcset="images/content/process/process@05x.jpg 0.5x,
+                             images/content/process/process@075x.jpg 0.75x,
+                             images/content/process/process@2x.jpg 2.2x"
+                             alt="Процесс публикации">
                     </div>
                 </div>
             </section>
@@ -310,7 +320,7 @@
                     </div>
                     <div class="promo__col promo__col_w40">
                         <img class="promo-slide__img"
-                             src="https://picsum.photos/598/399"
+                             src="images/content/mockups/tech_audit.svg"
                              alt="Узнать стоимость и сроки">
                     </div>
                 </div>
@@ -344,8 +354,8 @@
                     </div>
                     <div class="promo__col promo__col_w40">
                         <img class="promo-slide__img"
-                             src="https://picsum.photos/598/399"
-                             alt="Узнать стоимость и сроки">
+                             src="images/content/mockups/promocode.svg"
+                             alt="промокод">
                     </div>
                 </div>
             </section>
@@ -353,9 +363,12 @@
     </div>
 </section>
 <!-- Секция 2: Получите публикацию -->
-<section class="promo container full-screen">
+<!-- TODO: Сделать анимацию для ссылки "Узнать больше" -->
+<!-- TODO: Добавить анимацию при наведении на ссылку -->
+<!-- TODO: Вставить изображения шагов -->
+<section class="promo container pb-section">
     <div class="promo__header">
-        <h2 class="do-steps__title text text_weight_bold text_size_title">
+        <h2 class="text text_weight_bold text_size_title">
             Получите публикацию при помощи команды <br>
             профессионалов <span class="text_color_green">World Sci Publ</span>
         </h2>
@@ -378,12 +391,12 @@
             </div>
             <div class="step-card">
                 <h3 class="step-card__title text text_size_accent text_weight_bold">
-                    1 шаг
+                    2 шаг
                 </h3>
                 <div class="step-card__inner">
-                    <p class="step-card__desc text text_size_accent ">
-                        Подробный аудит и подготовка статьи при помощи <span
-                            class="text_color_green">западных ученых</span>
+                    <p class="step-card__desc text text_size_accent">
+                        Продвижение в качественные международные журналы <span
+                            class="text_color_green">нужного рейтинга</span>
                     </p>
                     <a target="_blank" class="step-card__link text text_size_accent " href="#">
                         Узнать больше
@@ -392,12 +405,12 @@
             </div>
             <div class="step-card">
                 <h3 class="step-card__title text text_size_accent text_weight_bold">
-                    1 шаг
+                    3 шаг
                 </h3>
                 <div class="step-card__inner">
-                    <p class="step-card__desc text text_size_accent ">
-                        Подробный аудит и подготовка статьи при помощи <span
-                            class="text_color_green">западных ученых</span>
+                    <p class="step-card__desc text text_size_accent">
+                        Сопровождение до индексации статьи в базах данных Scopus или Web of Science.
+                        <span class="text_color_green">С гарантией того, что журнал не вылетит.</span>
                     </p>
                     <a target="_blank" class="step-card__link text text_size_accent " href="#">
                         Узнать больше
@@ -408,34 +421,37 @@
         <div class="promo__col">
             <div class="steps-slider__img-container">
                 <img class="steps-slider__img active"
-                     src="images/content/menu/cabinet.svg"
+                     src="images/content/mockups/tech_audit.svg"
                      alt="1 шаг">
                 <img class="steps-slider__img"
-                     src="https://picsum.photos/598/399"
+                     src="images/content/mockups/editing.svg"
                      alt="1 шаг">
                 <img class="steps-slider__img"
-                     src="images/content/menu/cabinet.svg"
+                     src="images/content/mockups/dogovor.svg"
                      alt="1 шаг">
             </div>
         </div>
     </div>
 </section>
 <!-- Секция 3: Мы создаем условия -->
-<section class="promo container full-screen">
+<section class="promo container pb-section">
     <div class="promo__header">
-        <h2 class="do-steps__title text text_weight_bold text_size_title">
+        <h2 class="text text_weight_bold text_size_title">
             Мы создаем условия, в которых авторы <br>
             <span class="text_color_green">максимально защищены</span>
         </h2>
     </div>
     <div class="promo__body">
-        <div class="promo__col">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/crRiVWm0FB4"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+        <div class="promo__col promo__col_w60">
+            <div class="promo__iframe-wrapper">
+                <iframe class="promo__iframe" src="https://www.youtube.com/embed/crRiVWm0FB4"
+                        title="Мы создаем условия, в которых авторы максимально защищены" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </div>
         </div>
-        <div class="promo__col">
+        <div class="promo__col promo__col_w40">
             <h3 class="text text_weight_bold text_size_accent">
                 Наша основная задача — сделать процесс публикации комфортным, понятным и прозрачным для автора
             </h3>
@@ -457,10 +473,12 @@
     </div>
 </section>
 <!-- Секция 4: Рассчитаем стоимость -->
-<section class="quiz-section quiz-section_bg_gray full-screen">
+<!-- TODO: добавить слайд с формой -->
+<!-- TODO: добавить отбивку -->
+<section class="quiz-section quiz-section_bg_gray pb-section">
     <div class="promo container">
         <div class="promo__header">
-            <h2 class="text text_weight_bold text_size_title mt-1em">
+            <h2 class="text text_weight_bold text_size_title mt-2em">
                 Рассчитаем стоимость публикации вашей рукописи, <br>
                 исходя из необходимых <span class="text_color_green">показателей журнала</span>
             </h2>
@@ -510,7 +528,7 @@
     </div>
 </section>
 <!-- Секция 5: Оцениваем научную составляющую -->
-<section class="promo container full-screen">
+<section class="promo container pb-section">
     <div class="promo__header">
         <h2 class="text text_weight_bold text_size_title mt-2em">
             Оцениваем научную составляющую и степень
@@ -519,7 +537,7 @@
     </div>
     <div class="promo__body">
         <div class="promo__col promo__col_w60">
-            <img class="promo__img"
+            <img class="promo__img promo__img_filter"
                  src="images/content/photo/group_photo.jpg"
                  data-src="images/content/photo/group_photo.jpg"
                  data-srcset="images/content/photo/group_photo@0.5x.jpg 0.5x,
@@ -536,8 +554,7 @@
             <h3 class="text text_weight_bold text_size_accent">
                 Мы исключаем возможные причины отказа в публикации еще на этапе подготовки статьи
             </h3>
-
-            <ul class="list list_color_green mt-1em">
+            <ul class="list list_color_green mt-1em mb-2em">
                 <li class="text text_size_accent">
                     Вам не нужно беспокоиться о переводе, оформлении или других критериях
                 </li>
@@ -550,7 +567,6 @@
                     внесут повторные изменения без дополнительных оплат
                 </li>
             </ul>
-
             <button class="button button_secondary button_icon_fb mt-a">
                 Перейти в чат
             </button>
@@ -617,7 +633,7 @@
     </div>
 </section>
 <!-- Секция 7:  Все сопутствующие работы -->
-<section class="promo container full-screen">
+<section class="promo container pb-section">
     <div class="promo__header">
         <h2 class="text text_weight_bold text_size_title mt-1em">
             Все сопутствующие работы по подготовке <br>
@@ -630,14 +646,14 @@
                 <div class="features-grid__item">
                     <article class="features-card">
                         <img class="features-card__icon"
-                             src="https://picsum.photos/45/45"
+                             src="images/content/features/translation.svg"
                              alt="Перевод">
                         <div class="features-card__body">
                             <h3 class="text text_weight_bold text_size_accent">
                                 Перевод
                             </h3>
                             <p class="text text_size_default mt-05em">
-                                одна строчка
+                                Перевод статьи осуществляется в несколько этапов.
                             </p>
                         </div>
                     </article>
@@ -645,14 +661,14 @@
                 <div class="features-grid__item">
                     <article class="features-card">
                         <img class="features-card__icon"
-                             src="https://picsum.photos/45/45"
+                             src="images/content/features/badge.svg"
                              alt="Экспертная оценка">
                         <div class="features-card__body">
                             <h3 class="text text_weight_bold text_size_accent">
                                 Экспертная оценка
                             </h3>
                             <p class="text text_size_default mt-05em">
-                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                Заранее получаем ценные рекомендации, что сокращает время публикации.
                             </p>
                         </div>
                     </article>
@@ -660,14 +676,14 @@
                 <div class="features-grid__item">
                     <article class="features-card">
                         <img class="features-card__icon"
-                             src="https://picsum.photos/45/45"
+                             src="images/content/features/promote.svg"
                              alt="Продвижение статьи">
                         <div class="features-card__body">
                             <h3 class="text text_weight_bold text_size_accent">
                                 Продвижение статьи
                             </h3>
                             <p class="text text_size_default mt-05em">
-                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                Подготовка и подача статьи по индивидуальным требованиям журнала.
                             </p>
                         </div>
                     </article>
@@ -675,14 +691,14 @@
                 <div class="features-grid__item">
                     <article class="features-card">
                         <img class="features-card__icon"
-                             src="https://picsum.photos/45/45"
+                             src="images/content/features/writing.svg"
                              alt="Первичное редактирование">
                         <div class="features-card__body">
                             <h3 class="text text_weight_bold text_size_accent">
                                 Первичное редактирование
                             </h3>
                             <p class="text text_size_default mt-05em">
-                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                Поможем с подготовкой исследования до начальных требований к публикации.
                             </p>
                         </div>
                     </article>
@@ -690,14 +706,14 @@
                 <div class="features-grid__item">
                     <article class="features-card">
                         <img class="features-card__icon"
-                             src="https://picsum.photos/45/45"
+                             src="images/content/features/certificate.svg"
                              alt="Научное редактирование">
                         <div class="features-card__body">
                             <h3 class="text text_weight_bold text_size_accent">
                                 Научное редактирование
                             </h3>
                             <p class="text text_size_default mt-05em">
-                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                Действующий англоязычный ученый вносит необходимые правки.
                             </p>
                         </div>
                     </article>
@@ -705,14 +721,14 @@
                 <div class="features-grid__item">
                     <article class="features-card">
                         <img class="features-card__icon"
-                             src="https://picsum.photos/45/45"
+                             src="images/content/features/conversation.svg"
                              alt="Переговоры с журналами">
                         <div class="features-card__body">
                             <h3 class="text text_weight_bold text_size_accent">
                                 Переговоры с журналами
                             </h3>
                             <p class="text text_size_default mt-05em">
-                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                Внесение доработок, повторные подачи, сопровождение.
                             </p>
                         </div>
                     </article>
@@ -727,7 +743,7 @@
     </div>
 </section>
 <!-- Секция 8: Полностью прозрачный процесс -->
-<section class="promo promo_bg_gray full-screen">
+<section class="promo promo_bg_gray pb-section">
     <div class="promo__header container">
         <h2 class="text text_weight_bold text_size_title mt-1em">
             Полностью прозрачный процесс публикации: <br>
@@ -735,8 +751,8 @@
         </h2>
     </div>
     <div class="promo__body stage-slider js-stage-slider">
-        <ul class="stage-slider__content container">
-            <li class="stage-slider__slide"
+        <ul class="stage-slider__content">
+            <li class="container stage-slider__slide"
                 data-pre-title="Обучение 1"
                 data-pre-img="images/content/mockups/promocode.svg">
                 <div class="stage-slider__slide-inner">
@@ -770,7 +786,7 @@
                     </button>
                 </div>
             </li>
-            <li class="stage-slider__slide"
+            <li class="container stage-slider__slide"
                 data-pre-title="Обучение 2"
                 data-pre-img="images/content/mockups/promocode.svg">
                 <div class="stage-slider__slide-inner">
@@ -804,7 +820,7 @@
                     </button>
                 </div>
             </li>
-            <li class="stage-slider__slide"
+            <li class="container stage-slider__slide"
                 data-pre-title="Обучение 3"
                 data-pre-img="images/content/mockups/promocode.svg">
                 <div class="stage-slider__slide-inner">
@@ -838,7 +854,7 @@
                     </button>
                 </div>
             </li>
-            <li class="stage-slider__slide"
+            <li class="container stage-slider__slide"
                 data-pre-title="Обучение 4"
                 data-pre-img="images/content/mockups/promocode.svg">
                 <div class="stage-slider__slide-inner">
@@ -872,7 +888,7 @@
                     </button>
                 </div>
             </li>
-            <li class="stage-slider__slide"
+            <li class="container stage-slider__slide"
                 data-pre-title="Обучение 5"
                 data-pre-img="images/content/mockups/promocode.svg">
                 <div class="stage-slider__slide-inner">
@@ -910,11 +926,11 @@
     </div>
 </section>
 <!-- Секция 9: Карточки с фичами -->
-<section class="promo promo_bg_gray">
-    <div class="promo__inner container">
+<section class="promo promo_bg_gray pb-section">
+    <div class="promo__inner">
         <div class="features-grid">
-            <div class="features-grid__inner features-grid__inner_outline">
-                <div class="features-grid__item">
+            <div class="features-grid__inner features-grid__inner_slider container js-feature-slider">
+                <div class="features-grid__item features-grid__item_slider">
                     <article class="features-card features-card_outline">
                         <h3 class="text text_weight_bold text_size_title">
                             250+
@@ -925,7 +941,7 @@
                         </p>
                     </article>
                 </div>
-                <div class="features-grid__item">
+                <div class="features-grid__item features-grid__item_slider">
                     <article class="features-card features-card_outline">
                         <h3 class="text text_weight_bold text_size_title">
                             250+
@@ -936,7 +952,7 @@
                         </p>
                     </article>
                 </div>
-                <div class="features-grid__item">
+                <div class="features-grid__item features-grid__item_slider">
                     <article class="features-card features-card_outline">
                         <h3 class="text text_weight_bold text_size_title">
                             250+
@@ -947,7 +963,7 @@
                         </p>
                     </article>
                 </div>
-                <div class="features-grid__item">
+                <div class="features-grid__item features-grid__item_slider">
                     <article class="features-card features-card_outline">
                         <h3 class="text text_weight_bold text_size_title">
                             250+
@@ -963,7 +979,7 @@
     </div>
 </section>
 <!-- Секция 10: Личный кабинет позволяет -->
-<section class="promo promo_bg_gray full-screen">
+<section class="promo promo_bg_gray pb-section">
     <div class="promo__inner container">
         <div class="promo__header">
             <h2 class="text text_weight_bold text_size_title mt-1em">
@@ -977,12 +993,12 @@
         <div class="promo__body">
             <div class="promo__col">
                 <img class="promo__img"
-                     src="https://picsum.photos/598/399"
+                     src="images/content/mockups/iphone.svg"
                      alt="Узнать стоимость и сроки">
             </div>
             <div class="promo__col">
                 <img class="promo__img"
-                     src="https://picsum.photos/598/399"
+                     src="images/content/mockups/web-site.svg"
                      alt="Узнать стоимость и сроки">
             </div>
         </div>
@@ -994,11 +1010,11 @@
     </div>
 </section>
 <!-- Секция 11: Бесплатный подробный аудит -->
-<section class="promo promo_bg_gray full-screen">
+<section class="promo promo_bg_gray pb-section">
     <div class="promo__inner container">
         <div class="promo__header">
             <h2 class="text text_weight_bold text_size_title mt-1em">
-                Бесплатный подробный аудит статьи и расчет стоимости <br>
+                Бесплатный подробный аудит статьи и расчет стоимости
                 <span class="text_color_green">необходимых услуг</span>
             </h2>
         </div>
@@ -1010,55 +1026,84 @@
                             Заполните данные для подробного аудита:
                         </h2>
                         <div class="audit-form__body">
-                            <input class="audit-form__input input" name="journal"
-                                   placeholder="Необходимый рейтинг журнала"
-                                   type="text" required>
-                            <input class="audit-form__input input" name="theme" placeholder="Тематика статьи"
-                                   type="text"
-                                   required>
-                            <input class="audit-form__input input" name="email" placeholder="E-mail" type="email"
-                                   required>
-                            <input class="audit-form__input input" name="phone" placeholder="Номер телефона" type="tel"
-                                   required>
-                            <input class="audit-form__input input" name="name" placeholder="Имя" type="text" required>
-                            <input class="audit-form__input input" name="file"
-                                   placeholder="Загрузить статью (.pdf .doc .docx)" type="file" required>
+                            <!--                            <input class="field__input" name="journal"-->
+                            <!--                                   placeholder="Необходимый рейтинг журнала"-->
+                            <!--                                   type="text" required>-->
+                            <div class="field audit-form__input" data-error="">
+                                <div class="custom-select">
+                                    <select class="custom-select__inner" name="rating">
+                                        <option value="0" disabled selected>
+                                            Необходимый рейтинг журнала
+                                        </option>
+                                        <option value="Q4">Q4 / 0-24%</option>
+                                        <option value="Q3">Q3 / 25-49%</option>
+                                        <option value="Q2">Q2 / 50-74%</option>
+                                        <option value="Q1">Q1 / 75-100%</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="field audit-form__input" data-error="">
+                                <input class="field__input" name="theme" placeholder="Тематика статьи"
+                                       type="text"
+                                       required>
+                            </div>
+                            <div class="field audit-form__input" data-error="">
+                                <input class="field__input" name="email" placeholder="E-mail" type="email"
+                                       required>
+                            </div>
+                            <div class="field audit-form__input" data-error="">
+                                <input class="field__input" name="phone" placeholder="Номер телефона" type="tel"
+                                       required>
+                            </div>
+                            <div class="field audit-form__input" data-error="">
+                                <input class="field__input" name="name" placeholder="Имя" type="text" required>
+                            </div>
+                            <div class="field audit-form__input" data-error="">
+                                <input class="field__input" name="file"
+                                       placeholder="Загрузить статью (.pdf .doc .docx)" type="file" required>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="promo__col">
-                <h3 class="text text_size_accent text_weight_bold">
-                    Загрузите научную статью
-                </h3>
-                <p class="text text_size_accent mt-1em">
-                    Проведем подробный аудит с рецензией, чтобы оценить возможность публикации вашей рукописи в журнале
-                    с необходимыми характеристиками. сформируем перечень требующихся доработок и рассчитем их стоимость.
-                </p>
-                <button class="button button_outline_success mt-1em">
-                    Как проходит аудит
-                </button>
+                <div class="promo__row">
+                    <h3 class="text text_size_accent text_weight_bold">
+                        Загрузите научную статью
+                    </h3>
+                    <p class="text text_size_accent mt-1em">
+                        Проведем подробный аудит с рецензией, чтобы оценить возможность публикации вашей рукописи в
+                        журнале
+                        с необходимыми характеристиками. сформируем перечень требующихся доработок и рассчитем их
+                        стоимость.
+                    </p>
+                    <button class="button button_outline_success mt-1em">
+                        Как проходит аудит
+                    </button>
+                </div>
             </div>
         </div>
     </div>
     </div>
 </section>
 <!-- Секция 12: Отзывы авторов о работе -->
-<section class="promo container full-screen">
+<section class="promo container pb-section">
     <div class="promo__header">
-        <h2 class="do-steps__title text text_weight_bold text_size_title mt-2em">
-            Отзывы авторов о работе с нашей
+        <h2 class="text text_weight_bold text_size_title mt-2em">
+            Отзывы авторов о работе с нашей <br>
             <span class="text_color_green">компанией</span>
         </h2>
     </div>
     <div class="promo__body">
-        <div class="promo__col">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/NABUxYJrI-M"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+        <div class="promo__col promo__col_w40">
+            <div class="promo__iframe-wrapper">
+                <iframe class="promo__iframe" src="https://www.youtube.com/embed/NABUxYJrI-M"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
         </div>
-        <div class="promo__col">
+        <div class="promo__col promo__col_w60">
             <h3 class="text text_weight_bold text_color_gray-blue text_size_accent">
                 Неёлова Евгения Юльевна <br>
                 <span class="text">Доцент ТИУ</span>
@@ -1075,11 +1120,11 @@
     </div>
 </section>
 <!-- Секция 13: Рассчитаем стоимость -->
-<section class="quiz-section quiz-section_bg_gray full-screen">
+<section class="quiz-section quiz-section_bg_gray pb-section">
     <div class="promo container">
         <div class="promo__header">
             <h2 class="text text_weight_bold text_size_title mt-1em">
-                Рассчитаем стоимость публикации вашей рукописи, <br>
+                Рассчитаем стоимость публикации вашей рукописи,
                 исходя из необходимых <span class="text_color_green">показателей журнала</span>
             </h2>
         </div>
@@ -1127,10 +1172,8 @@
         </div>
     </div>
 </section>
-
-
 <!-- Секция 14: FAQ -->
-<section class="promo container full-screen">
+<section class="promo container mb-2em">
     <div class="promo__header">
         <h2 class="text text_weight_bold text_size_title mt-2em">
             Ответы на
@@ -1264,8 +1307,6 @@
         </div>
     </div>
 </section>
-
-
 <!-- Секция 15: Задать вопрос -->
 <section class="promo promo_bg_gray pb-section">
     <div class="promo__inner container-small">

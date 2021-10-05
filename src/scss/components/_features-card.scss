@@ -15,7 +15,13 @@
 }
 
 .features-card__icon {
-
+  background-color: $green;
+  object-position: center;
+  object-fit: contain;
+  padding: 8px;
+  border-radius: 7px;
+  width: 45px;
+  height: 45px;
 }
 
 .features-card__body {

@@ -55,6 +55,8 @@
 }
 
 .header__action-item {
+  outline: none;
+
   & + & {
     margin-left: 12px;
     border-left: 1px solid #C4C4C4;

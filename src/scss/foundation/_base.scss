@@ -88,6 +88,14 @@ $maxWidthContainer: $maxWidthContainer + 2 * $p-side;
 
 .pb-section {
   padding-bottom: 160px;
+
+  @media screen and (max-width: $bp-tablet) {
+    padding-bottom: 90px;
+  }
+
+  @media screen and (max-width: $bp-mobile) {
+    padding-bottom: 56px;
+  }
 }
 
 

@@ -20,6 +20,11 @@
 
 .faq-form__submit-group {
   display: flex;
+
+  @media screen and (max-width: $bp-mobile) {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .faq-form__submit-input {
@@ -29,4 +34,8 @@
 .faq-form__submit-btn {
   flex: 1;
   margin-left: 1em;
+
+  @media screen and (max-width: $bp-mobile) {
+    margin: 12px 0;
+  }
 }

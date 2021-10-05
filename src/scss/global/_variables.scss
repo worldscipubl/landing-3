@@ -23,8 +23,9 @@ $bp-large: 1440px;
 $header-height: 58px;
 $navbar-width: 283px;
 
-$z-index-nav: 5;
-$z-index-header: 10;
+$z-index-select-items: 5;
+$z-index-nav: 10;
+$z-index-header: 15;
 $z-index-drop-down-menu: 20;
 
 %text-default {

@@ -9,6 +9,8 @@ import Quiz from '../../js/components/quiz';
 import PromoSlider from '../../js/components/promo-slider';
 import StageSlider from '../../js/components/stage-slider';
 import FaqSpoiler from '../../js/components/faq';
+import FeatureSlider from '../../js/components/feature-slider';
+import CustomSelect from '../../js/components/custom-select';
 
 /* Your JS Code goes here */
 window.addEventListener('DOMContentLoaded', () => {
@@ -18,6 +20,8 @@ window.addEventListener('DOMContentLoaded', () => {
   Header();
   Quiz();
   FaqSpoiler();
+  FeatureSlider();
+  CustomSelect();
 });
 
 window.addEventListener('load', () => {

@@ -9,6 +9,10 @@
   @media screen and (min-width: $bp-large) {
     font-size: #{get-vw(16px, $bp-large)};
   }
+
+  @media screen and (max-width: $bp-tablet) {
+    font-size: 14px;
+  }
 }
 
 .button {
@@ -49,11 +53,8 @@
       color: $dark-blue;
     }
 
-    @media screen and (max-width: 420px) {
-      font-size: 14px;
-    }
-
-    @media screen and (max-width: 420px) {
+    @media screen and (max-width: 380px) {
+      padding: 0.8em 0.765em;
       font-size: 12px;
     }
   }

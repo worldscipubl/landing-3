@@ -12,6 +12,11 @@
 }
 
 .quiz-section__body {
-  padding-bottom: 64px;
   flex-grow: 1;
+  width: 74%;
+  margin: 0 auto;
+
+  @media screen and (max-width: $bp-tablet) {
+    width: 100%;
+  }
 }

@@ -16,13 +16,14 @@
 @use "./src/scss/components/social-list";
 @use "./src/scss/components/progress-bar";
 @use "./src/scss/components/faq-form";
-@use "./src/scss/components/input";
+@use "../../scss/components/field";
 @use "./src/scss/components/audit-form";
 @use "./src/scss/components/stage-slider";
 @use "./src/scss/components/card";
 @use "./src/scss/components/link";
 @use "./src/scss/components/promo-slider";
 @use "./src/scss/components/spoilers";
+@use "./src/scss/components/custom-select";
 
 /* List of sections used on this page: */
 @use "./src/scss/sections/section-primary";

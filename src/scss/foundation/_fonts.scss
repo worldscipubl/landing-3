@@ -30,6 +30,15 @@ $text-sizes: (large: 64px,
         small: 9px,
 );
 
+$text-sizes-small: (large: 64px,
+        title: 18px,
+        subtitle: 16px,
+        accent: 14px,
+        default: 14px,
+        text: 12px,
+        small: 9px,
+);
+
 $text-colors: ("black": #000,
         "white": #FFF,
         "gray": #00000066,
@@ -57,6 +66,15 @@ $text-colors: ("black": #000,
 
         @media screen and (min-width: $bp-large) {
           font-size: #{get-vw($val, $bp-large)};
+        }
+      }
+    }
+
+    @media screen and (max-width: $bp-mobile) {
+      @each $size,
+      $val in $text-sizes-small {
+        &_#{$size} {
+          font-size: $val;
         }
       }
     }

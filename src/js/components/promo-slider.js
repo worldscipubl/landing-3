@@ -36,7 +36,8 @@ const PromoSlider = () => {
   const initFlickityNav = (sliderContainer, navForContainer) => new Flickity(sliderContainer, {
     asNavFor: navForContainer,
     cellAlign: 'left',
-    draggable: false,
+    draggable: true,
+    groupCells: true,
     contain: true,
     pageDots: false,
     prevNextButtons: false,
