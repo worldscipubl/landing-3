@@ -1,0 +1,48 @@
+@use '../global'as *;
+
+.form-promocode {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-promocode__header {
+  width: 100%;
+}
+
+.form-promocode__form {
+  margin-top: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: $bp-menu) {
+    flex-direction: column;
+  }
+}
+
+.form-promocode__input {
+  flex: 2;
+
+  &_submit {
+    flex: 1;
+    align-self: center;
+    width: 65%;
+  }
+
+  &:not(:first-child) {
+    margin-left: 0.5em;
+  }
+
+  @media screen and (max-width: $bp-menu) {
+    &:not(:first-child) {
+      margin-left: 0;
+      margin-top: 1em;
+    }
+  }
+}
+
+.form-promocode__footer {
+  margin-top: 1em;
+  width: 100%;
+}

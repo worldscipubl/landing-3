@@ -60,7 +60,7 @@ const StageSlider = () => {
   }) => {
     const tab = document.createElement('li');
     tab.classList.add('stage-slider__nav-card');
-    const html = `<h3 class="text text_weight_bold mt-1em">${preTitle}</h3><img class="stage-slider__nav-card-img" src="${preImg}" alt="${preTitle}">`;
+    const html = `<h3 class="stage-slider__nav-card-txt text text_weight_bold">${preTitle}</h3><img class="stage-slider__nav-card-img" src="${preImg}" alt="${preTitle}">`;
     tab.insertAdjacentHTML('beforeend', html);
     return tab;
   };

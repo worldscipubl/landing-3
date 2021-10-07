@@ -10,7 +10,8 @@ import PromoSlider from '../../js/components/promo-slider';
 import StageSlider from '../../js/components/stage-slider';
 import FaqSpoiler from '../../js/components/faq';
 import FeatureSlider from '../../js/components/feature-slider';
-import CustomSelect from '../../js/components/custom-select';
+import AuditFrom from '../../js/components/audit-form';
+import FaqForm from '../../js/components/faq-form';
 
 /* Your JS Code goes here */
 window.addEventListener('DOMContentLoaded', () => {
@@ -21,7 +22,8 @@ window.addEventListener('DOMContentLoaded', () => {
   Quiz();
   FaqSpoiler();
   FeatureSlider();
-  CustomSelect();
+  AuditFrom();
+  FaqForm();
 });
 
 window.addEventListener('load', () => {

@@ -23,9 +23,10 @@
 }
 
 .field__error {
+  @extend %text-default;
+  @include font-size(12px);
   display: none;
   color: red;
-  @include font-size(12px);
   padding-top: 0.4em;
 
   &.active {

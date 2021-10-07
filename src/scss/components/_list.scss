@@ -14,9 +14,12 @@ $list-colors: ("black": #000,
 );
 
 .list {
+  counter-reset: counter-list;
+
   & > li {
+    counter-increment: counter-list;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     margin-top: 0.8em;
   }
 
@@ -27,11 +30,14 @@ $list-colors: ("black": #000,
     height: 0.5em;
     border-radius: 50%;
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     line-height: 0.5em;
     color: white;
-    text-align: center;
     margin-right: 0.52em;
     flex: 0 0 auto;
+    margin-top: 0.4em;
   }
 
   &_color {
@@ -42,4 +48,25 @@ $list-colors: ("black": #000,
       }
     }
   }
+
+  &_counter {
+    & > li {
+      align-items: stretch;
+      margin-top: 1.5em;
+    }
+
+    & > li::before {
+      margin-top: 0;
+      font-family: $fontMain;
+      @include font-size(20px);
+      border-radius: 7px;
+      padding: 1em;
+      content: counter(counter-list);
+    }
+  }
+}
+
+.list__item-container {
+  display: flex;
+  flex-direction: column;
 }

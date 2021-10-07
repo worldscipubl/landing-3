@@ -1,4 +1,7 @@
 @use '../global'as *;
+@forward "./src/scss/components/field";
+@forward "./src/scss/components/field-upload";
+@forward "./src/scss/components/custom-select";
 
 .audit-form {
   width: 100%;
@@ -15,6 +18,11 @@
       padding: 24px 12px;
     }
   }
+
+  &_blur {
+    filter: blur(2px);
+    pointer-events: none;
+  }
 }
 
 .audit-form__inner {
@@ -24,19 +32,39 @@
   justify-content: space-between;
 }
 
-.audit-form__header {
+.audit-form__form {
   width: 100%;
   flex: 1;
-  align-self: center;
-  text-align: center;
-  margin-bottom: 1.42em;
-}
-
-.audit-form__body {
-  width: 100%;
-  flex: 5;
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  &.loading {
+    pointer-events: none;
+    opacity: 0.6;
+
+    .loader_form {
+      display: block;
+    }
+  }
+}
+
+.audit-form__submitted {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+
+  &.active {
+    display: flex;
+  }
+}
+
+.audit-form__sent-img {
+  object-fit: contain;
+  width: 72%;
+  margin: 0 auto 1em;
+  display: inline-block;
+  object-position: bottom center;
 }
 
 .audit-form__input {

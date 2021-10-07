@@ -28,3 +28,28 @@
   max-width: 100%;
   min-width: 0;
 }
+
+.quiz-card__form {
+  display: none;
+  flex-direction: column;
+  width: 64%;
+  margin: 1em auto 0;
+  position: relative;
+
+  @media screen and (max-width: $bp-tablet) {
+    width: 100%;
+  }
+
+  &.active {
+    display: flex;
+  }
+
+  &.loading {
+    pointer-events: none;
+    opacity: 0.6;
+
+    .loader_form {
+      display: block;
+    }
+  }
+}

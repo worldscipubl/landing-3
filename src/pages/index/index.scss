@@ -1,35 +1,35 @@
 @charset "UTF-8";
 @use './src/scss/foundation';
 
+/* INFO:
+ * Если компонент зависет от других, то их нужно запрашивать
+ * внутри самого компонента через @forward.
+ * Сюда выносить лишь глобальные компоненты, которые не являются вложенными
+ * в другой компонент или секцию
+ */
 /* List of components used on this page: */
 @use "./src/scss/components/header";
-@use "./src/scss/components/button";
+@use "./src/scss/components/field";
+@use "./src/scss/components/field-upload";
+@use "./src/scss/components/custom-select";
+@use "./src/scss/components/card";
+@use "./src/scss/components/link";
+@use "./src/scss/components/loader";
 @use "./src/scss/components/list";
+@use "./src/scss/components/spoilers";
 @use "./src/scss/components/steps-slider";
 @use "./src/scss/components/step-card";
 @use "./src/scss/components/features-grid";
 @use "./src/scss/components/features-card";
-@use "./src/scss/components/call-btn";
-@use "./src/scss/components/drawer";
-@use "./src/scss/components/burger";
-@use "./src/scss/components/navbar";
 @use "./src/scss/components/social-list";
-@use "./src/scss/components/progress-bar";
 @use "./src/scss/components/faq-form";
-@use "../../scss/components/field";
 @use "./src/scss/components/audit-form";
 @use "./src/scss/components/stage-slider";
-@use "./src/scss/components/card";
-@use "./src/scss/components/link";
 @use "./src/scss/components/promo-slider";
-@use "./src/scss/components/spoilers";
-@use "./src/scss/components/custom-select";
-@use "./src/scss/components/field-upload";
 
 /* List of sections used on this page: */
 @use "./src/scss/sections/section-primary";
 @use "./src/scss/sections/promo-slide";
-@use "./src/scss/sections/do-steps";
 @use "./src/scss/sections/promo-section";
 @use "./src/scss/sections/quiz";
 @use "./src/scss/sections/footer";

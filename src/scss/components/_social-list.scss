@@ -19,3 +19,11 @@
     object-fit: cover;
   }
 }
+
+.social-list_footer {
+  margin-top: 1em;
+  display: grid;
+  width: 90%;
+  gap: 1.25em;
+  grid-template-columns: 1fr 1fr 1fr;
+}

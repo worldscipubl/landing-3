@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@use './src/scss/foundation';
+
+/* INFO:
+ * Если компонент зависет от других, то их нужно запрашивать
+ * внутри самого компонента через @forward.
+ * Сюда выносить лишь глобальные компоненты, которые не являются вложенными
+ * в другой компонент или секцию
+ */
+/* List of components used on this page: */
+@use "./src/scss/components/header";
+@use "./src/scss/components/link";
+@use "./src/scss/components/list";
+@use "./src/scss/components/loader";
+@use "./src/scss/components/social-list";
+@use "./src/scss/components/audit-form";
+@use "./src/scss/components/form-promocode";
+
+/* List of sections used on this page: */
+@use "./src/scss/sections/section-primary";
+@use "./src/scss/sections/promo-section";
+@use "./src/scss/sections/footer";
