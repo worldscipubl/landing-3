@@ -4,6 +4,8 @@
   @extend %text-default;
   display: inline-flex;
   align-items: center;
+  color: $dark-blue;
+  text-decoration: underline;
 
   &_file {
     &:before {

@@ -8,7 +8,7 @@
 
 .field__input {
   @extend %text-default;
-  height: 100%;
+  height: 2.3em;
   font-size: 16px;
   display: block;
   background: $white;
@@ -31,5 +31,47 @@
 
   &.active {
     display: inline-block;
+  }
+}
+
+.field-file {
+  display: inline-flex;
+  cursor: pointer;
+  max-width: 100%;
+}
+
+.field-file__input-original {
+  display: none;
+}
+
+.field-file__input-surrogate {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  padding-right: 2.6em;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='98' height='77' fill='%23B3B3B3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M81.7 25.5a33.7 33.7 0 0 0-66.3 5.7 18.4 18.4 0 0 0 3 36.5h15.4v-6H18.4a12.2 12.2 0 0 1 0-24.6 3 3 0 0 0 3.1-3 27.6 27.6 0 0 1 54.6-5.4 3 3 0 0 0 2.6 2.5 15.3 15.3 0 0 1-2 30.4H64.3v6.1h12.2a21.4 21.4 0 0 0 5-42.2Z'/%3E%3Cpath d='M46.9 38 34.6 50.3l4.4 4.3 7-7v29.3h6.1V47.6l7 7 4.4-4.3L51.2 38a3 3 0 0 0-4.3 0Z'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    width: 1.5em;
+    height: 1.4em;
+    margin-right: 1em;
+  }
+
+  &.active {
+    border-color: $green;
+
+    &:after {
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' fill='%23219653' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.8243 0.769496C11.59 0.535168 11.2101 0.535168 10.9757 0.769496L3.78737 7.95794L1.02428 5.19485C0.789973 4.96052 0.410098 4.96054 0.175746 5.19485C-0.0585821 5.42915 -0.0585821 5.80903 0.175746 6.04336L3.36311 9.23067C3.59734 9.46497 3.9775 9.46481 4.21164 9.23067L11.8243 1.61803C12.0586 1.38372 12.0586 1.00382 11.8243 0.769496Z'/%3E%3C/svg%3E%0A");
+    }
   }
 }

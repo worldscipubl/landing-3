@@ -27,24 +27,32 @@ const StageSlider = () => {
       navbarList.innerHTML = '';
       navbarList.removeAttribute('style');
       slides.forEach((slide) => addTabToContainer(slide));
-      initFlickity(contentList);
+      initFlickity(contentList, slides);
       initFlickityNav(navbarList, contentList);
     });
   };
 
-  const initFlickity = (sliderContainer) => new Flickity(sliderContainer, {
+  const initFlickity = (sliderContainer, slides) => new Flickity(sliderContainer, {
     cellAlign: 'left',
-    draggable: false,
+    draggable: true,
     prevNextButtons: true,
+    adaptiveHeight: false,
     pageDots: false,
     initialIndex: 2,
+    on: {
+      ready: () => {
+        slides.forEach((slide) => {
+          slide.classList.add('stage-slider__slide_full');
+        });
+      },
+    },
   });
 
   const initFlickityNav = (sliderContainer, navForContainer) => new Flickity(sliderContainer, {
     asNavFor: navForContainer,
     contain: true,
     pageDots: false,
-    prevNextButtons: false,
+    prevNextButtons: true,
   });
 
   const createTabsContainer = () => {

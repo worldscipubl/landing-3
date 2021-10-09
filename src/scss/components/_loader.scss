@@ -23,9 +23,7 @@ $loader-color: $gray-dark;
 }
 
 .loader_form {
-  display: none;
   position: absolute;
-  opacity: 1;
   z-index: $z-index-loader;
   top: 0;
   left: 0;

@@ -2,6 +2,7 @@
 @forward "./src/scss/components/field";
 @forward "./src/scss/components/field-upload";
 @forward "./src/scss/components/custom-select";
+@forward "./src/scss/components/article-upload";
 
 .audit-form {
   width: 100%;
@@ -20,7 +21,7 @@
   }
 
   &_blur {
-    filter: blur(2px);
+    opacity: 0.24;
     pointer-events: none;
   }
 }
@@ -37,26 +38,6 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  position: relative;
-
-  &.loading {
-    pointer-events: none;
-    opacity: 0.6;
-
-    .loader_form {
-      display: block;
-    }
-  }
-}
-
-.audit-form__submitted {
-  width: 100%;
-  display: none;
-  flex-direction: column;
-
-  &.active {
-    display: flex;
-  }
 }
 
 .audit-form__sent-img {

@@ -1,0 +1,29 @@
+@use '../global'as *;
+
+.form-frame {
+  width: 100%;
+  position: relative;
+}
+
+.form-frame.loading {
+  pointer-events: none;
+  opacity: 0.6;
+
+  .form-frame__loader {
+    visibility: visible;
+  }
+}
+
+.form-frame__item {
+  position: absolute;
+  visibility: hidden;
+
+  &.active {
+    position: static;
+    visibility: visible;
+  }
+}
+
+.form-frame__loader {
+  visibility: hidden;
+}

@@ -1,8 +1,12 @@
 import formService from './LendingService';
 import CustomSelect from './custom-select';
+import ArticleUploader from './article-upload';
+import FieldFile from './field-file';
 
 const AuditFrom = () => {
   CustomSelect();
+  FieldFile();
+  ArticleUploader();
   const initForm = (form) => {
     const submittedFrame = form.parentNode.querySelector('.audit-form__submitted');
     const elEmail = submittedFrame.querySelector('.js-audit-from-email');
@@ -37,7 +41,7 @@ const AuditFrom = () => {
 
   const forms = document.querySelectorAll('.js-audit-from');
   forms.forEach((form) => {
-    initForm(form);
+    // initForm(form);
   });
 };
 
