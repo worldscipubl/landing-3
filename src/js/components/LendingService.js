@@ -1,6 +1,14 @@
 import ApiService from './ApiService';
+import HTTPError from './HTTPError';
 
 class FormService extends ApiService {
+  addFile = 'add-file/'; // Загрзка файла
+
+  letter = 'letter/'; // Вопрос из FAQ
+
+  isExists = 'is-exists/'; // Проверка email
+
+  addLead = 'add-lead/'; // Отправка заявки
 
   removeErrorInput = (input, inputHint) => {
     if (input.hasAttribute('style')) input.removeAttribute('style');
@@ -111,57 +119,30 @@ class FormService extends ApiService {
     });
 
     if (!isFormValid) return null;
-    if (!!csrfToken) formData.append('csrfToken', csrfToken);
+    if (csrfToken) formData.append('csrfToken', csrfToken);
     if (currentForm.hasAttribute('name')) {
       formData.append('formsended', currentForm.getAttribute('name'));
     }
     return formData;
   };
 
-  sendQuizForm = (data) => {
-    return new Promise((resolve, reject) => {
-      this.setResource({
-        url: '/add-lead',
-        data,
+  sendForm = (data, url) => new Promise((resolve, reject) => {
+    this.setResource({
+      url,
+      data,
+    })
+      .then((response) => {
+        if (response?.data?.warning) {
+          const warnings = Array(Object.values(response.data.warning))
+            .join(' ');
+          reject(new Error(warnings));
+        }
+        resolve(response.data);
       })
-        .then((response) => {
-          resolve(response);
-        })
-        .catch((reason) => {
-          reject(reason);
-        });
-    });
-  };
-
-  sendAuditForm = (data) => {
-    return new Promise((resolve, reject) => {
-      this.setResource({
-        url: '/add-file',
-        data,
-      })
-        .then((response) => {
-          resolve(response);
-        })
-        .catch((reason) => {
-          reject(reason);
-        });
-    });
-  };
-
-  sendFaqForm = (data) => {
-    return new Promise((resolve, reject) => {
-      this.setResource({
-        url: '/letter',
-        data,
-      })
-        .then((response) => {
-          resolve(response);
-        })
-        .catch((reason) => {
-          reject(reason);
-        });
-    });
-  };
+      .catch((reason) => {
+        reject(reason);
+      });
+  });
 }
 
 const formService = new FormService();

@@ -4,14 +4,14 @@ import './index.scss';
 import '../../js/common';
 import Header from '../../js/components/header';
 import AuditFrom from '../../js/components/audit-form';
-import AuditPages from '../../js/components/audit-pages';
+import PromoCodeFrom from '../../js/components/promocode-form';
 /* import components and lib */
 
 /* Your JS Code goes here */
 window.addEventListener('DOMContentLoaded', () => {
   Header();
+  PromoCodeFrom();
   AuditFrom();
-  AuditPages();
 });
 
 window.addEventListener('load', () => {

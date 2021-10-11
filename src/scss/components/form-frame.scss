@@ -22,6 +22,11 @@
     position: static;
     visibility: visible;
   }
+
+  &.lock {
+    opacity: 0.24;
+    pointer-events: none;
+  }
 }
 
 .form-frame__loader {

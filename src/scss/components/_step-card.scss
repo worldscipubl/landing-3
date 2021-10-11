@@ -15,6 +15,10 @@
     .step-card__inner {
       height: auto;
     }
+
+    .step-card__title {
+      border-color: black;
+    }
   }
 }
 
@@ -28,6 +32,8 @@
 
 .step-card__title {
   cursor: pointer;
+  display: inline-block;
+  border-bottom: 1px solid $gray-dark;
 }
 
 .step-card__desc {

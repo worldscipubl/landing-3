@@ -6,7 +6,6 @@
 
 .audit-form {
   width: 100%;
-  min-height: 200px;
 
   &_frame {
     padding: 42px 56px;
@@ -44,7 +43,7 @@
   object-fit: contain;
   width: 72%;
   margin: 0 auto 1em;
-  display: inline-block;
+  display: block;
   object-position: bottom center;
 }
 

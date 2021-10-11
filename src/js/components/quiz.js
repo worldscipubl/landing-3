@@ -73,7 +73,8 @@ const Quiz = () => {
       },
     };
     const questionTitle = quiz.querySelector('.quiz-card__question');
-    const quizForm = quiz.querySelector('.quiz-card__form');
+    const quizFormContainer = quiz.querySelector('.quiz-card__form');
+    const quizFormItem = quizFormContainer.querySelectorAll('.form-frame__item');
     const answerFrame = quiz.querySelector('.quiz-card__body');
     const backwardBtn = quiz.querySelector('.quiz__backward');
     const progress = quiz.querySelector('.progress-bar__indicator');
@@ -96,34 +97,36 @@ const Quiz = () => {
         questionTitle.innerText = option.question;
         answerFrame.innerHTML = '';
         option.answers.forEach((answer) => renderAnswer(answer));
-        if (quizForm.classList.contains('active')) quizForm.classList.remove('active');
+        if (quizFormContainer.classList.contains('active')) quizFormContainer.classList.remove('active');
       } else {
         questionTitle.innerHTML = 'Введите данные: <br> <span class="text">Письмо поступит на указанный эл.адрес в течение 15 минут.</span>';
         answerFrame.innerHTML = '';
-        quizForm.classList.add('active');
+        quizFormContainer.classList.add('active');
       }
       progress.style.width = `${(index / quizData.length) * 100}%`;
       score.innerText = `${(index / quizData.length) * 100}%`;
     };
 
     const showSuccessSubmit = () => {
-      questionTitle.classList.add('text_align_center');
-      questionTitle.innerHTML = 'Спасибо, данные получены. <br> Ответ поступит на указанный e-mail.';
-      quizForm.classList.remove('active');
+      quizFormContainer.classList.remove('loading');
+      questionTitle.remove();
+      quizFormItem[1].classList.add('active');
+      quizFormItem[0].classList.remove('active');
     };
 
-    quizForm.addEventListener('submit', (e) => {
+    quizFormItem[0].addEventListener('submit', (e) => {
       e.preventDefault();
       const elForm = e?.currentTarget;
       const data = formService.scrabbleInputs(elForm);
       if (!data) return;
       data.append('res', JSON.stringify(answersQuiz));
       backwardBtn.remove();
-      elForm.classList.add('loading');
-      formService.sendQuizForm(data)
+      quizFormContainer.classList.add('loading');
+      formService.sendForm(data, formService.addLead)
         .then((res) => {
           console.log(res);
           showSuccessSubmit();
+          triggerGoal(quizFormItem[0].getAttribute('name'));
         })
         .catch((err) => {
           console.log(err);
@@ -151,6 +154,29 @@ const Quiz = () => {
   quizzes.forEach((quiz) => {
     initQuiz(quiz);
   });
+
+  const triggerGoal = (currentGoal) => {
+    /* этот код создает цель в метрике */
+    console.log('Сработала метрика: ' + currentGoal);
+
+    if (localStorage.getItem(currentGoal) === null) {
+      localStorage.setItem(currentGoal, currentGoal);
+
+      if (typeof yaCounter50181778 !== 'undefined') {
+        yaCounter50181778.reachGoal(currentGoal);
+        console.log('reachGoal: ' + currentGoal);
+      }
+    }
+    if (currentGoal != 'question_1') {
+      if (localStorage.getItem('form') === null) {
+        localStorage.setItem('form', 'form');
+        if (typeof yaCounter50181778 !== 'undefined') {
+          yaCounter50181778.reachGoal('form');
+          console.log('reachGoal: form');
+        }
+      }
+    }
+  };
 };
 
 export default Quiz;

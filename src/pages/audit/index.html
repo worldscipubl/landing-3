@@ -4,7 +4,216 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WSP</title>
+    <title>WorldSciPubl</title>
+    <meta name="facebook-domain-verification" content="gta4edmceapujfhozlol4f48p2ack2" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-NF7Q6BJ');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- VK Pixel Code -->
+    <script>
+      !(function () {
+        var t = document.createElement('script');
+        (t.type = 'text/javascript'),
+          (t.async = !0),
+          (t.src = 'https://vk.com/js/api/openapi.js?162'),
+          (t.onload = function () {
+            VK.Retargeting.Init('VK-RTRG-837729-8F4Pd'),
+              VK.Retargeting.Hit();
+          }),
+          document.head.appendChild(t);
+      })();
+    </script>
+    <!-- End VK Pixel Code -->
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ?
+            n.callMethod.apply(n, arguments) :
+            n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        'script',
+        'https://connect.facebook.net/en_US/fbevents.js'
+      );
+      fbq('init', '2365479983546227');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel Code -->
+    <!-- Yandex.Metrika counter -->
+    <script>
+      var yaParams = {
+        ip: "<?=$_SERVER['REMOTE_ADDR'];?>",
+      };
+    </script>
+    <script>
+      (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+          try {
+            w.yaCounter50181778 = new Ya.Metrika2({
+              id: 50181778,
+              params: window.yaParams,
+              clickmap: true,
+              trackLinks: true,
+              accurateTrackBounce: true,
+              webvisor: true,
+            });
+          } catch (e) {}
+        });
+
+        var n = d.getElementsByTagName('script')[0],
+          s = d.createElement('script'),
+          f = function () {
+            n.parentNode.insertBefore(s, n);
+          };
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'https://mc.yandex.ru/metrika/tag.js';
+
+        if (w.opera == '[object Opera]') {
+          d.addEventListener('DOMContentLoaded', f, false);
+        } else {
+          f();
+        }
+      })(document, window, 'yandex_metrika_callbacks2');
+    </script>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125087961-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+      gtag('config', 'UA-125087961-1');
+    </script>
+    <!-- Start for Saving cookie -->
+    <script>
+      var utmCookie = {
+        cookieNamePrefix: '_uc_',
+        utmParams: [
+          'utm_source',
+          'utm_medium',
+          'utm_campaign',
+          'utm_term',
+          'utm_content',
+        ],
+        cookieExpiryDays: 365,
+        createCookie: function (c, d, e) {
+          if (e) {
+            var b = new Date();
+            b.setTime(b.getTime() + e * 24 * 60 * 60 * 1000);
+            var a = '; expires=' + b.toGMTString();
+          } else {
+            var a = '';
+          }
+          document.cookie =
+            this.cookieNamePrefix + c + '=' + d + a + '; path=/';
+        },
+        readCookie: function (b) {
+          var e = this.cookieNamePrefix + b + '=';
+          var a = document.cookie.split(';');
+          for (var d = 0; d < a.length; d++) {
+            var f = a[d];
+            while (f.charAt(0) == ' ') {
+              f = f.substring(1, f.length);
+            }
+            if (f.indexOf(e) == 0) {
+              return f.substring(e.length, f.length);
+            }
+          }
+          return null;
+        },
+        eraseCookie: function (a) {
+          this.createCookie(a, '', -1);
+        },
+        getParameterByName: function (b) {
+          b = b.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+          var a = '[\\?&]' + b + '=([^&#]*)';
+          var d = new RegExp(a);
+          var c = d.exec(window.location.search);
+          if (c == null) {
+            return '';
+          } else {
+            return decodeURIComponent(c[1].replace(/\+/g, ' '));
+          }
+        },
+        utmPresentInUrl: function () {
+          var d = false;
+          for (var a = 0; a < this.utmParams.length; a++) {
+            var c = this.utmParams[a];
+            var b = this.getParameterByName(c);
+            if (b != '' && b != undefined) {
+              d = true;
+            }
+          }
+          return d;
+        },
+        writeUtmCookieFromParams: function () {
+          for (var a = 0; a < this.utmParams.length; a++) {
+            var c = this.utmParams[a];
+            var b = this.getParameterByName(c);
+            this.createCookie(c, b, this.cookieExpiryDays);
+          }
+        },
+        writeCookieOnce: function (a, c) {
+          var b = this.readCookie(a);
+          if (!b) {
+            this.createCookie(a, c, this.cookieExpiryDays);
+          }
+        },
+        writeReferrerOnce: function () {
+          value = document.referrer;
+          if (value === '' || value === undefined) {
+            this.writeCookieOnce('referrer', 'direct');
+          } else {
+            this.writeCookieOnce('referrer', value);
+          }
+        },
+        referrer: function () {
+          return this.readCookie('referrer');
+        },
+      };
+      utmCookie.writeReferrerOnce();
+      if (utmCookie.utmPresentInUrl()) {
+        utmCookie.writeUtmCookieFromParams();
+      }
+    </script>
+    <!-- End for saving cookie -->
+    <!-- ManyChat -->
+    <script src="//widget.manychat.com/369241_e8d30.js" defer="defer"></script>
+    <script src="https://mccdn.me/assets/js/widget.js" defer="defer"></script>
+
 </head>
 <body>
 <!-- Шапка:  -->
@@ -235,78 +444,116 @@
         </div>
         <div class="promo__body">
             <div class="promo__col">
-                <div class="audit-form audit-form_frame">
+                <div class="audit-form audit-form_frame js-article-upload">
                     <div class="audit-form__inner">
-                        <form class="audit-form__form js-audit-from" name="audit" novalidate>
-                            <h2 class="text text_weight_bold text_size_accent text_align_center mb-1em">
-                                Заполните данные для подробного аудита:
-                            </h2>
-                            <div class="field audit-form__input">
-                                <div class="custom-select">
-                                    <select class="custom-select__inner" name="rating">
-                                        <option value="0" disabled selected>
-                                            Необходимый рейтинг журнала
-                                        </option>
-                                        <option value="Q4">Q4 / 0-24%</option>
-                                        <option value="Q3">Q3 / 25-49%</option>
-                                        <option value="Q2">Q2 / 50-74%</option>
-                                        <option value="Q1">Q1 / 75-100%</option>
-                                    </select>
+                        <div class="form-frame js-audit-from">
+                            <form class="form-frame__item active audit-form__form"
+                                  name="audit" novalidate>
+                                <h2 class="text text_weight_bold text_size_accent text_align_center mb-1em">
+                                    Заполните данные для подробного аудита:
+                                </h2>
+                                <div class="field audit-form__input">
+                                    <div class="custom-select">
+                                        <select class="custom-select__inner" name="rating">
+                                            <option value="0" disabled selected>
+                                                Необходимый рейтинг журнала
+                                            </option>
+                                            <option value="Q4">Q4 / 0-24%</option>
+                                            <option value="Q3">Q3 / 25-49%</option>
+                                            <option value="Q2">Q2 / 50-74%</option>
+                                            <option value="Q1">Q1 / 75-100%</option>
+                                        </select>
+                                    </div>
+                                    <span class="field__error"></span>
                                 </div>
-                                <span class="field__error"></span>
+                                <div class="field audit-form__input">
+                                    <input class="field__input" name="subject" placeholder="Тематика статьи"
+                                           type="text"
+                                           required>
+                                    <span class="field__error"></span>
+                                </div>
+                                <div class="field audit-form__input">
+                                    <input class="field__input"
+                                           name="email"
+                                           placeholder="E-mail"
+                                           pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                                           type="email"
+                                           required>
+                                    <span class="field__error"></span>
+                                </div>
+                                <div class="field audit-form__input">
+                                    <input class="field__input"
+                                           name="phone"
+                                           placeholder="Номер телефона"
+                                           pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                           type="tel"
+                                           required>
+                                    <span class="field__error"></span>
+                                </div>
+                                <div class="field audit-form__input">
+                                    <input class="field__input" name="name" placeholder="Имя" type="text" required>
+                                    <span class="field__error"></span>
+                                </div>
+                                <button class="button button_success audit-form__input">
+                                    Отправить на аудит
+                                </button>
+                            </form>
+                            <form class="form-frame__item"
+                                  name="audit" novalidate>
+                                <label class="article-upload">
+                                    <i class="article-upload__img"></i>
+                                    <h2 class="article-upload__label text text_weight_bold text_size_accent text_align_center mb-1em">
+                                        Загрузите статью (.pdf .doc .docx)
+                                    </h2>
+                                    <div class="field article-upload__input">
+                                        <div class="field-file js-field-file">
+                                            <input class="field-file__input-original js-article-upload-input"
+                                                   name="file"
+                                                   placeholder="Загрузить статью (.pdf .doc .docx)"
+                                                   type="file" required>
+                                            <div class="field-file__input-surrogate field__input"
+                                                 data-placeholder="Загрузить статью (.pdf .doc .docx)"
+                                                 data-many-file="Файлы загржуены">
+                                                Загрузить статью (.pdf .doc .docx)
+                                            </div>
+                                        </div>
+                                        <span class="field__error"></span>
+                                    </div>
+                                </label>
+                                <button class="button button_success audit-form__input">
+                                    Отправить на аудит
+                                </button>
+                            </form>
+                            <div class="form-frame__item">
+                                <h3 class="text text_weight_bold text_size_accent mb-2em">
+                                    Ваша статья получена, специалист проведет аудит в течение двух дней
+                                </h3>
+                                <p class="text text_size_accent mb-1em">
+                                    Отслеживайте работу в личном кабинете
+                                </p>
+                                <p class="text text_size_accent mb-1em">
+                                    Мы отправили письмо с паролем для входа на указанную Вами почту: <span
+                                        class="text_weight_bold js-audit-from-email"></span>
+                                </p>
+                                <img class="audit-form__sent-img" src="images/content/mockups/web-site.svg">
+                                <a href="/cabinet/login" class="button button_success m-auto-ws mt-a mb-2em">
+                                    Войти / Зарегистрироваться
+                                </a>
                             </div>
-                            <div class="field audit-form__input">
-                                <input class="field__input" name="subject" placeholder="Тематика статьи"
-                                       type="text"
-                                       required>
-                                <span class="field__error"></span>
+                            <div class="form-frame__item">
+                                <h3 class="text text_weight_bold text_size_accent text_align_center mb-2em">
+                                    Вы уже зарегистрированы в личном кабинете
+                                </h3>
+                                <p class="text text_size_accent text_align_center mb-1em">
+                                    В целях безопасности загрузите статью на технический аудит через личный кабинет.
+                                </p>
+
+                                <img class="audit-form__sent-img" src="images/content/mockups/web-site.svg">
+                                <a href="/cabinet/login" class="button button_success m-auto-ws mt-a mb-2em">
+                                    Войти / Зарегистрироваться
+                                </a>
                             </div>
-                            <div class="field audit-form__input">
-                                <input class="field__input"
-                                       name="email"
-                                       placeholder="E-mail"
-                                       pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
-                                       type="email"
-                                       required>
-                                <span class="field__error"></span>
-                            </div>
-                            <div class="field audit-form__input">
-                                <input class="field__input"
-                                       name="phone"
-                                       placeholder="Номер телефона"
-                                       pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
-                                       type="tel"
-                                       required>
-                                <span class="field__error"></span>
-                            </div>
-                            <div class="field audit-form__input">
-                                <input class="field__input" name="name" placeholder="Имя" type="text" required>
-                                <span class="field__error"></span>
-                            </div>
-                            <div class="field audit-form__input">
-                                <input class="field__input" name="file"
-                                       placeholder="Загрузить статью (.pdf .doc .docx)" type="file" required>
-                                <span class="field__error"></span>
-                            </div>
-                            <button class="button button_success audit-form__input">
-                                Отправить на аудит
-                            </button>
-                            <i class="loader loader_form"></i>
-                        </form>
-                        <div class="audit-form__submitted">
-                            <h3 class="text text_weight_bold text_size_accent mb-2em">
-                                Ваша статья получена, специалист проведет аудит в течение двух дней
-                            </h3>
-                            <p class="text text_size_accent mb-1em">
-                                Отслеживайте работу в личном кабинете
-                            </p>
-                            <p class="text text_size_accent mb-1em">
-                                Мы отправили письмо с паролем для входа на указанную Вами почту: <span
-                                    class="text_weight_bold js-audit-from-email"></span>
-                            </p>
-                            <img class="audit-form__sent-img" src="images/content/mockups/web-site.svg">
-                            <a href="/" class="button button_success m-auto-ws mt-a mb-2em">Войти /
-                                Зарегистрироваться</a>
+                            <i class="form-frame__loader loader loader_form"></i>
                         </div>
                     </div>
                 </div>
@@ -516,10 +763,11 @@
                 </p>
                 <ul class="promo__group">
                     <li class="promo__group-item">
-                        <button class="button button_secondary">Скачать список журналов</button>
+                        <a class="button button_secondary" href="https://m.me/worldscipubl?ref=w16005096"
+                           target="_blank">Скачать список журналов</a>
                     </li>
                     <li class="promo__group-item">
-                        <button class="button button_success">Загрузка статьи на аудит</button>
+                        <a class="button button_success" href="/audit?tab=0">Загрузка статьи на аудит</a>
                     </li>
                 </ul>
             </div>
@@ -640,9 +888,32 @@
         <p class="politics text text_color_white text_size_default">Политика конфиденциальности</p>
     </div>
 </section>
+
+<noscript>
+    <img src="https://vk.com/rtrg?p=VK-RTRG-837729-8F4Pd"
+         style="position: fixed; left: -999px" alt=""/>
+</noscript>
+<noscript>
+    <img height="1" width="1" style="display: none" alt="facebook"
+         src="https://www.facebook.com/tr?id=2365479983546227&ev=PageView&noscript=1"/>
+</noscript>
+<noscript>
+    <div>
+        <img src="https://mc.yandex.ru/watch/50181778"
+             style="position: absolute; left: -9999px" alt=""/>
+    </div>
+</noscript>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NF7Q6BJ" height="0"
+            width="0"
+            style="display: none; visibility: hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <script>
-  // var csrfToken = '<?=$_SESSION['csrf-token']?>';
-  var csrfToken = 121;
+  var csrfToken = '<?=$_SESSION['csrf-token']?>';
+  // var csrfToken = 121;
 </script>
 </body>
 </html>

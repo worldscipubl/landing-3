@@ -8,7 +8,7 @@
 
 .field__input {
   @extend %text-default;
-  height: 2.3em;
+  min-height: 2.3em;
   font-size: 16px;
   display: block;
   background: $white;
@@ -16,6 +16,7 @@
   border-radius: 0.4em;
   padding: 0.6em 0.8em;
   outline: none;
+  flex: 1;
 
   &:focus {
     border: 1px solid $outline-green;

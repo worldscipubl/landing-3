@@ -65,20 +65,30 @@
   width: 50%;
   position: relative;
 
+  @media screen and (max-width: $bp-tablet) {
+    width: 100%;
+  }
+
   &:last-child {
     padding-left: 36px;
   }
 
   &_w60 {
     width: 60%;
+    @media screen and (max-width: $bp-tablet) {
+      width: 100%;
+    }
   }
 
   &_w40 {
     width: 40%;
+    @media screen and (max-width: $bp-tablet) {
+      width: 100%;
+    }
   }
 
   &_by3 {
-    width: calc((100% / 3) + 12px);
+    width: calc((100% / 3) - 12px);
   }
 
   @media screen and (max-width: $bp-tablet) {
@@ -141,7 +151,6 @@
 .promo__group {
   display: flex;
   margin-top: 1em;
-  align-items: baseline;
 
   @media screen and (max-width: $bp-mobile) {
     flex-direction: column;

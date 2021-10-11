@@ -4,16 +4,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  position: relative;
-
-  &.loading {
-    pointer-events: none;
-    opacity: 0.6;
-
-    .loader_form {
-      display: block;
-    }
-  }
 }
 
 .faq-form__textarea {
@@ -30,7 +20,6 @@
 .faq-form__submit-group {
   display: flex;
   margin-top: 1em;
-  align-items: baseline;
 
   @media screen and (max-width: $bp-mobile) {
     flex-direction: column;

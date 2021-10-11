@@ -4,7 +4,215 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WSP</title>
+    <title>WorldSciPubl</title>
+    <meta name="facebook-domain-verification" content="gta4edmceapujfhozlol4f48p2ack2" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-NF7Q6BJ');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- VK Pixel Code -->
+    <script>
+      !(function () {
+        var t = document.createElement('script');
+        (t.type = 'text/javascript'),
+          (t.async = !0),
+          (t.src = 'https://vk.com/js/api/openapi.js?162'),
+          (t.onload = function () {
+            VK.Retargeting.Init('VK-RTRG-837729-8F4Pd'),
+              VK.Retargeting.Hit();
+          }),
+          document.head.appendChild(t);
+      })();
+    </script>
+    <!-- End VK Pixel Code -->
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ?
+            n.callMethod.apply(n, arguments) :
+            n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        'script',
+        'https://connect.facebook.net/en_US/fbevents.js'
+      );
+      fbq('init', '2365479983546227');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel Code -->
+    <!-- Yandex.Metrika counter -->
+    <script>
+      var yaParams = {
+        ip: "<?=$_SERVER['REMOTE_ADDR'];?>",
+      };
+    </script>
+    <script>
+      (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+          try {
+            w.yaCounter50181778 = new Ya.Metrika2({
+              id: 50181778,
+              params: window.yaParams,
+              clickmap: true,
+              trackLinks: true,
+              accurateTrackBounce: true,
+              webvisor: true,
+            });
+          } catch (e) {}
+        });
+
+        var n = d.getElementsByTagName('script')[0],
+          s = d.createElement('script'),
+          f = function () {
+            n.parentNode.insertBefore(s, n);
+          };
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'https://mc.yandex.ru/metrika/tag.js';
+
+        if (w.opera == '[object Opera]') {
+          d.addEventListener('DOMContentLoaded', f, false);
+        } else {
+          f();
+        }
+      })(document, window, 'yandex_metrika_callbacks2');
+    </script>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125087961-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+      gtag('config', 'UA-125087961-1');
+    </script>
+    <!-- Start for Saving cookie -->
+    <script>
+      var utmCookie = {
+        cookieNamePrefix: '_uc_',
+        utmParams: [
+          'utm_source',
+          'utm_medium',
+          'utm_campaign',
+          'utm_term',
+          'utm_content',
+        ],
+        cookieExpiryDays: 365,
+        createCookie: function (c, d, e) {
+          if (e) {
+            var b = new Date();
+            b.setTime(b.getTime() + e * 24 * 60 * 60 * 1000);
+            var a = '; expires=' + b.toGMTString();
+          } else {
+            var a = '';
+          }
+          document.cookie =
+            this.cookieNamePrefix + c + '=' + d + a + '; path=/';
+        },
+        readCookie: function (b) {
+          var e = this.cookieNamePrefix + b + '=';
+          var a = document.cookie.split(';');
+          for (var d = 0; d < a.length; d++) {
+            var f = a[d];
+            while (f.charAt(0) == ' ') {
+              f = f.substring(1, f.length);
+            }
+            if (f.indexOf(e) == 0) {
+              return f.substring(e.length, f.length);
+            }
+          }
+          return null;
+        },
+        eraseCookie: function (a) {
+          this.createCookie(a, '', -1);
+        },
+        getParameterByName: function (b) {
+          b = b.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+          var a = '[\\?&]' + b + '=([^&#]*)';
+          var d = new RegExp(a);
+          var c = d.exec(window.location.search);
+          if (c == null) {
+            return '';
+          } else {
+            return decodeURIComponent(c[1].replace(/\+/g, ' '));
+          }
+        },
+        utmPresentInUrl: function () {
+          var d = false;
+          for (var a = 0; a < this.utmParams.length; a++) {
+            var c = this.utmParams[a];
+            var b = this.getParameterByName(c);
+            if (b != '' && b != undefined) {
+              d = true;
+            }
+          }
+          return d;
+        },
+        writeUtmCookieFromParams: function () {
+          for (var a = 0; a < this.utmParams.length; a++) {
+            var c = this.utmParams[a];
+            var b = this.getParameterByName(c);
+            this.createCookie(c, b, this.cookieExpiryDays);
+          }
+        },
+        writeCookieOnce: function (a, c) {
+          var b = this.readCookie(a);
+          if (!b) {
+            this.createCookie(a, c, this.cookieExpiryDays);
+          }
+        },
+        writeReferrerOnce: function () {
+          value = document.referrer;
+          if (value === '' || value === undefined) {
+            this.writeCookieOnce('referrer', 'direct');
+          } else {
+            this.writeCookieOnce('referrer', value);
+          }
+        },
+        referrer: function () {
+          return this.readCookie('referrer');
+        },
+      };
+      utmCookie.writeReferrerOnce();
+      if (utmCookie.utmPresentInUrl()) {
+        utmCookie.writeUtmCookieFromParams();
+      }
+    </script>
+    <!-- End for saving cookie -->
+    <!-- ManyChat -->
+    <script src="//widget.manychat.com/369241_e8d30.js" defer="defer"></script>
+    <script src="https://mccdn.me/assets/js/widget.js" defer="defer"></script>
 </head>
 <body>
 <!-- Шапка:  -->
@@ -62,12 +270,10 @@
                             </a>
                         </li>
                         <li class="nav-links__item">
-                            <button class="button button_menu text text_color_gray-blue"
-                                    data-show-popup="1"
-                                    data-step="1"
-                                    data-formsended="submit_application_">
+                            <a class="button button_menu text text_color_gray-blue"
+                               href="https://m.me/worldscipubl?ref=w15970869" target="_blank">
                                 ⏱ Сроки и стоимость публикации
-                            </button>
+                            </a>
                         </li>
                         <li class="nav-links__item">
                             <a class="button button_menu text text_color_gray-blue"
@@ -143,7 +349,7 @@
                             – чат со специалистом.<br>
                         </p>
                         <a class="navbar-banner__btn button button_secondary button_icon_fb"
-                           href="https://m.me/worldscipubl" target="_blank">
+                           href="https://m.me/worldscipubl?ref=w15709979" target="_blank">
                             Запустить чат-бот
                         </a>
                         <img class="navbar-banner__bg" src="images/content/menu/bot.svg" alt="bot">
@@ -233,7 +439,7 @@
                             и отслеживайте прогресс в личном кабинете
                         </p>
                         <div class="promo-slide__btn-group">
-                            <a class="promo-slide__btn button button_secondary button_icon_fb"
+                            <a class="promo-slide__btn button button_secondary button_icon_fb js-reach-goal"
                                href="https://m.me/worldscipubl?ref=w15970869" target="_blank">
                                 Узнать стоимость и сроки
                             </a>
@@ -268,10 +474,11 @@
                                 примеры итоговых документов каждого этапа.
                             </li>
                         </ul>
+                        <!-- TODO: Требуеться указать ссылку -->
                         <div class="promo-slide__btn-group">
-                            <button class="promo-slide__btn button button_secondary button_icon_fb">
+                            <a class="promo-slide__btn button button_secondary button_icon_fb js-reach-goal" href="/">
                                 Скачать презентацию
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="promo__col promo__col_w40">
@@ -309,13 +516,15 @@
                         </p>
 
                         <div class="promo-slide__btn-group">
-                            <button class="promo-slide__btn button button_success">
+                            <a class="promo-slide__btn button button_success js-reach-goal" href="/audit?tab=0"
+                               target="_blank">
                                 Загрузить статью на аудит
-                            </button>
+                            </a>
 
-                            <button class="promo-slide__btn button button_success">
+                            <a class="promo-slide__btn button button_outline_success js-reach-goal" href="/audit?tab=1"
+                               target="_blank">
                                 Как проходит аудит?
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="promo__col promo__col_w40">
@@ -343,13 +552,14 @@
                         </p>
 
                         <div class="promo-slide__btn-group">
-                            <button class="promo-slide__btn button button_success">
+                            <a class="promo-slide__btn button button_success js-reach-goal" href="/promocode">
                                 Ввести промокод
-                            </button>
+                            </a>
 
-                            <button class="promo-slide__btn button button_success">
+                            <a class="promo-slide__btn button button_outline_success js-reach-goal"
+                               href="/promocode?get-coupon">
                                 Получить промокод
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="promo__col promo__col_w40">
@@ -364,6 +574,7 @@
 </section>
 <!-- Секция 2: Получите публикацию -->
 <!-- TODO: Сделать анимацию для ссылки "Узнать больше" -->
+<!-- TODO: Указать ссылки "Узнать больше" -->
 <!-- TODO: Добавить анимацию при наведении на ссылку -->
 <section class="promo container pb-section">
     <div class="promo__header">
@@ -383,7 +594,8 @@
                         Подробный аудит и подготовка статьи при помощи <span
                             class="text_color_green">западных ученых</span>
                     </p>
-                    <a target="_blank" class="step-card__link text text_underline text_size_accent " href="#">
+                    <a target="_blank" class="step-card__link text text_underline text_size_accent js-reach-goal"
+                       href="https://m.me/worldscipubl?ref=w16005031">
                         Узнать больше
                     </a>
                 </div>
@@ -397,7 +609,8 @@
                         Продвижение в качественные международные журналы <span
                             class="text_color_green">нужного рейтинга</span>
                     </p>
-                    <a target="_blank" class="step-card__link text text_underline text_size_accent " href="#">
+                    <a target="_blank" class="step-card__link text text_underline text_size_accent js-reach-goal"
+                       href="https://m.me/worldscipubl?ref=w16005037">
                         Узнать больше
                     </a>
                 </div>
@@ -411,7 +624,8 @@
                         Сопровождение до индексации статьи в базах данных Scopus или Web of Science.
                         <span class="text_color_green">С гарантией того, что журнал не вылетит.</span>
                     </p>
-                    <a target="_blank" class="step-card__link text text_underline text_size_accent " href="#">
+                    <a target="_blank" class="step-card__link text text_underline text_size_accent js-reach-goal"
+                       href="https://m.me/worldscipubl?ref=w16005043">
                         Узнать больше
                     </a>
                 </div>
@@ -476,8 +690,8 @@
 <section class="quiz-section quiz-section_bg_gray pb-section">
     <div class="promo container">
         <div class="promo__header">
-            <h2 class="text text_weight_bold text_size_title mt-2em">
-                Рассчитаем стоимость публикации вашей рукописи, <br>
+            <h2 class="text text_weight_bold text_size_title mt-1em">
+                Рассчитаем стоимость публикации вашей рукописи,
                 исходя из необходимых <span class="text_color_green">показателей журнала</span>
             </h2>
         </div>
@@ -493,43 +707,50 @@
                     <div class="quiz__card quiz-card">
                         <div class="quiz-card__header">
                             <h2 class="quiz-card__question text text_weight_bold text_size_default">
-                                1. В какие сроки Вам необходима публикация?
+                                Введите данные:
                             </h2>
                         </div>
                         <ul class="quiz-card__body">
-                            <!--                            <li class="quiz-card__answer">-->
-                            <!--                                <button class="button button_fill button_quiz">answer-->
-                            <!--                                </button>-->
-                            <!--                            </li>-->
+                            <!-- <li class="quiz-card__answer">-->
+                            <!-- <button class="button button_fill button_quiz">answer-->
+                            <!-- </button>-->
+                            <!-- /li>-->
                         </ul>
-                        <form class="quiz-card__form" name="quiz" novalidate>
-                            <div class="field mt-1em">
-                                <input class="field__input"
-                                       name="email"
-                                       placeholder="E-mail"
-                                       pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
-                                       type="email"
-                                       required>
-                                <span class="field__error"></span>
+                        <div class="form-frame quiz-card__form">
+                            <form class="form-frame__item active" name="quiz-1" novalidate>
+                                <div class="field mt-1em">
+                                    <input class="field__input"
+                                           name="email"
+                                           placeholder="E-mail"
+                                           pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                                           type="email"
+                                           required>
+                                    <span class="field__error"></span>
+                                </div>
+                                <div class="field mt-1em">
+                                    <input class="field__input"
+                                           name="phone"
+                                           placeholder="Номер телефона"
+                                           pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                           type="tel"
+                                           required>
+                                    <span class="field__error"></span>
+                                </div>
+                                <div class="field mt-1em">
+                                    <input class="field__input" name="name" placeholder="Имя" type="text" required>
+                                    <span class="field__error"></span>
+                                </div>
+                                <button class="button button_success mt-1em">
+                                    Отправить
+                                </button>
+                            </form>
+                            <div class="form-frame__item">
+                                <h3 class="text text_weight_bold text_size_accent text_align_center mt-2em mb-2em">
+                                    Спасибо, данные получены. <br> Ответ поступит на указанный e-mail.
+                                </h3>
                             </div>
-                            <div class="field mt-1em">
-                                <input class="field__input"
-                                       name="phone"
-                                       placeholder="Номер телефона"
-                                       pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
-                                       type="tel"
-                                       required>
-                                <span class="field__error"></span>
-                            </div>
-                            <div class="field mt-1em">
-                                <input class="field__input" name="name" placeholder="Имя" type="text" required>
-                                <span class="field__error"></span>
-                            </div>
-                            <button class="button button_success mt-1em">
-                                Отправить
-                            </button>
-                            <i class="loader loader_form"></i>
-                        </form>
+                            <i class="form-frame__loader loader loader_form"></i>
+                        </div>
                     </div>
                     <div class="quiz__nav">
                         <div class="quiz__progress quiz-progress">
@@ -590,7 +811,8 @@
                     внесут повторные изменения без дополнительных оплат
                 </li>
             </ul>
-            <a class="button button_secondary button_icon_fb mt-a" href="https://m.me/worldscipubl?ref=w15970986"
+            <a class="button button_secondary button_icon_fb mt-a js-reach-goal"
+               href="https://m.me/worldscipubl?ref=w15970986"
                target="_blank">
                 Перейти в чат
             </a>
@@ -606,7 +828,7 @@
         </h2>
     </div>
     <div class="promo__body">
-        <div class="promo__col promo__col_by3">
+        <div class="promo__col promo__col_by3 js-reach-goal">
             <h3 class="text text_decoration text_size_accent text_weight_bold">
                 Качество
             </h3>
@@ -614,7 +836,8 @@
                 Мы гарантируем вам качество предоставляемых услуг по доработке и сопровождению статьи, несём
                 ответственность за выполнение всех сопутствующих работ.
             </p>
-            <a target="_blank" class="arrow-link text text_size_accent mt-1em" href="#">
+            <a target="_blank" class="arrow-link text text_size_accent mt-1em"
+               href="https://journal.worldscipubl.com/vse-stati/pochemu-davat-garantiyu-na-uspeshnuyu-publikacziyu-ne-mozhet-ni-odna-kompaniya/">
                 <span class="text_underline">Перейти в блог</span>
                 <span class="arrow-link__subtitle">
                     3 min read
@@ -622,7 +845,7 @@
                 </span>
             </a>
         </div>
-        <div class="promo__col promo__col_by3">
+        <div class="promo__col promo__col_by3 js-reach-goal">
             <h3 class="text text_decoration text_size_accent text_weight_bold">
                 Соответствуем научной этике
             </h3>
@@ -630,7 +853,8 @@
                 Мы не платим взносы журналам, но вкладываем в профессиональную доработку статьи 80% от общего бюджета.
                 Мы заинтересованы только в успешном результате.
             </p>
-            <a target="_blank" class="arrow-link text text_size_accent mt-1em" href="#">
+            <a target="_blank" class="arrow-link text text_size_accent mt-1em"
+               href="https://journal.worldscipubl.com/vse-stati/pochemu-davat-garantiyu-na-uspeshnuyu-publikacziyu-ne-mozhet-ni-odna-kompaniya/">
                 <span class="text_underline">Перейти в блог</span>
                 <span class="arrow-link__subtitle">
                     3 min read
@@ -638,7 +862,7 @@
                 </span>
             </a>
         </div>
-        <div class="promo__col promo__col_by3">
+        <div class="promo__col promo__col_by3 js-reach-goal">
             <h3 class="text text_decoration text_size_accent text_weight_bold">
                 Договор
             </h3>
@@ -646,7 +870,8 @@
                 Наш сервис работает не первый год, поэтому мы знаем все риски и минимизируем их, чтобы вы оставались
                 довольны сотрудничеством, а публикации соответствовали международным стандартам.
             </p>
-            <a target="_blank" class="arrow-link text text_size_accent mt-1em" href="#">
+            <a target="_blank" class="arrow-link text text_size_accent mt-1em"
+               href="https://knowledge.worldscipubl.com/explorer/19gCTg4oCjAXn8EC_PNWcw1HY4sPGEv5q">
                 <span class="text_underline">Перейти в блог</span>
                 <span class="arrow-link__subtitle">
                     3 min read
@@ -761,7 +986,8 @@
         </div>
     </div>
     <div class="promo__footer">
-        <a class="button button_secondary button_icon_fb mt-a m-auto-ws" href="https://m.me/worldscipubl?ref=w15970869"
+        <a class="button button_secondary button_icon_fb mt-a m-auto-ws js-reach-goal"
+           href="https://m.me/worldscipubl?ref=w15970869"
            target="_blank">
             Узнать сроки
         </a>
@@ -803,7 +1029,7 @@
                         Обучение будет доступно в ближайшее время. Включите уведомления, чтобы не пропустить.
                     </p>
 
-                    <a class="button button_secondary button_icon_fb mt-a"
+                    <a class="button button_secondary button_icon_fb mt-a js-reach-goal"
                        href="https://m.me/worldscipubl?ref=w15971027" target="_blank">
                         Получать уведомления
                     </a>
@@ -841,7 +1067,8 @@
                             – актуальность источников литературы.
                         </p>
                     </div>
-                    <a target="_blank" class="link link_file text text_size_default mt-a" href="#">
+                    <a target="_blank" class="link link_file text text_size_default mt-a"
+                       href="https://knowledge.worldscipubl.com/explorer/1EGCJ0eWtR67Rd8Fr5lH0dTQqex00KYW7">
                         Скачать начальные требования
                     </a>
                 </div>
@@ -863,26 +1090,35 @@
                         важным параметрам, как наличие литературного обзора, актуальных ссылок, цитирования,
                         достаточного количества иностранных источников литературы, а также наличие заимствований, в том
                         числе процент самоцитирования. По его результатам Вы узнаете, насколько Ваша научная статья
-                        соответствует <span class="text_color_light-blue">начальным требованиям </span> для продолжения
+                        соответствует <a class="text_color_light-blue" href="https://knowledge.worldscipubl.com/explorer/1EGCJ0eWtR67Rd8Fr5lH0dTQqex00KYW7
+
+начальные требования" target="_blank">начальным
+                        требованиям </a> для продолжения
                         подготовительных работ к публикации в не
                         хищническом журнале с необходимыми характеристиками.
                     </p>
                     <p class="text mt-1em text_size_accent mb-2em">
                         Рецензия от профессионального редактора выявит уровень научной составляющей Вашего исследования.
                         Также вместе с рецензией Вы получите подробный пошаговый план улучшения научной составляющей.
-                        В случае если статья не пройдет аудит, мы предложим услугу <span class="text_color_light-blue">«первичное редактирование»</span>.
+                        В случае если статья не пройдет аудит, мы предложим услугу <a class="text_color_light-blue"
+                                                                                      href="https://knowledge.worldscipubl.com/explorer/1r7SljQJQ58wbIO_vcmwJ36ddD6ZlXHeW
+
+первичное редактирование" target="_blank">«первичное
+                        редактирование»</a>.
                         Редактор
                         самостоятельно отредактирует Ваш материал под необходимые требования и вам не придется повторно
                         проходить аудит.
                     </p>
                     <div class="stage-slider__btn-group mt-a">
                         <a target="_blank" class="stage-slider__btn link link_file text text_size_default"
-                           href="#">
-                            Пример подачи в журнал
+                           href="https://knowledge.worldscipubl.com/explorer/1gmk2qW2tD4Uc4S62Wsw7PnrqFfplxsEq">
+                            Пример подробного аудита
                         </a>
-                        <a class="stage-slider__btn button button_outline_success" href="/" target="_blank">Как проходит
+                        <a class="stage-slider__btn button button_outline_success" href="/audit?tab=1" target="_blank">Как
+                            проходит
                             аудит</a>
-                        <a class="stage-slider__btn button button_success" href="/" target="_blank">Загрузить статью на
+                        <a class="stage-slider__btn button button_success" href="/audit?tab=0" target="_blank">Загрузить
+                            статью на
                             аудит</a>
                     </div>
                 </div>
@@ -914,7 +1150,8 @@
                         — Ваша публикация будет соответствовать всем международным стандартам в рамках научной этики.
                     </p>
 
-                    <a target="_blank" class="link link_file text text_size_default mt-a" href="#">
+                    <a target="_blank" class="link link_file text text_size_default mt-a"
+                       href="https://knowledge.worldscipubl.com/explorer/19gCTg4oCjAXn8EC_PNWcw1HY4sPGEv5q">
                         Пример договора с сервисом World Sci Publ
                     </a>
                 </div>
@@ -952,7 +1189,9 @@
                         </p>
                         <p class="text mt-1em text_size_accent">
                             * Уровень сложности доработок оценивает специалист сервиса World Sci Publ во время
-                            проведения <span class="text_color_light-blue">подробного аудита.</span>
+                            проведения <a class="text_color_light-blue"
+                                          href="https://knowledge.worldscipubl.com/explorer/1gmk2qW2tD4Uc4S62Wsw7PnrqFfplxsEq"
+                                          target="_blank">подробного аудита.</a>
                         </p>
                     </div>
                 </div>
@@ -988,10 +1227,11 @@
                         Обучение будет доступно в ближайшее время. Включите уведомления, чтобы не пропустить.
                     </p>
                     <div class="stage-slider__btn-group mt-a">
-                        <a target="_blank" class="link link_file text text_size_default stage-slider__btn" href="#">
+                        <a target="_blank" class="link link_file text text_size_default stage-slider__btn"
+                           href="https://knowledge.worldscipubl.com/explorer/1LgHpt3kqbv80aCH9f0Wcff0JppmbBSyN">
                             Пример перевода
                         </a>
-                        <a class="button button_secondary button_icon_fb stage-slider__btn"
+                        <a class="button button_secondary button_icon_fb stage-slider__btn js-reach-goal"
                            href="https://m.me/worldscipubl?ref=refuid"
                            target="_blank">
                             Получите бесплатный перевод за три простых шага
@@ -1024,7 +1264,8 @@
                         научному редактированию англоговорящим ученым.
                     </p>
 
-                    <a target="_blank" class="link link_file text text_size_default mt-a" href="#">
+                    <a target="_blank" class="link link_file text text_size_default mt-a"
+                       href="https://knowledge.worldscipubl.com/explorer/1wgWwAdyDEctM52rbaT7n6z1EW3XcNd1N">
                         Пример экспертной оценки
                     </a>
                 </div>
@@ -1056,7 +1297,8 @@
                         комментариев от специалиста.
                     </p>
 
-                    <a target="_blank" class="link link_file text text_size_default mt-a" href="#">
+                    <a target="_blank" class="link link_file text text_size_default mt-a"
+                       href="https://knowledge.worldscipubl.com/explorer/1EZEil7qSIsYuBumqUVVl1xMW6S3GC5rH">
                         Пример научного редактирования
                     </a>
                 </div>
@@ -1082,7 +1324,8 @@
                         «чистую» финальную версию, исходя их замечаний лингвиста.
                     </p>
 
-                    <a target="_blank" class="link link_file text text_size_default mt-a" href="#">
+                    <a target="_blank" class="link link_file text text_size_default mt-a"
+                       href="https://knowledge.worldscipubl.com/explorer/1u6nNOl4zkak0YlzSmyGAgs5xhvWz4ylm">
                         Пример вычитки носителем языка
                     </a>
                 </div>
@@ -1115,7 +1358,8 @@
                         ключевые слова с запросом соответствия рукописи интересам читателей издания.
                     </p>
 
-                    <a target="_blank" class="link link_file text text_size_default mt-a" href="#">
+                    <a target="_blank" class="link link_file text text_size_default mt-a"
+                       href="https://knowledge.worldscipubl.com/explorer/1T6XIamiLNo2vUft7xaDcBMLuA83HH83S">
                         Пример таргетированного подбора
                     </a>
                 </div>
@@ -1144,7 +1388,8 @@
                         раскрывается актуальность и польза исследования, предлагаются рецензенты, которые должны
                         соответствовать необходимым требованиям, указывается отсутствие конфликта интересов у Авторов.
                     </p>
-                    <a target="_blank" class="link link_file text text_size_default mt-a" href="#">
+                    <a target="_blank" class="link link_file text text_size_default mt-a"
+                       href="https://knowledge.worldscipubl.com/explorer/1E1juXAGuHgWcZWznIgPJPF9IBAK2WD2i">
                         Пример финальной подготовки
                     </a>
                 </div>
@@ -1168,7 +1413,8 @@
                         возможность принятия статьи на рецензирование с первой подачи.
                     </p>
 
-                    <a target="_blank" class="link link_file text text_size_default mt-a" href="#">
+                    <a target="_blank" class="link link_file text text_size_default mt-a"
+                       href="https://knowledge.worldscipubl.com/explorer/1LQ5Pwm0CSjqN_8D7lbC0V9ZO1Cr6n7DR">
                         Пример подачи в журнал
                     </a>
                 </div>
@@ -1196,7 +1442,8 @@
                         работаем с возможными отказами или возвратами на доработку, а далее, по необходимости, заново
                         подаем статью с внесёнными корректировками.
                     </p>
-                    <a target="_blank" class="link link_file text text_size_default mt-a" href="#">
+                    <a target="_blank" class="link link_file text text_size_default mt-a"
+                       href="https://knowledge.worldscipubl.com/explorer/1p1JHjZvhaEzkXE84igHXvlpQ37PrTdGZ">
                         Пример сопровождения на этапах рецензирования
                     </a>
                 </div>
@@ -1229,7 +1476,7 @@
                         статьи и её успешной индексации.
                     </p>
 
-                    <a class="button button_secondary button_icon_fb mt-a"
+                    <a class="button button_secondary button_icon_fb mt-a js-reach-goal"
                        href="https://m.me/worldscipubl?ref=w15975810" target="_blank">
                         Примеры публикации (кейс)
                     </a>
@@ -1314,9 +1561,10 @@
             </div>
         </div>
         <div class="promo__footer">
-            <button class="button button_secondary button_icon_fb mt-2em m-auto-ws">
+            <a class="button button_success button_icon_star mt-2em m-auto-ws js-reach-goal" href="/cabinet/login"
+               target="_blank">
                 Зарегистрироваться
-            </button>
+            </a>
         </div>
     </div>
 </section>
@@ -1334,8 +1582,8 @@
                 <div class="audit-form audit-form_frame js-article-upload">
                     <div class="audit-form__inner">
                         <div class="form-frame js-audit-from">
-                            <form class="form-frame__item audit-form__form"
-                                  name="audit" novalidate>
+                            <form class="form-frame__item active audit-form__form"
+                                  name="audit-add-lead" novalidate>
                                 <h2 class="text text_weight_bold text_size_accent text_align_center mb-1em">
                                     Заполните данные для подробного аудита:
                                 </h2>
@@ -1385,8 +1633,8 @@
                                     Отправить на аудит
                                 </button>
                             </form>
-                            <form class="form-frame__item active"
-                                  name="audit" novalidate>
+                            <form class="form-frame__item"
+                                  name="audit-add-file" novalidate>
                                 <label class="article-upload">
                                     <i class="article-upload__img"></i>
                                     <h2 class="article-upload__label text text_weight_bold text_size_accent text_align_center mb-1em">
@@ -1423,8 +1671,22 @@
                                         class="text_weight_bold js-audit-from-email"></span>
                                 </p>
                                 <img class="audit-form__sent-img" src="images/content/mockups/web-site.svg">
-                                <a href="/" class="button button_success m-auto-ws mt-a mb-2em">Войти /
-                                    Зарегистрироваться</a>
+                                <a href="/cabinet/login" class="button button_success m-auto-ws mt-a mb-2em">
+                                    Войти / Зарегистрироваться
+                                </a>
+                            </div>
+                            <div class="form-frame__item">
+                                <h3 class="text text_weight_bold text_size_accent text_align_center mb-2em">
+                                    Вы уже зарегистрированы в личном кабинете
+                                </h3>
+                                <p class="text text_size_accent text_align_center mb-1em">
+                                    В целях безопасности загрузите статью на технический аудит через личный кабинет.
+                                </p>
+
+                                <img class="audit-form__sent-img" src="images/content/mockups/web-site.svg">
+                                <a href="/cabinet/login" class="button button_success m-auto-ws mt-a mb-2em">
+                                    Войти / Зарегистрироваться
+                                </a>
                             </div>
                             <i class="form-frame__loader loader loader_form"></i>
                         </div>
@@ -1442,9 +1704,22 @@
                         с необходимыми характеристиками. сформируем перечень требующихся доработок и рассчитем их
                         стоимость.
                     </p>
-                    <button class="button button_outline_success mt-1em">
-                        Как проходит аудит
-                    </button>
+                    <a class="promo-slide__btn button button_outline_success mt-1em js-reach-goal" href="/audit?tab=1"
+                       target="_blank">
+                        Как проходит аудит?
+                    </a>
+                    <div class="promo__group">
+                        <a target="_blank"
+                           class="stage-slider__btn promo__group-item link link_file text text_size_default"
+                           href="https://knowledge.worldscipubl.com/explorer/1gmk2qW2tD4Uc4S62Wsw7PnrqFfplxsEq">
+                            Пример подробного аудита
+                        </a>
+                        <a target="_blank"
+                           class="stage-slider__btn promo__group-item link link_file text text_size_default"
+                           href="https://knowledge.worldscipubl.com/explorer/1kPVIs0mlwJIQsCqUgP5o6bmb6pG2B5h1">
+                            Пример резенции от редактора
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1514,34 +1789,41 @@
                             <!-- </button>-->
                             <!-- /li>-->
                         </ul>
-                        <form class="quiz-card__form" name="quiz" novalidate>
-                            <div class="field mt-1em">
-                                <input class="field__input"
-                                       name="email"
-                                       placeholder="E-mail"
-                                       pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
-                                       type="email"
-                                       required>
-                                <span class="field__error"></span>
+                        <div class="form-frame quiz-card__form">
+                            <form class="form-frame__item active" name="quiz-2" novalidate>
+                                <div class="field mt-1em">
+                                    <input class="field__input"
+                                           name="email"
+                                           placeholder="E-mail"
+                                           pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                                           type="email"
+                                           required>
+                                    <span class="field__error"></span>
+                                </div>
+                                <div class="field mt-1em">
+                                    <input class="field__input"
+                                           name="phone"
+                                           placeholder="Номер телефона"
+                                           pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                           type="tel"
+                                           required>
+                                    <span class="field__error"></span>
+                                </div>
+                                <div class="field mt-1em">
+                                    <input class="field__input" name="name" placeholder="Имя" type="text" required>
+                                    <span class="field__error"></span>
+                                </div>
+                                <button class="button button_success mt-1em">
+                                    Отправить
+                                </button>
+                            </form>
+                            <div class="form-frame__item">
+                                <h3 class="text text_weight_bold text_size_accent text_align_center mt-2em mb-2em">
+                                    Спасибо, данные получены. <br> Ответ поступит на указанный e-mail.
+                                </h3>
                             </div>
-                            <div class="field mt-1em">
-                                <input class="field__input"
-                                       name="phone"
-                                       placeholder="Номер телефона"
-                                       pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
-                                       type="tel"
-                                       required>
-                                <span class="field__error"></span>
-                            </div>
-                            <div class="field mt-1em">
-                                <input class="field__input" name="name" placeholder="Имя" type="text" required>
-                                <span class="field__error"></span>
-                            </div>
-                            <button class="button button_success mt-1em">
-                                Отправить
-                            </button>
-                            <i class="loader loader_form"></i>
-                        </form>
+                            <i class="form-frame__loader loader loader_form"></i>
+                        </div>
                     </div>
                     <div class="quiz__nav">
                         <div class="quiz__progress quiz-progress">
@@ -1703,16 +1985,15 @@
 <!-- Секция 15: Задать вопрос -->
 <section class="promo promo_bg_gray pb-section">
     <div class="promo__inner container-small">
-        <div class="promo__header">
-            <h2 class="text text_weight_bold text_size_accent mt-2em">
-                Не нашли ответ на свой вопрос?
-            </h2>
-            <p class="text">
-                Задайте его в в этой форме и мы ответим вам на e-mail
-            </p>
-        </div>
-        <div class="promo__body">
-            <form class="faq-form js-faq-from" name="question_1" novalidate>
+        <div class="form-frame js-faq-from">
+            <form class="form-frame__item active faq-form"
+                  name="question_1" novalidate>
+                <h2 class="text text_weight_bold text_size_accent mt-2em">
+                    Не нашли ответ на свой вопрос?
+                </h2>
+                <p class="text mb-1em">
+                    Задайте его в в этой форме и мы ответим вам на e-mail
+                </p>
                 <div class="field">
                     <textarea class="faq-form__textarea field__input text"
                               placeholder="Введите свой вопрос"
@@ -1731,13 +2012,14 @@
                     </div>
                     <button class="faq-form__submit-btn button button_success">Отправить</button>
                 </div>
-                <i class="loader loader_form"></i>
             </form>
-            <div class="audit-form__submitted">
-                <h3 class="text text_weight_bold text_size_accent mb-2em">
-                    Ваш вопрос отправлен специалисту. Ответ поступит на указанный e-mail.
+            <div class="form-frame__item">
+                <h3 class="text text_weight_bold text_size_accent text_align_center mt-2em mb-2em">
+                    Ваш вопрос отправлен специалисту. <br>
+                    Ответ поступит на указанный e-mail.
                 </h3>
             </div>
+            <i class="form-frame__loader loader loader_form"></i>
         </div>
     </div>
 </section>
@@ -1848,9 +2130,32 @@
     </div>
 </section>
 
+<noscript>
+    <img src="https://vk.com/rtrg?p=VK-RTRG-837729-8F4Pd"
+         style="position: fixed; left: -999px" alt=""/>
+</noscript>
+<noscript>
+    <img height="1" width="1" style="display: none" alt="facebook"
+         src="https://www.facebook.com/tr?id=2365479983546227&ev=PageView&noscript=1"/>
+</noscript>
+<noscript>
+    <div>
+        <img src="https://mc.yandex.ru/watch/50181778"
+             style="position: absolute; left: -9999px" alt=""/>
+    </div>
+</noscript>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NF7Q6BJ" height="0"
+            width="0"
+            style="display: none; visibility: hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <script>
-  // var csrfToken = '<?=$_SESSION['csrf-token']?>';
-  var csrfToken = 121;
+  var csrfToken = '<?=$_SESSION['csrf-token']?>';
+  // var csrfToken = 121;
 </script>
+
 </body>
 </html>
