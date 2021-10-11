@@ -60,10 +60,10 @@ const AuditFrom = () => {
         .then((res) => {
           console.log(res);
           if (!res) {
+            sendAddLead(data);
+          } else {
             showToCabinet();
             triggerGoal(forms[0].getAttribute('name'));
-          } else {
-            sendAddLead(data);
           }
         })
         .catch((err) => {
