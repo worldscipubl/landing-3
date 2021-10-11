@@ -62,11 +62,11 @@ const AuditFrom = () => {
       formService.sendForm(emailData, formService.isExists)
         .then((res) => {
           console.log(res);
-          triggerGoal(forms[0].getAttribute('name'));
           if (!res) {
-            sendAddLead(data);
-          } else {
             showToCabinet();
+            triggerGoal(forms[0].getAttribute('name'));
+          } else {
+            sendAddLead(data);
           }
         })
         .catch((err) => {
@@ -87,7 +87,6 @@ const AuditFrom = () => {
       formService.sendForm(data, formService.addFile)
         .then((res) => {
           console.log(res);
-          triggerGoal(forms[1].getAttribute('name'));
           showSuccessSubmit();
         })
         .catch((err) => {
