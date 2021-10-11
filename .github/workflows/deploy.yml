@@ -20,6 +20,6 @@ jobs:
       - run: mkdir build
       # Config move
       - run: mv config.json build/config.json
-      - run: cp -a dist/. build
+      - run: cp -a dist build
       # Other
       - run: cd build && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . root@5.253.63.141:/var/www/www-root/data/www/worldscipubl.com/public_html/public/landing/
