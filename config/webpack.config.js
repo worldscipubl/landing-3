@@ -24,7 +24,7 @@ const getHtmlTemplate = () => glob
       hash: false,
       template: template.path,
       chunks: [template.name.toString()],
-      filename: `${template.name}.html`,
+      filename: `${template.name}.php`,
       favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
     }),
   );
