@@ -19,7 +19,9 @@ jobs:
       # Deploy
       - run: mkdir build
       # Config move
-      - run: mv dist build
       - run: mv config.json build/config.json
+      - run: cd dist
+      - run: mv * build
+      - run: cd ..
       # Other
       - run: cd build && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . root@5.253.63.141:/var/www/www-root/data/www/worldscipubl.com/public_html/public/landing/
