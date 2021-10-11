@@ -55,11 +55,8 @@ const AuditFrom = () => {
       const elForm = e?.currentTarget;
       const data = formService.scrabbleInputs(elForm);
       if (!data) return;
-      const email = data.get('email');
-      const emailData = new FormData();
-      emailData.append('email', email);
       formContainer.classList.add('loading');
-      formService.sendForm(emailData, formService.isExists)
+      formService.sendForm(data, formService.isExists)
         .then((res) => {
           console.log(res);
           if (!res) {
