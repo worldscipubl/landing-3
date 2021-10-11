@@ -1,4 +1,4 @@
-<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WorldSciPubl</title><meta name="facebook-domain-verification" content="gta4edmceapujfhozlol4f48p2ack2"/><script>(function (w, d, s, l, i) {
+<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/landing/"><title>WorldSciPubl</title><meta name="facebook-domain-verification" content="gta4edmceapujfhozlol4f48p2ack2"/><script>(function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({
           'gtm.start': new Date().getTime(),
