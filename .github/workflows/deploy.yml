@@ -25,13 +25,14 @@ jobs:
       - name: Build project
         run: CI=false npm run production
 
+      - name: Rename html files
+        run: cd dist && for f in *.html; do mv -- "$f" "${f%.html}.php"; done;
+
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
         with:
           name: production-files
           path: ./dist
-      - name: Rename html files
-        run: cd dist && for f in *.html; do mv -- "$f" "${f%.html}.php"; done;
 
   deploy:
     name: Deploy
