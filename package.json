@@ -69,7 +69,7 @@
     "lint:sass": "sass-lint -v -q",
     "lint:js": "eslint --ext .js src/js/",
     "stats": "webpack --config config/webpack.prod.config.js --mode=production --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json",
-    "deploy": "gh-pages -d dist"
+    "deploy": "git push --tags origin"
   },
   "target": "web",
   "dependencies": {
