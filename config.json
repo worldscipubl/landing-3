@@ -1,6 +1,6 @@
 {
   "audit": "audit.php",
-  "cooperation": "we_need_editors.php",
+  "cooperation": "cooperation.php",
   "promocode": "promocode.php",
   "promocode-ads": "promocode.php",
   "overtake": "overtake.php",
