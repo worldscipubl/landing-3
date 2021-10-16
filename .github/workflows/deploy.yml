@@ -31,7 +31,7 @@ jobs:
           name: production-files
           path: ./dist
       - name: Rename html files
-        run: for f in *.html; do mv -- "$f" "${f%.html}.php"; done;
+        run: cd dist && for f in *.html; do mv -- "$f" "${f%.html}.php"; done;
 
   deploy:
     name: Deploy
