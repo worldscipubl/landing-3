@@ -23,16 +23,16 @@ jobs:
         run: npm ci
 
       - name: Build project
-        run: CI=false npm run build
+        run: CI=false npm run production
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
         with:
           name: production-files
-          path: ./build
+          path: ./dist
 
   deploy:
-    name: Build
+    name: Deploy
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -43,7 +43,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: production-files
-          path: ./build
+          path: ./dist
 
       - name: Deploy to server
         run: |
@@ -51,6 +51,6 @@ jobs:
           mkdir "$HOME/.ssh"
           echo "${{ secrets.key_server }}" > "$HOME/.ssh/key"
           chmod 600 "$HOME/.ssh/key"
-          mv config.json build/config.json
+          mv config.json dist/config.json
           for f in *.html; do mv -- "$f" "${f%.html}.php" done
-          cd build && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . root@5.253.63.141:/var/www/www-root/data/www/worldscipubl.com/public_html/public/landing/
+          cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . root@5.253.63.141:/var/www/www-root/data/www/worldscipubl.com/public_html/public/landing/
