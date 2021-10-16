@@ -1,25 +1,58 @@
-name: Deploy
+name: Build & deploy
 
 on:
-  push:
-    branches:
-      - main
+  create:
+    tags:
+      - v*
 
 jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 13.x
+
+      - name: Install NPM packages
+        run: npm ci
+
+      - name: Build project
+        run: CI=false npm run production
+
+      - name: Rename html files
+        run: cd dist && for f in *.html; do mv -- "$f" "${f%.html}.php"; done;
+
+      - name: Upload production-ready build files
+        uses: actions/upload-artifact@v2
+        with:
+          name: production-files
+          path: ./dist
+
   deploy:
+    name: Deploy
+    needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      # Setup key
-      - run: set -eu
-      - run: mkdir "$HOME/.ssh"
-      - run: echo "${{ secrets.key_server }}" > "$HOME/.ssh/key"
-      - run: chmod 600 "$HOME/.ssh/key"
-      # Deploy
-      - run: mkdir build
-      # Config move
-      - run: cp -a dist/. build
-      - run: mv config.json build/config.json
-      # Other
-      - run: cd build && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . root@5.253.63.141:/var/www/www-root/data/www/worldscipubl.com/public_html/public/landing/
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: production-files
+          path: ./dist
+
+      - name: Deploy to server
+        run: |
+          set -eu
+          mkdir "$HOME/.ssh"
+          echo "${{ secrets.key_server }}" > "$HOME/.ssh/key"
+          chmod 600 "$HOME/.ssh/key"
+          mv config.json dist/config.json
+          cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . root@5.253.63.141:/var/www/www-root/data/www/worldscipubl.com/public_html/public/landing/
