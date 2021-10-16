@@ -1,8 +1,5 @@
 {
   "audit": "audit.php",
-  "cooperation": "cooperation.php",
   "promocode": "promocode.php",
-  "promocode-ads": "promocode.php",
-  "overtake": "overtake.php",
-  "referral": "referral.php"
+  "promocode-ads": "promocode.php"
 }
