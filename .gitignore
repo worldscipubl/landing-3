@@ -19,7 +19,7 @@ Thumbs.db
 npm-debug.log
 
 node_modules/
-dist/
+#dist/
 # Created by https://www.toptal.com/developers/gitignore/api/webstorm,visualstudiocode,visualstudio,phpstorm,windows,macos,linux,node,firebase,wordpress,octobercms
 # Edit at https://www.toptal.com/developers/gitignore?templates=webstorm,visualstudiocode,visualstudio,phpstorm,windows,macos,linux,node,firebase,wordpress,octobercms
 
@@ -163,7 +163,7 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+#dist
 
 # Gatsby files
 .cache/
