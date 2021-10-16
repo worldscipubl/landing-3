@@ -52,5 +52,5 @@ jobs:
           echo "${{ secrets.key_server }}" > "$HOME/.ssh/key"
           chmod 600 "$HOME/.ssh/key"
           mv config.json dist/config.json
-          find . -depth -name "*.html" -exec sh -c 'f="{}"; mv -- "$f" "${f%.html}.php"' \;
+#          find . -depth -name "*.html" -exec sh -c 'f="{}"; mv -- "$f" "${f%.html}.php"' \;
           cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . root@5.253.63.141:/var/www/www-root/data/www/worldscipubl.com/public_html/public/landing/
