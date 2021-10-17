@@ -24,7 +24,7 @@ const CooperationFrom = () => {
       const elForm = e?.currentTarget;
       const data = formService.scrabbleInputs(elForm);
       if (!data) return;
-
+      form.classList.add('loading');
       const headers = {
         Accept: 'application/json',
         'Content-Type': 'multipart/form-data',
