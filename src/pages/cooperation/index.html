@@ -213,7 +213,8 @@
         </div>
     </div>
 </header>
-<section class="container cooperation">
+<!-- Вакансии:  -->
+<section class="cooperation container first-section pb-section">
     <div class="cooperation__inner">
         <div class="cooperation__aside card-coop">
             <div class="card-coop__col">
@@ -245,94 +246,83 @@
             <div class="cooperation__form">
                 <div class="coop-form">
                     <div class="coop-form__inner">
-                        <h2 class="text text_size_large text_color_gray-blue coop-form__title">
-                            World Sci Publ
-                        </h2>
-                        <p class="text text_size_accent coop-form__description">
-                            Открыта вакансия на позицию ”редактор научных статей”. Оставьте,
-                            пожалуйста, контактные данные по форме ниже. Специалист HR -
-                            отдела обработает заявку и свяжется с Вами, чтобы рассказать
-                            подробнее об условиях сотрудничества.
-                            <a href="https://drive.google.com/uc?id=1IrR0ZFupg48J2R6NYx_cLna4-CW87qFz&export=download"
-                               class="link_color_gray">Подробнее о
-                                вакансии.</a>
-                        </p>
-                        <form class="coop-form__form" novalidate name="cooperation"
-                              action="/">
-                            <div class="coop-form__inputs">
-                                <div class="input-wrapper">
-                                    <span class="coop-form__label">
-                                        Имя
-                                    </span>
-                                    <input name="name" type="text" class="coop-form__input"
-                                           placeholder="Имя" required/>
-                                    <span class="input-wrapper__error"></span>
+                        <div class="form-frame js-cooperation-from">
+                            <form class="form-frame__item coop-form__form active"
+                                  novalidate
+                                  name="cooperation">
+                                <h2 class="text text_size_large text_color_gray-blue coop-form__title">
+                                    World Sci Publ
+                                </h2>
+                                <p class="text text_size_accent coop-form__description">
+                                    Открыта вакансия на позицию ”редактор научных статей”. Оставьте,
+                                    пожалуйста, контактные данные по форме ниже. Специалист HR -
+                                    отдела обработает заявку и свяжется с Вами, чтобы рассказать
+                                    подробнее об условиях сотрудничества.
+                                    <a href="https://drive.google.com/uc?id=1IrR0ZFupg48J2R6NYx_cLna4-CW87qFz&export=download"
+                                       class="link_color_gray">Подробнее о
+                                        вакансии.</a>
+                                </p>
+                                <div class="coop-form__inputs">
+                                    <div class="field audit-form__input">
+                                        <input class="field__input" name="name" placeholder="Имя"
+                                               type="text"
+                                               required>
+                                        <span class="field__error"></span>
+                                    </div>
+                                    <div class="field audit-form__input">
+                                        <input class="field__input" name="phone"
+                                               placeholder="Введите номер телефона"
+                                               pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                               type="tel"
+                                               required>
+                                        <span class="field__error"></span>
+                                    </div>
+                                    <div class="field audit-form__input">
+                                        <input class="field__input" name="link"
+                                               placeholder="Ссылка на профиль"
+                                               type="text"
+                                               required>
+                                        <span class="field__error"></span>
+                                    </div>
+                                    <div class="field audit-form__input">
+                                        <input class="field__input" name="email"
+                                               placeholder="Email"
+                                               type="email"
+                                               pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                                               required>
+                                        <span class="field__error"></span>
+                                    </div>
                                 </div>
-                                <div class="input-wrapper">
-                                    <span class="coop-form__label">
-                                        Номер телефона
-                                    </span>
-                                    <input name="phone" type="tel" class="coop-form__input"
-                                           placeholder="Введите номер телефона"
-                                           pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
-                                           required/>
-                                    <span class="input-wrapper__error"></span>
-                                </div>
-                                <div class="input-wrapper">
-                                    <span class="coop-form__label">
-                                        Ссылка на профиль автора в Scopus или WoS
-                                    </span>
-                                    <input name="link" type="text" class="coop-form__input"
-                                           placeholder="Ссылка на профиль" required/>
-                                    <span class="input-wrapper__error"></span>
-                                </div>
-                                <div class="input-wrapper">
-                                    <span class="coop-form__label">
-                                        Рабочий Email
-                                    </span>
-                                    <input name="email" type="email"
-                                           class="coop-form__input"
-                                           placeholder="Email"
-                                           pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
-                                           required/>
-                                    <span class="input-wrapper__error"></span>
-                                </div>
-                            </div>
-                            <button type="submit" class="coop-form__btn button"
-                                    data-show-popup="0" data-formsended="cooperation_"
-                                    data-step="1">
-                                Отправить
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="cooperation__success hidden">
-                <div class="coop-form">
-                    <div class="coop-form__inner">
-                        <h2 class="text text_size_large text_weight_bold
+                                <p class="text text_color_red form-frame__error mt-1em"></p>
+                                <button class="coop-form__btn button button_outline_success">
+                                    Отправить
+                                </button>
+                            </form>
+                            <div class="form-frame__item coop-form__inner">
+                                <h2 class="text text_size_large text_weight_bold
                                  text_color_gray-blue coop-form__title">
-                            Спасибо
-                        </h2>
-                        <p class="text text_size_accent text_color_gray-blue coop-form__description">
-                            Мы приняли Вашу заявку.
-                            Письмо с информацией о дальнейшем ходе работ уже отправленно на
-                            Ваш email.
-                        </p>
+                                    Спасибо
+                                </h2>
+                                <p class="text text_size_accent text_color_gray-blue coop-form__description">
+                                    Мы приняли Вашу заявку.
+                                    Письмо с информацией о дальнейшем ходе работ уже отправленно на
+                                    Ваш email.
+                                </p>
+                                <p class="text text_size_accent text_color_gray-blue coop-form__description">
+                                    Ознакомьтесь с сервисом World Sci Publ,
+                                    вся информация находится <b>в избранном.</b>
+                                </p>
+                                <img class="coop-form__img" src="images/content/publishing/translation.svg"
+                                     alt="favorites">
 
-                        <p class="text text_size_accent text_color_gray-blue coop-form__description">
-                            Ознакомьтесь с сервисом World Sci Publ,
-                            вся информация находится <b>в избранном.</b>
-                        </p>
-
-                        <img class="coop-form__img" src="./media/menu/favorites.svg"
-                             alt="favorites">
-
-                        <a class="button button--menu coop-form__favorite"
-                           href="https://taplink.cc/world.sci.publ"
-                           target="_blank">
-                            ⭐️ Перейти в избранное
-                        </a>
+                                <a class="button button_outline_success coop-form__favorite"
+                                   href="https://taplink.cc/world.sci.publ"
+                                   target="_blank">
+                                    ⭐️ Перейти в избранное
+                                </a>
+                            </div>
+                            <i class="form-frame__loader loader loader_form"></i>
+                        </div>
                     </div>
                 </div>
             </div>
