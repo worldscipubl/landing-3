@@ -13,7 +13,7 @@
     border-radius: 12px;
 
     .step-card__inner {
-      height: auto;
+      max-height: 50em;
     }
 
     .step-card__title {
@@ -25,9 +25,9 @@
 .step-card__inner {
   display: flex;
   flex-direction: column;
-  height: 0;
+  max-height: 0;
   overflow: hidden;
-  transition: height .3s ease;
+  transition: max-height ease 0.5s;
 }
 
 .step-card__title {

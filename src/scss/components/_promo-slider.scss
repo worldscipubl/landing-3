@@ -9,6 +9,7 @@
 .promo-slider__tabs {
   width: 100%;
   margin: 21px -12px 48px;
+  overflow: hidden;
 
   @media screen and (max-width: $bp-tablet) {
     margin: 12px 0;
@@ -17,11 +18,11 @@
 
 .promo-slider__tab {
   margin: 12px;
-  display: inline-block;
   text-align: center;
   flex-shrink: 0;
   word-wrap: normal;
-  min-width: fit-content;
+  white-space: nowrap;
+  width: auto;
 
   @media screen and (max-width: $bp-tablet) {
     margin: 2px 8px;
@@ -31,6 +32,7 @@
 .promo-slider__content {
   flex-grow: 1;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   position: relative;
   width: 100%;
@@ -38,10 +40,18 @@
 
 .promo-slider__page {
   width: 100%;
+  justify-content: center;
+  min-height: 50vh;
+
+  @media screen and (max-width: $bp-tablet) {
+    justify-content: flex-start;
+    min-height: auto;
+  }
 
   &:not(:first-child) {
     position: absolute;
     visibility: hidden;
+    margin-left: 64px;
   }
 
   &_init {
