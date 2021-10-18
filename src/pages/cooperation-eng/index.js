@@ -10,7 +10,6 @@ import LazyLoad from 'vanilla-lazyload';
 /* Your JS Code goes here */
 window.addEventListener('DOMContentLoaded', () => {
   new LazyLoad();
-  Header();
   CooperationFrom();
 });
 

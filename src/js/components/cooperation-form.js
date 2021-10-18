@@ -5,7 +5,6 @@ const CooperationFrom = () => {
   const initForm = (form) => {
     const forms = form.querySelectorAll('.form-frame__item');
     const formError = forms[0].querySelectorAll('.form-frame__error');
-
     const showSuccessSubmit = () => {
       hideForms();
       forms[1].classList.add('active');
