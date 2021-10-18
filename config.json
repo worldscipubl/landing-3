@@ -3,5 +3,7 @@
   "promocode": "promocode.php",
   "promocode-ads": "promocode.php/?c=1OX8CVBOYF",
   "cooperation": "cooperation.php",
-  "cooperationjournal": "cooperation.php"
+  "cooperationjournal": "cooperation.php",
+  "cooperation-eng": "cooperation-eng.php",
+  "cooperationjournal-eng": "cooperation-eng.php"
 }

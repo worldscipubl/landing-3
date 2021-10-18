@@ -37,6 +37,35 @@
   }
 }
 
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @media screen and (max-width: $bp-mobile) {
+    flex-direction: column;
+  }
+}
+
+.footer-flex__item {
+  width: calc(100% / 4 - 48px);
+
+  @media screen and (max-width: $bp-tablet) {
+    width: calc(100% / 2 - 12px);
+
+    &:not(:first-child) {
+      margin-top: 24px;
+    }
+  }
+
+  @media screen and (max-width: $bp-mobile) {
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+  }
+}
+
 .footer-links {
 
   &__item {

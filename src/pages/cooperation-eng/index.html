@@ -9,8 +9,37 @@
 </head>
 <body>
 <!-- Шапка:  -->
-<include src="sections/header.html">
-</include>
+<header class="header header_bg_white" id="header">
+    <div class="header__inner">
+        <a class="header__logo header-logo"
+           href="/">
+            <img class="header-logo__img"
+                 src="images/content/logo/logo_black.svg"
+                 alt="Logo: World Sci Publ">
+            <h3 class="header-logo__label text
+                text_color_gray-blue
+                text_weight_bold">
+                Publication service<br>
+                World Sci Publ
+            </h3>
+        </a>
+        <ul class="header__action">
+            <li class="header__action-item header__action-item_call">
+                <a target="_blank" class="call-btn"
+                   id="header-call-btn"
+                   href="tel:+74951277926"
+                   data-formsended="call_1">
+                    <img class="call-btn__img"
+                         src="images/content/icons/phone-call.svg"
+                         alt="phone">
+                    <span class="text call-btn__label">
+                        +7 (495) 127 - 79 - 26
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
 <!-- Вакансии:  -->
 <section class="cooperation container first-section pb-section">
     <div class="cooperation__inner">
@@ -52,24 +81,19 @@
                                     World Sci Publ
                                 </h2>
                                 <p class="text text_size_accent coop-form__description">
-                                    Открыта вакансия на позицию ”редактор научных статей”. Оставьте,
-                                    пожалуйста, контактные данные по форме ниже. Специалист HR -
-                                    отдела обработает заявку и свяжется с Вами, чтобы рассказать
-                                    подробнее об условиях сотрудничества.
-                                    <a href="https://drive.google.com/uc?id=1IrR0ZFupg48J2R6NYx_cLna4-CW87qFz&export=download"
-                                       class="link_color_gray">Подробнее о
-                                        вакансии.</a>
+                                    To contact and learn more information about possible cooperation, please, fill out
+                                    the application form:
                                 </p>
                                 <div class="coop-form__inputs">
                                     <div class="field audit-form__input">
-                                        <input class="field__input" name="name" placeholder="Имя"
+                                        <input class="field__input" name="name" placeholder="Name"
                                                type="text"
                                                required>
                                         <span class="field__error"></span>
                                     </div>
                                     <div class="field audit-form__input">
                                         <input class="field__input" name="phone"
-                                               placeholder="Введите номер телефона"
+                                               placeholder="Phone number"
                                                pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
                                                type="tel"
                                                required>
@@ -77,7 +101,14 @@
                                     </div>
                                     <div class="field audit-form__input">
                                         <input class="field__input" name="link"
-                                               placeholder="Сайт журнала"
+                                               placeholder="Journal title"
+                                               type="text"
+                                               required>
+                                        <span class="field__error"></span>
+                                    </div>
+                                    <div class="field audit-form__input">
+                                        <input class="field__input" name="ISSN"
+                                               placeholder="ISSN"
                                                type="text"
                                                required>
                                         <span class="field__error"></span>
@@ -93,30 +124,24 @@
                                 </div>
                                 <p class="text text_color_red form-frame__error mt-1em"></p>
                                 <button class="coop-form__btn button button_outline_success">
-                                    Отправить
+                                    Send
                                 </button>
                             </form>
                             <div class="form-frame__item coop-form__inner">
                                 <h2 class="text text_size_large text_weight_bold
                                  text_color_gray-blue coop-form__title">
-                                    Спасибо
+                                    Thank you
                                 </h2>
                                 <p class="text text_size_accent text_color_gray-blue coop-form__description">
-                                    Мы приняли Вашу заявку.
-                                    Письмо с информацией о дальнейшем ходе работ уже отправленно на
-                                    Ваш email.
-                                </p>
-                                <p class="text text_size_accent text_color_gray-blue coop-form__description">
-                                    Ознакомьтесь с сервисом World Sci Publ,
-                                    вся информация находится <b>в избранном.</b>
+                                    A specialist will contact you
                                 </p>
                                 <img class="coop-form__img" src="images/content/publishing/translation.svg"
                                      alt="favorites">
 
                                 <a class="button button_outline_success coop-form__favorite"
-                                   href="https://taplink.cc/world.sci.publ"
+                                   href="https://worldscipubl.com/"
                                    target="_blank">
-                                    ⭐️ Перейти в избранное
+                                    worldscipubl.com
                                 </a>
                             </div>
                             <i class="form-frame__loader loader loader_form"></i>
@@ -202,15 +227,80 @@
     </div>
 </section>
 <!-- Футер -->
-<include src="sections/footer.html" locals='{
-    "how_we_work": "/#publishing-process",
-    "price": "/",
-    "guarantees": "/#guarantees",
-    "about": "/#about",
-    "faq": "/#faq",
-    "faq_question": "/#faq-question"
-    }'>
-</include>
+<section id="footer" class="footer">
+    <div class="footer-flex container">
+        <img class="footer-flex__item" src="images/content/logo/logo_white.svg">
+        <div class='footer-flex__item'>
+            <ul class="social-list social-list_footer">
+                <li class="social-list__item"><a href="https://teleg.run/worldscipubl"
+                                                 target="_blank" rel="noreferrer"
+                                                 class="social-list__link"><img
+                        class="social-list__link-img"
+                        src="images/content/social/telegram.svg"
+                        alt="telegram"></a></li>
+                <li class="social-list__item"><a href="https://vk.com/worldscipubl/" target="_blank"
+                                                 rel="noreferrer" class="social-list__link"><img
+                        class="social-list__link-img"
+                        src="images/content/social/vk.svg"
+                        alt="vk"></a></li>
+                <li class="social-list__item"><a
+                        href="https://api.whatsapp.com/send/?phone=%2B79086008126&amp;text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9D%D0%BE%D0%BC%D0%B5%D1%80+%D0%BC%D0%BE%D0%B5%D0%B9+%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8%3A+undefined&amp;app_absent=0"
+                        target="_blank" rel="noreferrer" class="social-list__link"><img
+                        class="social-list__link-img"
+                        src="images/content/social/whatsapp.svg"
+                        alt="whatsapp"></a></li>
+                <li class="social-list__item"><a
+                        href="https://www.youtube.com/channel/UC9Wuvp-a1pZn_iHkPAFrwKA?view_as=subscriber"
+                        target="_blank" rel="noreferrer" class="social-list__link"><img
+                        class="social-list__link-img"
+                        src="images/content/social/youtube.svg"
+                        alt="YouTube"></a></li>
+                <li class="social-list__item"><a href="https://www.instagram.com/world.sci.publ/"
+                                                 target="_blank" rel="noreferrer"
+                                                 class="social-list__link"><img
+                        class="social-list__link-img"
+                        src="images/content/social/instagram.svg"
+                        alt="instagram"></a></li>
+                <li class="social-list__item"><a href="https://www.facebook.com/worldscipubl/"
+                                                 target="_blank" rel="noreferrer"
+                                                 class="social-list__link"><img
+                        class="social-list__link-img"
+                        src="images/content/social/facebook.svg"
+                        alt="facebook"></a></li>
+            </ul>
+        </div>
+        <div class='footer-flex__item'>
+            <h3 class="text text_color_white text_size_default text_weight_bold">Contacts</h3>
+            <ul class="footer-links">
+                <li class="footer-links__item">
+                    <a class="text text_color_white text_size_default mt-1em"
+                       href="mailto:cooperation@worldscipubl.com">email: cooperation@worldscipubl.com</a>
+                </li>
+                <li class="footer-links__item">
+                    <a target="_blank" class="text text_color_white text_size_default" href="tel:84951277926">+7 (495)
+                        127 - 79 - 26</a>
+                </li>
+                <li class="footer-links__item">
+                    <p class="text text_color_white text_size_default">
+                        adress: Tyumen, ul. 50 let VLKSM, 13, p. 1 office 86
+                    </p>
+                </li>
+                <li class="footer-links__item">
+                    <a target="_blank" class="text text_color_white text_size_default" href="https://worldscipubl.com/">
+                        site: worldscipubl.com
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-flex__item">
+            <p class="text text_color_white text_size_default">ИП Кадыров</p>
+            <p class="text text_color_white text_size_default">Марсель Алмазович</p>
+            <p class="text text_color_white text_size_default">ИНН 022903480700</p>
+            <p class="text text_color_white text_size_default mb-2em">ОГРНИП 318723200073192</p>
+            <p class="text text_color_white text_size_default mt-a">Privacy Policy</p>
+        </div>
+    </div>
+</section>
 <!-- Скрипты и метрики -->
 <include src="components/telemetry-footer.html">
 </include>
