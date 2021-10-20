@@ -20,7 +20,7 @@ $list-colors: ("black": #000,
     counter-increment: counter-list;
     display: flex;
     align-items: stretch;
-    margin-top: 0.8em;
+    margin-top: 1em;
   }
 
   & > li::before {

@@ -13,20 +13,24 @@
     text-align: center;
   }
 
-  &__img {
-    width: 100%;
-    object-fit: cover;
-    object-position: top center;
 
+  &__img-wrapper {
+    transition: transform 300ms;
+    overflow: hidden;
     background-color: #E6F2FB;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    transition: transform 300ms;
 
     &:hover {
       transform: scale(1.08);
     }
+  }
 
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transform: scale(1.5);
   }
 
   &__label {

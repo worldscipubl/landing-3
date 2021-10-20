@@ -23,6 +23,7 @@
   word-wrap: normal;
   white-space: nowrap;
   width: auto;
+  display: inline-block;
 
   @media screen and (max-width: $bp-tablet) {
     margin: 2px 8px;
