@@ -151,23 +151,14 @@
 .promo__group {
   display: flex;
   margin-top: 1em;
-
-  @media screen and (max-width: $bp-mobile) {
-    flex-direction: column;
-    width: 100%;
-  }
+  overflow-x: scroll;
+  width: 100%;
 }
 
 .promo__group-item {
+  flex-shrink: 0;
 
   &:not(:first-child) {
     margin-left: 1em;
-  }
-
-  @media screen and (max-width: $bp-mobile) {
-    &:not(:first-child) {
-      margin-left: 0;
-      margin-top: 1em;
-    }
   }
 }
