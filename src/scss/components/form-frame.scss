@@ -3,6 +3,7 @@
 .form-frame {
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .form-frame.loading {
@@ -16,6 +17,8 @@
 
 .form-frame__item {
   position: absolute;
+  top: 0;
+  left: 0;
   visibility: hidden;
 
   &.active {
