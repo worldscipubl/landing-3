@@ -1,6 +1,7 @@
 {
   "audit": "audit.php",
   "promocode": "promocode.php",
+  "promocode-ads": "",
   "cooperation": "cooperation.php",
   "cooperationjournal": "cooperation.php",
   "cooperation-eng": "cooperation-eng.php",
