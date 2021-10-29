@@ -39,7 +39,7 @@ const CooperationEngFrom = () => {
     });
   };
 
-  const forms = document.querySelectorAll('.js-cooperation-from');
+  const forms = document.querySelectorAll('.js-cooperationjournal-from');
   forms.forEach((form) => {
     initForm(form);
   });
