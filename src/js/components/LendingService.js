@@ -73,6 +73,13 @@ class FormService extends ApiService {
         }
         this.setErrorInput(input, inputHint, 'Укажите ISSN');
         return false;
+      case 'science':
+        if (input.validity.valid) {
+          this.removeErrorInput(input, inputHint);
+          return true;
+        }
+        this.setErrorInput(input, inputHint, 'Укажите научное направление');
+        return false;
       case 'link':
         if (input.validity.valid) {
           this.removeErrorInput(input, inputHint);
