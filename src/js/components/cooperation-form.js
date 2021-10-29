@@ -52,7 +52,7 @@ const CooperationFrom = () => {
     });
   };
 
-  const forms = document.querySelectorAll('.js-cooperationjournal-from');
+  const forms = document.querySelectorAll('.js-cooperation-from');
   forms.forEach((form) => {
     initForm(form);
   });
