@@ -112,10 +112,6 @@
     border-radius: 8px;
     overflow: hidden;
 
-    @media screen and (max-width: $bp-tablet) {
-      display: none;
-    }
-
     &:hover {
       background-color: $dark-blue;
       border-color: $dark-blue;
