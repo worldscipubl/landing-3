@@ -17,4 +17,8 @@
 .header-logo__label {
   display: block;
   margin-left: 12px;
+
+  @media screen and (max-width: $bp-mobile) {
+    margin-left: 8px;
+  }
 }

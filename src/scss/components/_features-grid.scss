@@ -8,6 +8,7 @@
 .features-grid__inner {
   display: grid;
   justify-content: center;
+  overflow: hidden;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 24px;
 
@@ -51,7 +52,7 @@
     &_slider {
       width: 70%;
       padding: 0 12px;
-      min-height: 125px;
+      min-height: 156px;
     }
   }
 }

@@ -18,6 +18,11 @@ const PromoSlider = () => {
       slides.forEach((slide) => initSlides(slide));
       const flickityPage = initFlickity(slideContainer);
       initNavBar(tabs, flickityPage);
+      flickityPage.on('select', (index) => {
+        if (!(index >= 0 && tabs[index])) return;
+        resetTabs(tabs);
+        tabs[index].classList.add('active');
+      });
     });
   };
 
