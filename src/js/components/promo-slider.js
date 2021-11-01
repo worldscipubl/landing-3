@@ -7,6 +7,7 @@ const PromoSlider = () => {
     const tabsContainer = slider.querySelector('.promo-slider__tabs');
     const slideContainer = slider.querySelector('.promo-slider__content');
     const slides = slideContainer.querySelectorAll('.promo-slider__page');
+    const tabs = tabsContainer.querySelectorAll('.promo-slider__tab');
 
     const initSlides = (slide) => {
       if (!slide) return;
@@ -15,9 +16,24 @@ const PromoSlider = () => {
 
     window.addEventListener('load', () => {
       slides.forEach((slide) => initSlides(slide));
-      initFlickity(slideContainer);
-      initFlickityNav(tabsContainer, slideContainer);
+      const flickityPage = initFlickity(slideContainer);
+      initNavBar(tabs, flickityPage);
     });
+  };
+
+  const initNavBar = (tabs, flickity) => {
+    if (!tabs) return;
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => {
+        flickity.select(index);
+        resetTabs(tabs);
+        tab.classList.add('active');
+      });
+    });
+  };
+
+  const resetTabs = (tabs) => {
+    tabs.forEach((tab) => tab.classList.remove('active'));
   };
 
   const initFlickity = (sliderContainer) => new Flickity(sliderContainer, {

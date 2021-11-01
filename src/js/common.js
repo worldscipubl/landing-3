@@ -1,3 +1,5 @@
+import LazyLoad from 'vanilla-lazyload';
+
 window.addEventListener('DOMContentLoaded', () => {
-  console.log('DOMContentLoaded');
+  new LazyLoad();
 });
