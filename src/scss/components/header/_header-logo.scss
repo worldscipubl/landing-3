@@ -21,4 +21,12 @@
   @media screen and (max-width: $bp-mobile) {
     margin-left: 8px;
   }
+
+  @media screen and (max-width: 412px) {
+    font-size: 11px;
+  }
+
+  @media screen and (max-width: 340px) {
+    font-size: 10px;
+  }
 }
