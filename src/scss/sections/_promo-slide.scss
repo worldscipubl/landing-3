@@ -31,6 +31,10 @@
   object-position: center;
   margin-left: auto;
   margin-top: auto;
+
+  &_lg {
+    width: 100%;
+  }
 }
 
 .promo-slide__desc {

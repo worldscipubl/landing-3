@@ -66,6 +66,10 @@
   width: 50%;
   position: relative;
 
+  &_row {
+    flex-direction: row;
+  }
+
   @media screen and (max-width: $bp-tablet) {
     width: 100%;
   }
