@@ -2,13 +2,15 @@ import ApiService from './ApiService';
 import HTTPError from './HTTPError';
 
 class FormService extends ApiService {
-  addFile = 'add-file/'; // Загрзка файла
+  addFile = 'leads'; // Загрзка файла
 
-  letter = 'letter/'; // Вопрос из FAQ
+  letter = 'leads/letter'; // Вопрос из FAQ
 
-  isExists = 'is-exists/'; // Проверка email
+  isExists = 'users/exist'; // Проверка email
 
-  addLead = 'add-lead/'; // Отправка заявки
+  addLeadCooperation = 'leads/cooperation'; // Отправка заявки редакторов
+
+  addLead = 'leads'; // Отправка заявки
 
   removeErrorInput = (input, inputHint) => {
     if (input.hasAttribute('style')) input.removeAttribute('style');
@@ -66,28 +68,28 @@ class FormService extends ApiService {
         }
         this.setErrorInput(input, inputHint, 'Введите свой вопрос');
         return false;
-      case 'ISSN':
+      case 'issn':
         if (input.validity.valid) {
           this.removeErrorInput(input, inputHint);
           return true;
         }
         this.setErrorInput(input, inputHint, 'Укажите ISSN');
         return false;
-      case 'science':
+      case 'scientificDirection':
         if (input.validity.valid) {
           this.removeErrorInput(input, inputHint);
           return true;
         }
         this.setErrorInput(input, inputHint, 'Укажите научное направление');
         return false;
-      case 'link':
+      case 'linkAuthorScopus':
         if (input.validity.valid) {
           this.removeErrorInput(input, inputHint);
           return true;
         }
         this.setErrorInput(input, inputHint, 'Не указана ссылка на профиль');
         return false;
-      case 'file':
+      case 'Lead[file]':
         if (input.validity.valid) {
           this.removeErrorInput(input, inputHint);
           return true;
@@ -101,7 +103,7 @@ class FormService extends ApiService {
         }
         this.setErrorInput(input, inputHint, 'Введите промокод!');
         return false;
-      case 'text':
+      case 'message':
         if (input.validity.valid) {
           this.removeErrorInput(input, inputHint);
           return true;
@@ -128,7 +130,7 @@ class FormService extends ApiService {
       const inputType = input.getAttribute('type');
       switch (inputType) {
         case 'file':
-          formData.append('file', input.files[0]);
+          formData.append('Lead[file]', input.files[0]);
           break;
         case 'radio':
           if (input.checked) formData.append(input.name, input.value);
@@ -137,12 +139,28 @@ class FormService extends ApiService {
           formData.append(input.name, input.value);
           break;
       }
+
+      let matches = document.cookie.match(new RegExp(
+          "(?:^|; )" + "partnerId".replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+      ));
+      let partnerId = matches ? decodeURIComponent(matches[1]) : undefined;
+      if (partnerId) {
+        formData.append('partnerId', partnerId);
+      }
+
+      let cookies = document.cookie.split(';').reduce((cookies, cookie) => {
+        const [ name, value ] = cookie.split('=').map(c => c.trim());
+        cookies[name] = value;
+        return cookies;
+      }, {});
+      if (cookies) {
+        formData.append('metrics', JSON.stringify(cookies));
+      }
     });
 
     if (!isFormValid) return null;
-    if (csrfToken) formData.append('csrfToken', csrfToken);
     if (currentForm.hasAttribute('name')) {
-      formData.append('formsended', currentForm.getAttribute('name'));
+      formData.append('formName', currentForm.getAttribute('name'));
     }
     return formData;
   };
@@ -163,6 +181,24 @@ class FormService extends ApiService {
       .catch((reason) => {
         reject(reason);
       });
+  });
+
+  sendFormGet = (data, url) => new Promise((resolve, reject) => {
+    this.getResource({
+      url,
+      data,
+    })
+        .then((response) => {
+          if (response?.data?.warning) {
+            const warnings = Array(Object.values(response.data.warning))
+                .join(' ');
+            reject(new Error(warnings));
+          }
+          resolve(response.data);
+        })
+        .catch((reason) => {
+          reject(reason);
+        });
   });
 }
 

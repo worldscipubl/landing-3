@@ -71,25 +71,25 @@ const Forms = () => {
     // loadProgressBar();
 
     axios.post(
-      url,
-      sendData,
-      { withCredentials: true },
-      { headers: headers },
+        url,
+        sendData,
+        { withCredentials: true },
+        { headers: headers },
     )
-      .then((response) => {
-        const resData = response.data;
-        if (resData.warning) {
-          // const error = resData.warning?.error;
-        }
-        triggerGoal(currentForm.name); // Фиксируем цель
-        clearFrom(currentForm); // Отчищаем форму
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        // _button.style.pointerEvents = 'auto';
-      });
+        .then((response) => {
+          const resData = response.data;
+          if (resData.warning) {
+            // const error = resData.warning?.error;
+          }
+          triggerGoal(currentForm.name); // Фиксируем цель
+          clearFrom(currentForm); // Отчищаем форму
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+        .finally(() => {
+          // _button.style.pointerEvents = 'auto';
+        });
   };
 
   const scrabbleInputs = (currentForm) => {
@@ -149,9 +149,9 @@ const Forms = () => {
           return true;
         }
         setErrorInput(
-          input,
-          inputHint,
-          'Недопустимый номер телефона!',
+            input,
+            inputHint,
+            'Недопустимый номер телефона!',
         );
         return false;
       case 'name':

@@ -24,31 +24,19 @@ const CooperationFrom = () => {
       const data = formService.scrabbleInputs(elForm);
       if (!data) return;
       form.classList.add('loading');
-      const headers = {
-        Accept: 'application/json',
-        'Content-Type': 'multipart/form-data',
-        'Access-Control-Allow-Origin': 'https://worldscipubl.com/',
-        'Access-Control-Allow-Credentials': true,
-        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type,' + ' Accept'
-      };
-      const url = 'https://e.worldscipubl.com/site/editor-form/';
-      post(
-        url,
-        data,
-        { withCredentials: true },
-        { headers: headers },
-      )
-        .then((res) => {
-          console.log(res);
-          showSuccessSubmit();
-        })
-        .catch((err) => {
-          console.log(err);
-          formError.innerText = err?.message;
-        })
-        .finally(() => {
-          form.classList.remove('loading');
-        });
+
+      formService.sendForm(data, formService.addLeadCooperation)
+          .then((res) => {
+            console.log(res);
+            showSuccessSubmit();
+          })
+          .catch((err) => {
+            console.log(err);
+            formError.innerText = err?.message;
+          })
+          .finally(() => {
+            form.classList.remove('loading');
+          });
     });
   };
 

@@ -75,7 +75,7 @@
                     <div class="form-frame js-cooperation-from">
                         <form class="form-frame__item coop-form__form active"
                               novalidate
-                              name="cooperation-eng">
+                              name="cooperationEn">
                             <h2 class="text text_size_large text_color_gray-blue coop-form__title">
                                 World Sci Publ
                             </h2>
@@ -99,14 +99,14 @@
                                     <span class="field__error"></span>
                                 </div>
                                 <div class="field audit-form__input">
-                                    <input class="field__input" name="link"
+                                    <input class="field__input" name="journalTitle"
                                            placeholder="Journal title"
                                            type="text"
                                            required>
                                     <span class="field__error"></span>
                                 </div>
                                 <div class="field audit-form__input">
-                                    <input class="field__input" name="ISSN"
+                                    <input class="field__input" name="issn"
                                            placeholder="ISSN"
                                            type="text"
                                            required>
@@ -118,6 +118,7 @@
                                            type="email"
                                            pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                            required>
+                                    <input type="hidden" name="cooperation" value="1">
                                     <span class="field__error"></span>
                                 </div>
                             </div>

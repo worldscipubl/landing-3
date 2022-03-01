@@ -119,7 +119,7 @@ const Quiz = () => {
       const elForm = e?.currentTarget;
       const data = formService.scrabbleInputs(elForm);
       if (!data) return;
-      data.append('res', JSON.stringify(answersQuiz));
+      data.append('quiz', JSON.stringify(answersQuiz));
       backwardBtn.remove();
       quizFormContainer.classList.add('loading');
       formService.sendForm(data, formService.addLead)

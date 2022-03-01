@@ -4,26 +4,25 @@ import HTTPError from './HTTPError';
 class ApiService {
   constructor() {
     // this._API_BASE = 'https://worldscipubl.com/main';
-    this._API_BASE = '/main';
+    this._API_BASE = 'https://api.worldscipubl.com/v1/';
     this.hasLogging = true;
     this.wspAxios = axios.create({
       baseURL: this._API_BASE,
       headers: { 'Content-Type': 'multipart/form-data' },
-      withCredentials: true,
+      withCredentials: false,
     });
   }
 
   async getResource({
     url = null,
-    params = null,
+    data = null,
     auth = null,
     responseType = null,
   }) {
     const config = {};
-    params && (config.params = params);
+    data && (config.params = {email: data});
     auth && (config.auth = auth);
     responseType && (config.responseType = responseType);
-
     try {
       const response = await this.wspAxios.get(url, config);
       this.logMessage('Response API', response);

@@ -24,18 +24,18 @@ const CooperationEngFrom = () => {
       const data = formService.scrabbleInputs(elForm);
       if (!data) return;
       form.classList.add('loading');
-      formService.sendForm(data, formService.addLead)
-        .then((res) => {
-          console.log(res);
-          showSuccessSubmit();
-        })
-        .catch((err) => {
-          console.log(err);
-          formError.innerText = err?.message;
-        })
-        .finally(() => {
-          form.classList.remove('loading');
-        });
+      formService.sendForm(data, formService.addLeadCooperation)
+          .then((res) => {
+            console.log(res);
+            showSuccessSubmit();
+          })
+          .catch((err) => {
+            console.log(err);
+            formError.innerText = err?.message;
+          })
+          .finally(() => {
+            form.classList.remove('loading');
+          });
     });
   };
 
