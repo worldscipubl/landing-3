@@ -216,6 +216,7 @@
     }
     &_tg {
       &:before {
+        content: "";
         background-image: url("/src/images/content/icons/tg_icon.svg");
         background-repeat: no-repeat;
         background-position: center;
