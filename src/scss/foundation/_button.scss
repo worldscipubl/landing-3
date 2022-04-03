@@ -1,4 +1,4 @@
-@use '../global'as *;
+@use "../global" as *;
 
 %btn-text-default {
   font-family: $fontMain;
@@ -35,7 +35,6 @@
   flex-shrink: 0;
 
   &_size {
-
   }
 
   /* Серая для меню*/
@@ -52,7 +51,7 @@
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
 
     &:hover {
-      background: #E1E1E1;
+      background: #e1e1e1;
       color: $dark-blue;
     }
 
@@ -78,7 +77,8 @@
   }
 
   /* Серая для табов*/
-  &_primary, &_outline_primary {
+  &_primary,
+  &_outline_primary {
     background-color: $gray;
     border-color: $gray;
     color: $dark-blue;
@@ -89,14 +89,15 @@
       color: white;
     }
 
-    &.active, &.is-nav-selected {
+    &.active,
+    &.is-nav-selected {
       background-color: $dark-blue;
       border-color: $dark-blue;
       color: $white;
 
       &:hover {
-        background-color: #{lighter($dark-blue, .65)};
-        border-color: #{lighter($dark-blue, .65)};
+        background-color: #{lighter($dark-blue, 0.65)};
+        border-color: #{lighter($dark-blue, 0.65)};
       }
     }
   }
@@ -107,7 +108,7 @@
     color: $dark-blue;
     font-size: 16px;
     font-weight: bold;
-    border: 1px solid #B3B3B3;
+    border: 1px solid #b3b3b3;
     padding: 0.4em 1em;
     border-radius: 8px;
     overflow: hidden;
@@ -118,20 +119,22 @@
       color: white;
     }
 
-    &.active, &.is-nav-selected {
+    &.active,
+    &.is-nav-selected {
       background-color: $dark-blue;
       border-color: $dark-blue;
       color: $white;
 
       &:hover {
-        background-color: #{lighter($dark-blue, .65)};
-        border-color: #{lighter($dark-blue, .65)};
+        background-color: #{lighter($dark-blue, 0.65)};
+        border-color: #{lighter($dark-blue, 0.65)};
       }
     }
   }
 
   /* Синия для ссылкок на Facebook*/
-  &_secondary, &_outline_secondary {
+  &_secondary,
+  &_outline_secondary {
     background-color: $light-blue;
     border-color: $light-blue;
     color: white;
@@ -143,9 +146,17 @@
       color: white;
     }
   }
+  &_telegram {
+    background-color: $tg-blue;
+    border-color: $tg-blue;
+    color: $white;
+    font-weight: bold;
+    padding: 0.64em 6em 0.64em 0.885em;
+  }
 
   /* Зеленная для квиза*/
-  &_success, &_outline_success {
+  &_success,
+  &_outline_success {
     background-color: $green;
     border-color: $green;
     color: white;
@@ -203,7 +214,17 @@
         margin-right: 0.5em;
       }
     }
-
+    &_tg {
+      &:before {
+        background-image: url("/src/images/content/icons/tg_icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        height: 1.25em;
+        min-width: 1.25em;
+        margin-right: 3.8em;
+      }
+    }
     &_back {
       &:before {
         content: "";
