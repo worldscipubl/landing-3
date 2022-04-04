@@ -1,9 +1,9 @@
-@use '../../global'as *;
+@use "../../global" as *;
 
 .navbar-banner {
   position: relative;
   width: 100%;
-  margin-top: 3vh;
+  margin-top: 1vh;
 
   @media screen and (max-height: 620px) {
     margin-top: 0;
@@ -14,11 +14,10 @@
   }
 
   &__description {
-
   }
 
   &__btn {
-    margin: 1em 0;
+    margin: 0.5em 0;
     width: 46%;
 
     @media screen and (max-width: $bp-mobile) {

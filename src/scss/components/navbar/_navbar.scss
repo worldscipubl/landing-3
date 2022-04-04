@@ -85,7 +85,7 @@
     padding: 28px;
 
     @media screen and (min-width: $bp-large) {
-      padding: #{get-vw(28px, $bp-large)};
+      padding: 1.5vh #{get-vw(28px, $bp-large)};
     }
 
     @media screen and (max-width: $bp-menu) {
@@ -115,8 +115,6 @@
   }
 
   &__title {
-    margin-bottom: 12px;
-
     @media screen and (max-width: $bp-mobile) {
       font-size: 16px;
       align-self: flex-start;
