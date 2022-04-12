@@ -94,6 +94,10 @@ $maxWidthContainer: $maxWidthContainer + 2 * $p-side;
   margin-top: 5em;
 }
 
+.m-a1em {
+  margin: auto 1em;
+}
+
 .pb-section {
   padding-bottom: 160px;
 
