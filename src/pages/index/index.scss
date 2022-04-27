@@ -27,6 +27,9 @@
 @use "./src/scss/components/stage-slider";
 @use "./src/scss/components/promo-slider";
 @use "./src/scss/components/form-frame";
+@use "./src/scss/components/text-on-img";
+@use "./src/scss/components/about-team";
+@use "./src/scss/components/university-slider";
 
 /* List of sections used on this page: */
 @use "./src/scss/sections/section-primary";
@@ -34,4 +37,3 @@
 @use "./src/scss/sections/promo-section";
 @use "./src/scss/sections/quiz";
 @use "./src/scss/sections/footer";
-

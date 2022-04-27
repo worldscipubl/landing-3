@@ -12,6 +12,7 @@ import FaqSpoiler from '../../js/components/faq';
 import FeatureSlider from '../../js/components/feature-slider';
 import AuditFrom from '../../js/components/audit-form';
 import FaqForm from '../../js/components/faq-form';
+import UniversitySlider from '../../js/components/university-slider';
 
 /* Your JS Code goes here */
 window.addEventListener('DOMContentLoaded', () => {
@@ -24,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
   FeatureSlider();
   AuditFrom();
   FaqForm();
+  UniversitySlider();
 });
 
 window.addEventListener('load', () => {

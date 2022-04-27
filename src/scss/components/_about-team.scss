@@ -1,0 +1,19 @@
+@use '../global'as *;
+.block-team {
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+	&_column{
+		align-items:center;
+		display: flex;
+		flex-direction: column;
+
+	}
+	&_row{
+		display: flex;
+		flex-direction: row;
+	}
+	&_img{
+padding:1em 0.5em;
+	}
+}

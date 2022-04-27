@@ -20,7 +20,7 @@
 /* Example include fonts from google-fonts */
 //@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-$text-sizes: (large: 64px,
+$text-sizes: (huge: 80px,large: 64px,
         title: 36px,
         subtitle: 24px,
         header-logo: 22px,
@@ -30,7 +30,9 @@ $text-sizes: (large: 64px,
         small: 9px,
 );
 
-$text-sizes-small: (large: 64px,
+$text-sizes-small: (
+
+        large: 64px,
         title: 18px,
         subtitle: 16px,
         accent: 14px,
@@ -108,13 +110,22 @@ $text-colors: ("black": #000,
       text-align: center;
       vertical-align: center;
     }
+    &_centered{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
 
     &_left {
       text-align: left;
       vertical-align: center;
     }
   }
-
+  &_absolute {
+    position: absolute;
+  }
   &_decoration {
     position: relative;
 
