@@ -856,3 +856,6 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/webstorm,visualstudiocode,visualstudio,phpstorm,windows,macos,linux,node,firebase,wordpress,octobercms
+src/scss/components/article-upload.css.map
+.gitignore
+src/scss/components/form-frame.css

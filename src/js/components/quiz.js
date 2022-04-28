@@ -99,7 +99,7 @@ const Quiz = () => {
         option.answers.forEach((answer) => renderAnswer(answer));
         if (quizFormContainer.classList.contains('active')) quizFormContainer.classList.remove('active');
       } else {
-        questionTitle.innerHTML = 'Введите данные: <br> <span class="text">Письмо поступит на указанный эл.адрес в течение 15 минут.</span>';
+        questionTitle.innerHTML = 'Введите данные:';
         answerFrame.innerHTML = '';
         quizFormContainer.classList.add('active');
       }

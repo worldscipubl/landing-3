@@ -5,6 +5,7 @@ const UniversitySlider = () => {
   const sliders = document.querySelectorAll(".js-university-slider");
   const initSlider = (slider) => {
     const contentList = slider.querySelector(".university-slider__content");
+    
     const slides = contentList.querySelectorAll(".university-slider__slide");
     const navbarList = createTabsContainer();
     slider.insertBefore(navbarList, contentList);
