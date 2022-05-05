@@ -108,6 +108,9 @@ $maxWidthContainer: $maxWidthContainer + 2 * $p-side;
 .p-btn {
   padding: 0.5em 4em;
 }
+.ml-1em{
+  margin-left: 1em;
+}
 
 .pb-section {
   padding-bottom: 160px;
@@ -129,4 +132,13 @@ $maxWidthContainer: $maxWidthContainer + 2 * $p-side;
   margin-left: auto;
   margin-right: auto;
   align-self: center;
+}
+.scale08 {
+  transform: scale(0.8);
+}
+.scale07{
+  transform: scale(0.7);
+}
+.scale2{
+  transform: scale(2);
 }

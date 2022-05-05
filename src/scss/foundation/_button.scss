@@ -151,16 +151,19 @@
     border-color: $tg-blue;
     color: $white;
     font-weight: bold;
-    padding: 0.64em 2.5em 0.64em 1.2885em;
+    // padding: 0.64em 2.5em 0.64em 1.2885em;
     box-shadow: 0px 4px 4px #00000025;
   }
   &_youtube{
-     background-color: $youtube;
-    border-color: $youtube;
+    background: url("/src/images/content/icons/youtube.svg");
+    background-repeat: no-repeat;
     color: $white;
     font-weight: bold;
-    padding: 0.64em 2.5em 0.64em 1.2885em;
-    box-shadow: 0px 4px 4px #00000025;
+    padding: 0.64em 0em;
+    text-indent: 1em;
+    width: 100%;
+    margin-left: 0.1em;
+
   }
 
   /* Зеленная для квиза*/
@@ -235,21 +238,21 @@
         margin-right: 1em;
       }
     }
-    &_yt{
-      &:before {
-        content: "";
-        background-image: url("/src/images/content/icons/youtube.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        height: 1.25em;
-        min-width: 1.25em;
-        margin-right: 1em;
-        transform: scale(2);
+    // &_yt{
+    //   &:before {
+    //     content: "";
+    //     background-image: url("/src/images/content/icons/youtube.svg");
+    //     background-repeat: no-repeat;
+    //     background-position: center;
+    //     background-size: contain;
+    //     height: 1.25em;
+    //     min-width: 1.25em;
+    //     margin-right: 1em;
+    //     transform: scale(2);
 
-      }
+    //   }
 
-    }
+    // }
     &_back {
       &:before {
         content: "";
