@@ -142,3 +142,9 @@ $maxWidthContainer: $maxWidthContainer + 2 * $p-side;
 .scale2{
   transform: scale(2);
 }
+.zindex{
+  z-index: 3;
+}
+.w100{
+  width: 100%;
+}

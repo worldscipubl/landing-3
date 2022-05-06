@@ -29,18 +29,20 @@
 		box-sizing: content-box;
 		margin-bottom: 0.5em;
 		&_small{
-			position: relative;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+  	position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 		}
 		&_svg{
 
 		}
 		&_flag{
-			position: relative;
-    		top: -80%;
-    		left: 85%;
+    position: relative;
+    top: -80%;
+    left: 40%;
+    transform: scale(.15);
 		}
 	}
 	&_case{
@@ -94,10 +96,12 @@
 
 		}
 		&_flag{
-			    position: absolute;
-    				top: 0%;
-    				left: 80%;
-    width: fit-content;
+			      position: absolute;
+					top: -6.5%;
+					left: 80%;
+
+					width: fit-content;
+					transform: scale(.5);
 
 		}
 	}

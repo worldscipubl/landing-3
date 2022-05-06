@@ -157,6 +157,7 @@
   }
   &_youtube{
     background: url("/src/images/content/icons/youtube.svg");
+    background-color: #db261d;
     background-repeat: no-repeat;
     color: $white;
     font-weight: bold;
@@ -164,7 +165,10 @@
     text-indent: 1em;
     width: 100%;
     margin-left: 0.1em;
+    white-space: nowrap;
 
+
+    
   }
 
   /* Зеленная для квиза*/
