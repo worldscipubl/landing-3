@@ -12,6 +12,7 @@ class FormService extends ApiService {
 
   addLead = 'leads'; // Отправка заявки
 
+
   removeErrorInput = (input, inputHint) => {
     if (input.hasAttribute('style')) input.removeAttribute('style');
     inputHint.classList.remove('active');
@@ -137,8 +138,10 @@ class FormService extends ApiService {
           break;
         default:
           formData.append(input.name, input.value);
+          console.log(formData);
           break;
       }
+
 
       let matches = document.cookie.match(new RegExp(
           "(?:^|; )" + "partnerId".replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"

@@ -7,7 +7,7 @@
     <include src="components/telemetry-header.html">
     </include>
 </head>
-<body>
+<body lock-padding>
 <!-- Шапка:  -->
 <include src="sections/header.html">
 </include>
@@ -46,6 +46,10 @@
                                href="https://t.me/Wosscopusbot?start=w16690732" target="_blank">
                                 Узнать стоимость и сроки
                             </a>
+                            <a class="button button_success ml-1em  popup-link" href="#popup"
+               >
+                Оставить заявку
+            </a>
                         </div>
                     </div>
                     <div class="promo__col promo__col_w40">
@@ -172,6 +176,7 @@
         </div>
     </div>
 </section>
+
 <!-- Секция 2: Получите публикацию -->
 <!-- TODO: Сделать анимацию для ссылки "Узнать больше" -->
 <!-- TODO: Указать ссылки "Узнать больше" -->
@@ -578,12 +583,17 @@
             </div>
         </div>
     </div>
-    <div class="promo__footer">
-        <a class="button button_telegram button_icon_tg mt-a m-auto-ws js-reach-goal"
+    <div class="promo__footer features-btn-group">
+
+        <a class="button button_telegram button_icon_tg js-reach-goal"
            href="https://t.me/Wosscopusbot?start=w16690732"
            target="_blank">
             Узнать стоимость и сроки
         </a>
+        <a class="button button_success ml-1em  popup-link" href="#popup"
+               >
+                Оставить заявку
+            </a>
     </div>
 </section>
 <!-- Секция 8: Полностью прозрачный процесс публикации -->
@@ -1127,7 +1137,8 @@
  <div class="block-window_column carousel-cell-publ publication_case ml-1em">
      <div class=" publication publication_emerald">
          <div class="publication_item">
-
+<img class="publication_img_flag"  src="images/content/publication/flag.svg"
+                             alt="worldscipubl">
                         <img class="publication_img_small scale07"
                              src="images/content/publication/emerald-publishing.svg"
                              alt="Youtube">
@@ -1146,6 +1157,8 @@
                      <div class="block-window_column carousel-cell-publ publication_case ml-1em">
      <div class=" publication publication_elsevier">
          <div class="publication_item">
+             <img class="publication_img_flag"  src="images/content/publication/flag.svg"
+                             alt="worldscipubl">
                         <img class="publication_img_small scale07"
                              src="images/content/publication/elsevier.png"
                              alt="Youtube">
@@ -1164,6 +1177,8 @@
                      <div class="block-window_column carousel-cell-publ publication_case ml-1em">
      <div class=" publication publication_59pr">
          <div class="publication_item">
+             <img class="publication_img_flag"  src="images/content/publication/flag.svg"
+                             alt="worldscipubl">
                         <img class="publication_img_small scale07"
                              src="images/content/publication/59pr.png"
                              alt="Youtube">
@@ -1675,6 +1690,49 @@
         </div>
     </div>
 </section>
+<div class="wrapper">
+<div id="popup" class="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="" class="popup__close close-popup  ">
+                <span class="close"></span>
+            </a>
+            <div class="popup__title text text_weight_bold text_size_subtitle">Оставить заявку</div>
+            <div class="popup__text text"></div>
+
+                <div class="form-frame js-app-form">
+            <form class="form-frame__item  faq-form"
+             id="application-req"
+                                  name="application" novalidate>
+                                <h2 class="text text_size_default mb-1em">
+                                    Укажите номер телефона и мы позвоним, <br> чтобы ответить на все Ваши вопросы.
+                                </h2>
+
+                                <div class="field audit-form__input">
+                                    <input class="field__input" name="name" placeholder="Имя" type="text" required>
+                                    <span class="field__error"></span>
+                                </div>
+
+                                <div class="field audit-form__input">
+                                    <input class="field__input"
+                                           name="phone"
+                                           placeholder="Номер телефона"
+                                           0="^(\+)?(\(\d{2,3}\) ?\d|\d)(([ \-]?\d)|( ?\(\d{2,3}\) ?)){5,12}\d$"
+                                           type="tel"
+                                           required>
+                                    <span class="field__error"></span>
+                                </div>
+                                <div class="popup__bottom mt-1em">
+                                <div class="popup__text text_size_small">Нажимая на кнопку я соглашаюсь на <br> обработку персональных данных</div>
+                                <button class="button button_success">Отправить</button>
+                            </div>
+                                </form>
+                </div>
+
+    </div>
+</div>
+
+</div>
 <!-- Секция 17: Футер -->
 <include src="sections/footer.html" locals='{
     "how_we_work": "#publishing-process",

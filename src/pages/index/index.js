@@ -13,6 +13,8 @@ import FeatureSlider from '../../js/components/feature-slider';
 import AuditFrom from '../../js/components/audit-form';
 import FaqForm from '../../js/components/faq-form';
 import UniversitySlider from '../../js/components/university-slider';
+import Popup from '../../js/components/popup';
+import PopupForm from '../../js/components/application-form';
 
 /* Your JS Code goes here */
 window.addEventListener('DOMContentLoaded', () => {
@@ -26,6 +28,8 @@ window.addEventListener('DOMContentLoaded', () => {
   AuditFrom();
   FaqForm();
   UniversitySlider();
+  Popup();
+  PopupForm();
 });
 
 window.addEventListener('load', () => {
