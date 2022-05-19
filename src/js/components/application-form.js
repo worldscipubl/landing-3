@@ -16,8 +16,9 @@ const PopupForm = () => {
           changePopupTitle.classList.add("end")
           changePopupTitle.textContent = "Спасибо";
           changePopupText.classList.add("end", "text_size_default");
-          changePopupText.textContent = "Специалист свяжется с Вами"
-          changePopupText.textContent += "в ближайшее время.";
+          changePopupText.textContent = "Специалист свяжется с Вами в ближайшее время."
+          // changePopupText.innerHTML = "<br>"
+          // changePopupText.textContent += " ";
 
 
         }
